@@ -344,7 +344,7 @@ function generateBoxPlotSvg() {
   </svg>`;
 }
 
-// 40 questions data
+// 40 questions enriched with pedagogical hints and step-by-step teaching guides
 const questions = [
   {
     num: 1,
@@ -359,7 +359,9 @@ const questions = [
       { key: "D", text: "x = &minus;3, Nilai maksimum / Maximum value = &minus;5" }
     ],
     answer: "A",
-    solution: "Paksi simetri: x = &minus;b / (2a) = &minus;6 / [2(&minus;1)] = 3.<br>Nilai maksimum = f(3) = &minus;(3)² + 6(3) &minus; 5 = &minus;9 + 18 &minus; 5 = 4."
+    concept: "Bagi fungsi kuadratik f(x) = ax² + bx + c dengan a < 0, graf mempunyai titik maksimum (puncak). Persamaan paksi simetri ialah garisan menegak x = &minus;b / (2a).",
+    stepByStep: "1. Kenal pasti pekali: a = &minus;1, b = 6, c = &minus;5.<br>2. Cari paksi simetri: x = &minus;6 / [2(&minus;1)] = &minus;6 / (&minus;2) = 3.<br>3. Cari nilai maksimum dengan menggantikan x = 3 ke dalam fungsi:<br>&nbsp;&nbsp;&nbsp;&nbsp;f(3) = &minus;(3)² + 6(3) &minus; 5 = &minus;9 + 18 &minus; 5 = 4.<br>Maka, persamaan paksi simetri ialah x = 3 dan nilai maksimum ialah 4.",
+    tip: "Berhati-hati dengan tanda negatif pada &minus;(3)². Kuasa dua hanya dikenakan pada 3, iaitu &minus;(9) = &minus;9, bukan (&minus;3)² = +9."
   },
   {
     num: 2,
@@ -374,7 +376,9 @@ const questions = [
       { key: "D", text: "x = 2, &nbsp; x = &minus;2/3" }
     ],
     answer: "A",
-    solution: "3x(x &minus; 1) = 2(2 &minus; x) &rArr; 3x² &minus; 3x = 4 &minus; 2x &rArr; 3x² &minus; x &minus; 4 = 0.<br>(3x &minus; 4)(x + 1) = 0 &rArr; x = 4/3 atau x = &minus;1."
+    concept: "Untuk menyelesaikan persamaan kuadratik, hilangkan pecahan terlebih dahulu dan kembangkan ungkapan ke dalam bentuk am: ax² + bx + c = 0 sebelum pemfaktoran.",
+    stepByStep: "1. Darab silang kedua-dua belah dengan 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x(x &minus; 1) = 2(2 &minus; x)<br>2. Kembangkan kurungan:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x² &minus; 3x = 4 &minus; 2x<br>3. Pindahkan semua sebutan ke sebelah kiri:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x² &minus; 3x + 2x &minus; 4 = 0 &rArr; 3x² &minus; x &minus; 4 = 0<br>4. Faktorkan:<br>&nbsp;&nbsp;&nbsp;&nbsp;(3x &minus; 4)(x + 1) = 0<br>5. Punca-punca persamaan:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x &minus; 4 = 0 &rArr; x = 4/3<br>&nbsp;&nbsp;&nbsp;&nbsp;x + 1 = 0 &rArr; x = &minus;1.",
+    tip: "Semak semula jawapan dengan kalkulator saintifik: Tekan MODE &rarr; EQN &rarr; Degree 2, masukkan a = 3, b = &minus;1, c = &minus;4."
   },
   {
     num: 3,
@@ -389,7 +393,9 @@ const questions = [
       { key: "D", text: "8 unit / units" }
     ],
     answer: "B",
-    solution: "g(x) = x² + 5 &minus; 9 = x² &minus; 4.<br>Menyilang paksi-x apabila g(x) = 0 &rArr; x² &minus; 4 = 0 &rArr; x = &plusmn;2.<br>Jarak PQ = 2 &minus; (&minus;2) = 4 unit."
+    concept: "Translasi menegak ke bawah sebanyak k unit menukar f(x) kepada g(x) = f(x) &minus; k. Titik persilangan paksi-x diperoleh apabila g(x) = 0.",
+    stepByStep: "1. Bentuk fungsi baharu: g(x) = (x² + 5) &minus; 9 = x² &minus; 4.<br>2. Titik persilangan paksi-x berlaku apabila g(x) = 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;x² &minus; 4 = 0 &rArr; x² = 4 &rArr; x = &plusmn;2.<br>3. Koordinat titik ialah P(&minus;2, 0) dan Q(2, 0).<br>4. Jarak antara P dan Q = 2 &minus; (&minus;2) = 4 unit.",
+    tip: "Jarak antara dua titik pada paksi mengufuk dihitung dengan menolak koordinat x yang lebih kecil daripada koordinat x yang lebih besar: x₂ &minus; x₁."
   },
   {
     num: 4,
@@ -404,7 +410,9 @@ const questions = [
       { key: "D", text: "60 cm" }
     ],
     answer: "B",
-    solution: "(x + 5)(x &minus; 2) = 44 &rArr; x² + 3x &minus; 54 = 0 &rArr; (x + 9)(x &minus; 6) = 0 &rArr; x = 6.<br>Panjang = 11 cm, Lebar = 4 cm. Perimeter = 2(11 + 4) = 30 cm."
+    concept: "Luas segi empat tepat = Panjang &times; Lebar. Perimeter = 2(Panjang + Lebar). Nilai x yang mewakili panjang mestilah positif.",
+    stepByStep: "1. Bentuk persamaan luas:<br>&nbsp;&nbsp;&nbsp;&nbsp;(x + 5)(x &minus; 2) = 44<br>&nbsp;&nbsp;&nbsp;&nbsp;x² + 3x &minus; 10 = 44 &rArr; x² + 3x &minus; 54 = 0<br>2. Faktorkan:<br>&nbsp;&nbsp;&nbsp;&nbsp;(x + 9)(x &minus; 6) = 0 &rArr; x = 6 atau x = &minus;9.<br>3. Kerana panjang mesti positif, ambil x = 6.<br>4. Kira dimensi segi empat tepat:<br>&nbsp;&nbsp;&nbsp;&nbsp;Panjang = 6 + 5 = 11 cm, Lebar = 6 &minus; 2 = 4 cm.<br>5. Perimeter = 2(11 + 4) = 2(15) = 30 cm.",
+    tip: "Jangan berhenti selepas mencari nilai x = 6! Soalan bertanyakan PERIMETER segi empat tepat, bukan nilai x."
   },
   {
     num: 5,
@@ -419,7 +427,9 @@ const questions = [
       { key: "D", text: "375" }
     ],
     answer: "C",
-    solution: "Nilai digit = 3 &times; 5² = 3 &times; 25 = 75₁₀."
+    concept: "Nilai tempat bagi sesuatu digit dalam nombor asas b dikira dari kanan bermula dengan b⁰, b¹, b², b³, ... Nilai digit = Digit &times; Nilai tempat.",
+    stepByStep: "1. Kenal pasti kedudukan digit yang bergaris dalam 4<u>3</u>21₅:<br>&nbsp;&nbsp;&nbsp;&nbsp;Digit 1: tempat ke-0 &rarr; 5⁰ = 1<br>&nbsp;&nbsp;&nbsp;&nbsp;Digit 2: tempat ke-1 &rarr; 5¹ = 5<br>&nbsp;&nbsp;&nbsp;&nbsp;Digit 3 (bergaris): tempat ke-2 &rarr; 5² = 25<br>2. Hitung nilai digit:<br>&nbsp;&nbsp;&nbsp;&nbsp;Nilai digit = 3 &times; 5² = 3 &times; 25 = 75₁₀.",
+    tip: "Kerap kali murid terkeliru antara 'nilai tempat' (25) dengan 'nilai digit' (75). Pastikan darabkan digit tersebut dengan nilai tempatnya!"
   },
   {
     num: 6,
@@ -434,7 +444,9 @@ const questions = [
       { key: "D", text: "75₈" }
     ],
     answer: "C",
-    solution: "Kumpulan 3 bit: [111]₂ = 7, [011]₂ = 3 &rArr; 73₈."
+    concept: "Kerana 2³ = 8, nombor asas dua boleh ditukar ke asas lapan secara pantas dengan mengumpulkan setiap 3 digit bit bermula dari sebelah KANAN.",
+    stepByStep: "1. Bahagikan 111011₂ kepada kumpulan 3 bit dari kanan:<br>&nbsp;&nbsp;&nbsp;&nbsp;[111] dan [011]<br>2. Tukar setiap kumpulan 3 bit ke nombor perpuluhan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Kumpulan kiri [111]₂ = 1(4) + 1(2) + 1(1) = 7<br>&nbsp;&nbsp;&nbsp;&nbsp;Kumpulan kanan [011]₂ = 0(4) + 1(2) + 1(1) = 3<br>3. Gabungkan digit: 73₈.",
+    tip: "Ingat kod cepat 3-bit: 4-2-1. Contohnya 011 ialah 2+1=3, dan 111 ialah 4+2+1=7."
   },
   {
     num: 7,
@@ -449,7 +461,9 @@ const questions = [
       { key: "D", text: "324₅" }
     ],
     answer: "B",
-    solution: "423₅ = 113₁₀, 144₅ = 49₁₀. 113 &minus; 49 = 64₁₀.<br>Tukar 64₁₀ ke asas 5: 64 &divide; 5 = 12 baki 4; 12 &divide; 5 = 2 baki 2; 2 &divide; 5 = 0 baki 2 &rArr; 224₅."
+    concept: "Kaedah paling selamat: Tukar kedua-dua nombor ke asas 10, lakukan penolakan, kemudian tukar semula jawapan ke asas 5.",
+    stepByStep: "1. Tukar ke asas 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;423₅ = 4(25) + 2(5) + 3 = 100 + 10 + 3 = 113₁₀<br>&nbsp;&nbsp;&nbsp;&nbsp;144₅ = 1(25) + 4(5) + 4 = 25 + 20 + 4 = 49₁₀<br>2. Tolak dalam asas 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;113 &minus; 49 = 64₁₀<br>3. Tukar 64₁₀ ke asas 5 (pembahagian berulang dengan 5):<br>&nbsp;&nbsp;&nbsp;&nbsp;64 &divide; 5 = 12 baki 4<br>&nbsp;&nbsp;&nbsp;&nbsp;12 &divide; 5 = 2 baki 2<br>&nbsp;&nbsp;&nbsp;&nbsp;2 &divide; 5 = 0 baki 2<br>Maka, baca dari bawah ke atas: 224₅.",
+    tip: "Jika menggunakan penolakan lazim terus dalam asas 5: apabila meminjam 1 dari tiang sebelah kiri, nilainya ialah 5 (bukan 10!)."
   },
   {
     num: 8,
@@ -464,7 +478,9 @@ const questions = [
       { key: "D", text: "32" }
     ],
     answer: "B",
-    solution: "101₂ = 5₁₀, 35₇ = 26₁₀. 5 + p₈ = 26 &rArr; p₁₀ = 21 &rArr; 25₈. Maka p = 25."
+    concept: "Apabila persamaan mengandungi pelbagai asas nombor yang berbeza, tukarkan setiap nombor ke asas 10 untuk menyelesaikan persamaan.",
+    stepByStep: "1. Tukar 101₂ ke asas 10: 1(4) + 0(2) + 1(1) = 5₁₀.<br>2. Tukar 35₇ ke asas 10: 3(7) + 5(1) = 21 + 5 = 26₁₀.<br>3. Selesaikan persamaan linear:<br>&nbsp;&nbsp;&nbsp;&nbsp;5 + p₈ = 26 &rArr; p₁₀ = 26 &minus; 5 = 21₁₀.<br>4. Tukar 21₁₀ ke asas 8:<br>&nbsp;&nbsp;&nbsp;&nbsp;21 &divide; 8 = 2 baki 5<br>&nbsp;&nbsp;&nbsp;&nbsp;2 &divide; 8 = 0 baki 2<br>Maka p = 25₈. Nilai p ialah 25.",
+    tip: "Berhati-hati: 21 ialah nilai dalam asas 10. Soalan menyatakan p₈ (asas 8), jadi 21₁₀ mesti ditukar kepada 25₈."
   },
   {
     num: 9,
@@ -479,7 +495,9 @@ const questions = [
       { key: "D", text: "5 &times; 0 = 5 dan 7 ialah nombor ganjil" }
     ],
     answer: "B",
-    solution: "'9 nombor perdana' (Palsu) ATAU '12 gandaan 4' (Benar). Palsu ATAU Benar = BENAR."
+    concept: "Jadual Kebenaran: Pernyataan dengan perkataan 'ATAU' adalah BENAR jika sekurang-kurangnya SATU pernyataan komponennya adalah benar. Pernyataan dengan 'DAN' memerlukan kedua-duanya benar.",
+    stepByStep: "Analisis setiap pilihan:<br>&bull; A: 3² = 6 (Palsu) DAN 4 > 2 (Benar) &rarr; Palsu DAN Benar = PALSU.<br>&bull; B: 9 nombor perdana (Palsu) ATAU 12 gandaan 4 (Benar) &rarr; Palsu ATAU Benar = BENAR! ✓<br>&bull; C: Semua poligon ada 5 sisi (Palsu) ATAU &minus;3 > &minus;1 (Palsu) &rarr; PALSU.<br>&bull; D: 5 &times; 0 = 5 (Palsu) DAN 7 nombor ganjil (Benar) &rarr; PALSU.",
+    tip: "Untuk operasi 'ATAU', anda hanya perlu mencari satu fakta yang benar sahaja untuk menjadikan keseluruhan pernyataan majmuk itu benar."
   },
   {
     num: 10,
@@ -494,7 +512,9 @@ const questions = [
       { key: "D", text: "x faktor 12 jika dan hanya jika x faktor 24." }
     ],
     answer: "B",
-    solution: "Akas (converse) bagi 'Jika p, maka q' ialah 'Jika q, maka p'."
+    concept: "Hubungan Implikasi (Jika p, maka q):<br>&bull; Akas (Converse): Jika q, maka p.<br>&bull; Songsangan (Inverse): Jika ~p, maka ~q.<br>&bull; Kontrapositif: Jika ~q, maka ~p.",
+    stepByStep: "1. Implikasi asal: Jika p (x faktor 12), maka q (x faktor 24).<br>2. Akas diperoleh dengan menukar kedudukan anteseden (p) dan akibat (q):<br>&nbsp;&nbsp;&nbsp;&nbsp;'Jika q, maka p'<br>3. Maka akasnya ialah: 'Jika x ialah faktor bagi 24, maka x ialah faktor bagi 12.'",
+    tip: "Akas HANYA menukar kedudukan (terbalikkan urutan ayat), tanpa menafikan (tanpa menambah perkataan 'bukan')."
   },
   {
     num: 11,
@@ -509,7 +529,9 @@ const questions = [
       { key: "D", text: "m boleh dibahagi tepat dengan 3" }
     ],
     answer: "B",
-    solution: "Hujah Bentuk II: Anteseden dipenuhi (42 gandaan 6), maka akibatnya benar (42 boleh dibahagi tepat dengan 3)."
+    concept: "Hujah Deduktif Bentuk II (Modus Ponens):<br>Premis 1: Jika p, maka q.<br>Premis 2: p adalah benar.<br>Kesimpulan: q adalah benar.",
+    stepByStep: "1. Dalam Premis 1: p = 'm gandaan 6', q = 'm boleh dibahagi tepat dengan 3'.<br>2. Premis 2 mengesahkan p bagi nombor 42: '42 ialah gandaan 6'.<br>3. Kesimpulan mesti mengesahkan q bagi nombor yang sama: '42 boleh dibahagi tepat dengan 3'.",
+    tip: "Pastikan kesimpulan menyatakan subjek khusus (42) dan bukannya huruf pemboleh ubah m."
   },
   {
     num: 12,
@@ -524,7 +546,9 @@ const questions = [
       { key: "D", text: "2n² + 3, &nbsp; n = 1, 2, 3, 4, ..." }
     ],
     answer: "A",
-    solution: "Pola berulang: 3n² + 2 dengan n = 1, 2, 3, 4, ..."
+    concept: "Penaakulan induktif melibatkan pemerhatian pola nombor khusus untuk membina formula am bagi sebutan ke-n.",
+    stepByStep: "1. Teliti bahagian yang malar (tidak berubah): nombor 3, kuasa dua ², dan penambahan + 2.<br>2. Teliti bahagian yang berubah mengikut urutan: (1), (2), (3), (4) ... gantikan dengan pemboleh ubah n.<br>3. Pola am: 3n² + 2 di mana n = 1, 2, 3, 4, ...",
+    tip: "Dalam soalan SPM, ungkapan induksi yang lengkap MESTI menyatakan julat n (iaitu n = 1, 2, 3, 4, ...)."
   },
   {
     num: 13,
@@ -539,7 +563,9 @@ const questions = [
       { key: "D", text: "10" }
     ],
     answer: "C",
-    solution: "P = 10 unsur ganjil. Ganjil gandaan 3: {3, 9, 15}. Maka P &cap; Q' = 10 &minus; 3 = 7 unsur."
+    concept: "P &cap; Q' merujuk kepada semua unsur yang berada di dalam set P TETAPI TIDAK berada di dalam set Q (sama dengan P \\ Q).",
+    stepByStep: "1. Senaraikan set P (nombor ganjil dari 1 hingga 20):<br>&nbsp;&nbsp;&nbsp;&nbsp;P = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19} &rarr; Jumlah = 10 unsur.<br>2. Senaraikan set Q (gandaan 3):<br>&nbsp;&nbsp;&nbsp;&nbsp;Q = {3, 6, 9, 12, 15, 18}.<br>3. Cari unsur P yang juga gandaan 3 (P &cap; Q):<br>&nbsp;&nbsp;&nbsp;&nbsp;{3, 9, 15} &rarr; 3 unsur.<br>4. Unsur P yang BUKAN gandaan 3 (P &cap; Q'):<br>&nbsp;&nbsp;&nbsp;&nbsp;{1, 5, 7, 11, 13, 17, 19} &rarr; 10 &minus; 3 = 7 unsur.",
+    tip: "Q' bermaksud pelengkap bagi Q (semua nombor yang bukan gandaan 3). Maka cari nombor ganjil yang tidak boleh dibahagi dengan 3."
   },
   {
     num: 14,
@@ -554,7 +580,9 @@ const questions = [
       { key: "D", text: "P' &cap; (Q &cup; R)" }
     ],
     answer: "A",
-    solution: "Kawasan persilangan P dan Q di luar R &rArr; (P &cap; Q) &cap; R'."
+    concept: "Kawasan persilangan dua set P dan Q diwakili oleh P &cap; Q. Jika sebahagian kawasan itu dikeluarkan kerana bertindih dengan R, ia didarab silang dengan pelengkap R (iaitu &cap; R').",
+    stepByStep: "1. Perhatikan kedudukan kawasan berlorek: ia berada di dalam bulatan P dan bulatan Q serentak &rarr; (P &cap; Q).<br>2. Perhatikan bulatan R: kawasan berlorek langsung tidak memasuki bulatan R &rarr; di luar R (&cap; R').<br>3. Gabungkan kedua-dua syarat: (P &cap; Q) &cap; R'.",
+    tip: "Kaedah menomborkan kawasan: Labelkan setiap ruang dengan nombor 1, 2, 3, 4, 5, 6, 7 untuk menguji pilihan jawapan dengan pantas."
   },
   {
     num: 15,
@@ -569,7 +597,9 @@ const questions = [
       { key: "D", text: "17" }
     ],
     answer: "B",
-    solution: "Murid menyertai sekurang-kurangnya satu kelab = 45 &minus; 5 = 40.<br>n(S &cap; M) = 28 + 20 &minus; 40 = 8."
+    concept: "Formula kesatuan set: n(A &cup; B) = n(A) + n(B) &minus; n(A &cap; B).",
+    stepByStep: "1. Cari bilangan murid yang menyertai sekurang-kurangnya satu kelab:<br>&nbsp;&nbsp;&nbsp;&nbsp;n(S &cup; M) = 45 &minus; 5 = 40 orang.<br>2. Masukkan ke dalam rumus kesatuan:<br>&nbsp;&nbsp;&nbsp;&nbsp;40 = n(Sains) + n(Math) &minus; n(Kedua-duanya)<br>&nbsp;&nbsp;&nbsp;&nbsp;40 = 28 + 20 &minus; n(S &cap; M)<br>&nbsp;&nbsp;&nbsp;&nbsp;40 = 48 &minus; n(S &cap; M)<br>3. n(S &cap; M) = 48 &minus; 40 = 8 orang.",
+    tip: "Jangan lupa tolak 5 orang murid yang TIDAK menyertai mana-mana kelab sebelum mengira persilangan."
   },
   {
     num: 16,
@@ -584,7 +614,9 @@ const questions = [
       { key: "D", text: "B &sub; A" }
     ],
     answer: "C",
-    solution: "Semua unsur A berada dalam B, dan B tidak berkongsi unsur dengan C, maka A &cap; C = &empty;."
+    concept: "A &sub; B bermaksud set A terletak sepenuhnya di dalam set B. B &cap; C = &empty; bermaksud set B dan set C saling berpisah (tiada unsur sepunya).",
+    stepByStep: "1. Kerana semua unsur dalam A adalah unsur dalam B (A &sub; B),<br>2. Dan B tidak berkongsi sebarang unsur dengan C (B &cap; C = &empty;),<br>3. Maka A juga mustahil berkongsi unsur dengan C.<br>4. Oleh itu, A &cap; C = &empty; (set kosong).",
+    tip: "Lakarkan rajah Venn: Lukis bulatan A di dalam bulatan B, dan lukis bulatan C jauh di luar B. Jelas kelihatan A dan C tidak bersilang."
   },
   {
     num: 17,
@@ -599,7 +631,9 @@ const questions = [
       { key: "D", text: "5" }
     ],
     answer: "C",
-    solution: "&sum; d(v) = 2(9) = 18 &rArr; 14 + k = 18 &rArr; k = 4."
+    concept: "Teorem Jumlah Darjah (Handshaking Lemma): Jumlah darjah bagi semua bucu dalam suatu graf ialah dua kali bilangan tepi: &sum; d(v) = 2E.",
+    stepByStep: "1. Diberi E = 9 tepi, maka jumlah darjah ialah:<br>&nbsp;&nbsp;&nbsp;&nbsp;&sum; d(v) = 2 &times; 9 = 18.<br>2. Jumlahkan darjah bagi 6 bucu yang diberi:<br>&nbsp;&nbsp;&nbsp;&nbsp;3 + 2 + 4 + 3 + k + 2 = 14 + k.<br>3. Selesaikan persamaan linear:<br>&nbsp;&nbsp;&nbsp;&nbsp;14 + k = 18 &rArr; k = 18 &minus; 14 = 4.",
+    tip: "Ingat prinsip penting: Jumlah darjah bagi sebarang graf sentiasa merupakan nombor GENAP kerana setiap satu tepi menyambungkan 2 bucu."
   },
   {
     num: 18,
@@ -614,7 +648,9 @@ const questions = [
       { key: "D", text: "Graf D / Graph D" }
     ],
     answer: "C",
-    solution: "Graf C mempunyai 5 bucu dan 4 tepi, bersambung dan tiada kitaran &rArr; Pokok."
+    concept: "Ciri-ciri Pokok (Tree) dalam Teori Graf:<br>1. Graf bersambung (connected).<br>2. Tiada kitaran / gelung (acyclic).<br>3. Bilangan tepi mesti tepat: E = V &minus; 1.",
+    stepByStep: "Analisis setiap graf:<br>&bull; Graf A: Mengandungi kitaran segi tiga &rarr; BUKAN pokok.<br>&bull; Graf B: Terputus / tidak bersambung (2 komponen berasingan) &rarr; BUKAN pokok.<br>&bull; Graf C: Mempunyai 5 bucu dan 4 tepi (E = 5 &minus; 1 = 4), bersambung dan tiada kitaran &rarr; POKOK! ✓<br>&bull; Graf D: Mempunyai kitaran tertutup segi empat &rarr; BUKAN pokok.",
+    tip: "Pokok ialah graf paling ringkas yang menghubungkan semua bucu tanpa membentuk sebarang laluan berulang/kitaran tertutup."
   },
   {
     num: 19,
@@ -629,7 +665,9 @@ const questions = [
       { key: "D", text: "29 km" }
     ],
     answer: "A",
-    solution: "Laluan P &rarr; Q &rarr; R &rarr; T = 10 + 3 + 12 = 25 km."
+    concept: "Untuk mencari jarak terpendek dalam graf berpemberat, senaraikan semua laluan yang sah dari bucu mula ke bucu akhir dan bandingkan jumlah beratnya.",
+    stepByStep: "Kira jumlah berat setiap laluan dari P ke T:<br>&bull; Laluan 1 (P &rarr; Q &rarr; S &rarr; T): 10 + 11 + 8 = 29 km<br>&bull; Laluan 2 (P &rarr; Q &rarr; R &rarr; T): 10 + 3 + 12 = 25 km (Terpendek!) ✓<br>&bull; Laluan 3 (P &rarr; R &rarr; T): 14 + 12 = 26 km<br>&bull; Laluan 4 (P &rarr; Q &rarr; R &rarr; S &rarr; T): 10 + 3 + 6 + 8 = 27 km<br>Jarak terpendek ialah 25 km melalui laluan P &rarr; Q &rarr; R &rarr; T.",
+    tip: "Walaupun laluan P &rarr; R hanya mempunyai 2 tepi (14+12=26), laluan 3 tepi P &rarr; Q &rarr; R &rarr; T (10+3+12=25) sebenarnya lebih pendek!"
   },
   {
     num: 20,
@@ -644,7 +682,9 @@ const questions = [
       { key: "D", text: "d_in(B) = 3, &nbsp; d_out(B) = 3" }
     ],
     answer: "A",
-    solution: "Tepi masuk ke B = 2 (dari A, C). Tepi keluar dari B = 3 (ke D, E, C)."
+    concept: "Dalam graf berarah:<br>&bull; d_in (darjah masuk): Bilangan tepi berarah yang menunjuk MASUK ke bucu tersebut.<br>&bull; d_out (darjah keluar): Bilangan tepi berarah yang KELUAR daripada bucu tersebut.",
+    stepByStep: "Perhatikan bucu B pada Rajah 4:<br>1. Tepi yang MASUK ke B: dari bucu A (A &rarr; B) dan dari bucu C (C &rarr; B) &rarr; d_in(B) = 2.<br>2. Tepi yang KELUAR dari B: ke bucu D (B &rarr; D), ke bucu E (B &rarr; E), dan ke bucu C (B &rarr; C) &rarr; d_out(B) = 3.<br>Maka, d_in(B) = 2 dan d_out(B) = 3.",
+    tip: "Periksa arah kepala anak panah dengan teliti. Tepi antara B dan C mempunyai dua anak panah berasingan (satu masuk, satu keluar)."
   },
   {
     num: 21,
@@ -659,7 +699,9 @@ const questions = [
       { key: "D", text: "y &le; &minus;x + 5, &nbsp; y &le; 2x &minus; 1, &nbsp; x &ge; 0" }
     ],
     answer: "A",
-    solution: "Di bawah y = &minus;x + 5 (&le;), di atas y = 2x &minus; 1 (&ge;), dan kanan paksi-y (x &ge; 0)."
+    concept: "Garis padu melibatkan simbol &le; atau &ge;. Kawasan di bawah garisan menggunakan &le;, kawasan di atas garisan menggunakan &ge;. Paksi-y ialah garisan x = 0 (sebelah kanan ialah x &ge; 0).",
+    stepByStep: "1. Garisan y = &minus;x + 5: Rantau berlorek berada di sebelah BAWAH garis padu &rarr; y &le; &minus;x + 5.<br>2. Garisan y = 2x &minus; 1: Rantau berlorek berada di sebelah ATAS garis padu &rarr; y &ge; 2x &minus; 1.<br>3. Paksi-y: Rantau berlorek berada di sebelah KANAN &rarr; x &ge; 0.<br>Maka sistem ketaksamaan ialah: y &le; &minus;x + 5, y &ge; 2x &minus; 1, x &ge; 0.",
+    tip: "Garis padu = ada tanda sama dengan (&le; atau &ge;). Garis putus-putus = tiada tanda sama dengan (< atau >)."
   },
   {
     num: 22,
@@ -674,7 +716,9 @@ const questions = [
       { key: "D", text: "(0, 2)" }
     ],
     answer: "A",
-    solution: "Titik (1, 3): 2(3) + 1 = 7 &le; 8 (Benar); 3 > &minus;1 (Benar); 1 &ge; 1 (Benar)."
+    concept: "Titik (x, y) memuaskan sistem ketaksamaan apabila penggantian nilai x dan y menjadikan SEMUA ketaksamaan dalam sistem itu benar serentak.",
+    stepByStep: "Uji titik (1, 3):<br>1. 2y + x &le; 8 &rArr; 2(3) + 1 = 6 + 1 = 7 &le; 8 (BENAR)<br>2. y > x &minus; 2 &rArr; 3 > 1 &minus; 2 = &minus;1 (BENAR)<br>3. x &ge; 1 &rArr; 1 &ge; 1 (BENAR)<br>Semua 3 ketaksamaan dipenuhi oleh titik (1, 3).<br><br>Mengapa pilihan lain salah:<br>&bull; (2, 4): 2(4) + 2 = 10 &le; 8 (SALAH)<br>&bull; (3, 0): 0 > 3 &minus; 2 = 1 (SALAH)<br>&bull; (0, 2): x &ge; 1 tidak dipenuhi kerana 0 < 1 (SALAH).",
+    tip: "Mulakan dengan menyemak ketaksamaan yang paling mudah terlebih dahulu, iaitu x &ge; 1. Ini membolehkan anda menyingkirkan titik (0, 2) serta-merta!"
   },
   {
     num: 23,
@@ -689,7 +733,9 @@ const questions = [
       { key: "D", text: "x + y &le; 120 &nbsp; dan / and &nbsp; y &ge; 2x" }
     ],
     answer: "A",
-    solution: "Selebih-lebihnya: x + y &le; 120. Sekurang-kurangnya dua kali: x &ge; 2y."
+    concept: "Terjemahan istilah bahasa kepada simbol matematik:<br>&bull; 'selebih-lebihnya / tidak lebih daripada / at most' &rarr; &le;<br>&bull; 'sekurang-kurangnya / tidak kurang daripada / at least' &rarr; &ge;",
+    stepByStep: "1. Jumlah bungkusan (x + y) selebih-lebihnya 120 &rArr; x + y &le; 120.<br>2. Bilangan nasi lemak (x) sekurang-kurangnya (&ge;) dua kali mee goreng (2y) &rArr; x &ge; 2y.<br>Maka jawapan ialah: x + y &le; 120 dan x &ge; 2y.",
+    tip: "Awas: Jangan terbalik meletakkan faktor pendarab. 'Nasi lemak (x) sekurang-kurangnya dua kali mee goreng (y)' bermakna x &ge; 2y, BUKAN y &ge; 2x."
   },
   {
     num: 24,
@@ -704,7 +750,9 @@ const questions = [
       { key: "D", text: "28" }
     ],
     answer: "C",
-    solution: "Pada (4, 3): K = 4(4) + 3(3) = 16 + 9 = 25 (Nilai maksimum)."
+    concept: "Teori Pengaturcaraan Linear: Nilai optimum (maksimum atau minimum) bagi suatu fungsi objektif linear sentiasa dicapai pada salah satu titik bucu (bucu poligon) rantau tersaur.",
+    stepByStep: "Gantikan setiap koordinat bucu ke dalam fungsi objektif K = 4x + 3y:<br>&bull; Pada (0, 0): K = 4(0) + 3(0) = 0<br>&bull; Pada (5, 0): K = 4(5) + 3(0) = 20<br>&bull; Pada (4, 3): K = 4(4) + 3(3) = 16 + 9 = 25 (Maksimum!) ✓<br>&bull; Pada (0, 5): K = 4(0) + 3(5) = 15<br>Nilai maksimum ialah 25.",
+    tip: "Hanya uji koordinat bucu sahaja. Anda tidak perlu menguji titik-titik di bahagian dalam rantau berlorek."
   },
   {
     num: 25,
@@ -719,7 +767,9 @@ const questions = [
       { key: "D", text: "72 km/j / km/h" }
     ],
     answer: "B",
-    solution: "Laju = 36 km &divide; (40/60 j) = 36 &times; (3/2) = 54 km/j."
+    concept: "Pada graf jarak-masa, Kecerunan graf mewakili Laju. Laju = Jarak dilalui / Masa diambil.",
+    stepByStep: "1. Dari graf, dalam 40 minit pertama:<br>&nbsp;&nbsp;&nbsp;&nbsp;Jarak dilalui = 36 km &minus; 0 km = 36 km.<br>2. Masa diambil = 40 minit.<br>3. Tukar unit masa kepada jam:<br>&nbsp;&nbsp;&nbsp;&nbsp;Masa = 40 / 60 jam = 2/3 jam.<br>4. Kira laju:<br>&nbsp;&nbsp;&nbsp;&nbsp;Laju = 36 &divide; (2/3) = 36 &times; (3/2) = 54 km/j.",
+    tip: "Perangkap paling kerap: Murid terus membahagi 36 dengan 40 tanpa menukar minit kepada jam! Pastikan unit masa selaras dengan km/j."
   },
   {
     num: 26,
@@ -734,7 +784,9 @@ const questions = [
       { key: "D", text: "3.0" }
     ],
     answer: "C",
-    solution: "Laju purata = 160 / t = 64 &rArr; t = 160 / 64 = 2.5 jam."
+    concept: "Laju Purata = Jumlah Jarak Dilalui / Jumlah Masa Diambil. Tempoh pegun (berhenti rehat) tetap dikira dalam jumlah masa perjalanan.",
+    stepByStep: "1. Jumlah jarak dari graf = 160 km.<br>2. Jumlah masa keseluruhan = t jam.<br>3. Gunakan rumus laju purata:<br>&nbsp;&nbsp;&nbsp;&nbsp;Laju purata = Jumlah Jarak / Jumlah Masa<br>&nbsp;&nbsp;&nbsp;&nbsp;64 = 160 / t<br>4. Selesaikan untuk t:<br>&nbsp;&nbsp;&nbsp;&nbsp;t = 160 / 64 = 2.5 jam.",
+    tip: "Walaupun lori berhenti rehat dari jam 1.0 hingga 1.4, jumlah masa t tetap merangkumi keseluruhan tempoh termasuk masa rehat."
   },
   {
     num: 27,
@@ -749,7 +801,9 @@ const questions = [
       { key: "D", text: "6" }
     ],
     answer: "A",
-    solution: "Kadar perubahan laju = (0 &minus; 18) / 6 = &minus;3 m s⁻²."
+    concept: "Pada graf laju-masa, Kecerunan graf mewakili Kadar Perubahan Laju (Pecutan). Pecutan = (Laju Akhir &minus; Laju Awal) / Masa.",
+    stepByStep: "1. Tempoh 6 saat terakhir ialah dari t = 14 hingga t = 20 saat (masa = 20 &minus; 14 = 6 s).<br>2. Pada t = 14 s, laju awal (u) = 18 m s⁻¹.<br>3. Pada t = 20 s, laju akhir (v) = 0 m s⁻¹.<br>4. Pecutan = (v &minus; u) / t = (0 &minus; 18) / 6 = &minus;18 / 6 = &minus;3 m s⁻².",
+    tip: "Tanda negatif bermaksud objek mengalami nyahpecutan (laju semakin berkurang sehingga berhenti)."
   },
   {
     num: 28,
@@ -764,7 +818,9 @@ const questions = [
       { key: "D", text: "500" }
     ],
     answer: "C",
-    solution: "Luas bawah graf = 1/2 &times; [(25 &minus; 10) + 25] &times; 20 = 400 meter."
+    concept: "Pada graf laju-masa, Jumlah Jarak Dilalui bersamaan dengan LUAS DI BAWAH GRAF. Bentuk graf ini ialah trapezium.",
+    stepByStep: "1. Bentuk di bawah graf ialah trapezium dengan sisi selari a dan b:<br>&nbsp;&nbsp;&nbsp;&nbsp;Sisi selari atas (a) = 25 &minus; 10 = 15 s<br>&nbsp;&nbsp;&nbsp;&nbsp;Sisi selari bawah (b) = 25 s<br>&nbsp;&nbsp;&nbsp;&nbsp;Tinggi (h) = 20 m s⁻¹<br>2. Luas trapezium = 1/2 &times; (a + b) &times; h<br>&nbsp;&nbsp;&nbsp;&nbsp;Luas = 1/2 &times; (15 + 25) &times; 20<br>&nbsp;&nbsp;&nbsp;&nbsp;Luas = 1/2 &times; 40 &times; 20 = 400 meter.",
+    tip: "Anda juga boleh membahagikan bentuk kepada segi tiga (0 hingga 10s: 1/2 &times; 10 &times; 20 = 100m) dan segi empat tepat (10 hingga 25s: 15 &times; 20 = 300m). Jumlah = 100 + 300 = 400m."
   },
   {
     num: 29,
@@ -779,7 +835,9 @@ const questions = [
       { key: "D", text: "21" }
     ],
     answer: "B",
-    solution: "Median = 12. Q₁ = 6, Q₃ = 19. Julat antara kuartil = 19 &minus; 6 = 13."
+    concept: "Julat antara kuartil (IQR) = Kuartil Ketiga (Q₃) &minus; Kuartil Pertama (Q₁).",
+    stepByStep: "1. Data telah disusun (N = 11 data):<br>&nbsp;&nbsp;&nbsp;&nbsp;3, 5, 6, 8, 10, [12], 15, 17, 19, 21, 24<br>2. Median (nilai ke-6) = 12.<br>3. Separuh bawah (5 data): 3, 5, [6], 8, 10 &rArr; Kuartil pertama Q₁ = 6.<br>4. Separuh atas (5 data): 15, 17, [19], 21, 24 &rArr; Kuartil ketiga Q₃ = 19.<br>5. Julat antara kuartil = Q₃ &minus; Q₁ = 19 &minus; 6 = 13.",
+    tip: "Jika bilangan data ganjil, jangan masukkan nilai median tengah ke dalam separuh bawah atau separuh atas semasa mencari kuartil."
   },
   {
     num: 30,
@@ -794,7 +852,9 @@ const questions = [
       { key: "D", text: "36" }
     ],
     answer: "B",
-    solution: "x̄ = 14. Varians &sigma;² = (2320/10) &minus; 14² = 36 &rArr; Sisihan piawai = &radic;36 = 6."
+    concept: "Min: x̄ = &sum;x / N. Varians: &sigma;² = (&sum;x² / N) &minus; (x̄)². Sisihan piawai: &sigma; = &radic;(&sigma;²).",
+    stepByStep: "1. Hitung min (x̄):<br>&nbsp;&nbsp;&nbsp;&nbsp;x̄ = 140 / 10 = 14.<br>2. Hitung varians (&sigma;²):<br>&nbsp;&nbsp;&nbsp;&nbsp;&sigma;² = (2320 / 10) &minus; 14² = 232 &minus; 196 = 36.<br>3. Hitung sisihan piawai (&sigma;):<br>&nbsp;&nbsp;&nbsp;&nbsp;&sigma; = &radic;36 = 6.",
+    tip: "Pastikan anda mengambil punca kuasa dua bagi varians (36) untuk mendapatkan sisihan piawai (6). 36 ialah varians, bukan sisihan piawai."
   },
   {
     num: 31,
@@ -809,7 +869,9 @@ const questions = [
       { key: "D", text: "Min = 54, &nbsp; Sisihan piawai = 2.5" }
     ],
     answer: "A",
-    solution: "Min baharu = 18 &times; 3 + 4 = 58. Sisihan piawai baharu = 2.5 &times; 3 = 7.5."
+    concept: "Kesan perubahan data: Penambahan pemalar (+k) MENGUBAH min tetapi TIDAK mengubah ukuran serakan (sisihan piawai kekal). Pendaraban pemalar (&times;k) MENGUBAH min dan juga sisihan piawai.",
+    stepByStep: "1. Min terkesan oleh pendaraban dan penambahan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Min baharu = (18 &times; 3) + 4 = 54 + 4 = 58.<br>2. Sisihan piawai HANYA terkesan oleh pendaraban (penambahan +4 tidak mengubah serakan):<br>&nbsp;&nbsp;&nbsp;&nbsp;Sisihan piawai baharu = 2.5 &times; 3 = 7.5.<br>Maka: Min = 58, Sisihan piawai = 7.5.",
+    tip: "Ingat peraturan emas: Menambah atau menolak nombor hanya menganjak kedudukan graf secara keseluruhan tanpa melebarkan atau menyempitkan serakannya."
   },
   {
     num: 32,
@@ -824,7 +886,9 @@ const questions = [
       { key: "D", text: "Julat = 95, &nbsp; Julat antara kuartil = 45" }
     ],
     answer: "A",
-    solution: "Julat = 95 &minus; 20 = 75. Julat antara kuartil = 75 &minus; 45 = 30."
+    concept: "Plot kotak (Box plot) memaparkan 5 nombor ringkasan: Nilai Minimum, Q₁, Median, Q₃, dan Nilai Maksimum. Julat = Maks &minus; Min. Julat antara kuartil = Q₃ &minus; Q₁.",
+    stepByStep: "1. Baca nilai daripada plot kotak:<br>&nbsp;&nbsp;&nbsp;&nbsp;Nilai minimum = 20<br>&nbsp;&nbsp;&nbsp;&nbsp;Kuartil pertama (Q₁) = 45<br>&nbsp;&nbsp;&nbsp;&nbsp;Median = 60<br>&nbsp;&nbsp;&nbsp;&nbsp;Kuartil ketiga (Q₃) = 75<br>&nbsp;&nbsp;&nbsp;&nbsp;Nilai maksimum = 95<br>2. Kira Julat = 95 &minus; 20 = 75.<br>3. Kira Julat antara kuartil = Q₃ &minus; Q₁ = 75 &minus; 45 = 30.",
+    tip: "Kotak segi empat di tengah mewakili julat antara kuartil (Q₁ ke Q₃), manakala garis misai luar menunjukkan nilai ekstrem (Min dan Maks)."
   },
   {
     num: 33,
@@ -839,7 +903,9 @@ const questions = [
       { key: "D", text: "1/2" }
     ],
     answer: "B",
-    solution: "P(Angka &cap; Perdana) = 1/2 &times; 3/6 = 1/2 &times; 1/2 = 1/4."
+    concept: "Peristiwa tak bersandar: Kebarangkalian berlakunya peristiwa A dan B serentak ialah hasil darab kebarangkalian individu: P(A &cap; B) = P(A) &times; P(B).",
+    stepByStep: "1. Kebarangkalian mendapat angka pada syiling:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Angka) = 1/2.<br>2. Nombor perdana pada dadu adil (dari 1 hingga 6):<br>&nbsp;&nbsp;&nbsp;&nbsp;Nombor perdana ialah {2, 3, 5} (3 nombor daripada 6).<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Perdana) = 3/6 = 1/2.<br>3. Kerana kedua-dua peristiwa tidak bersandar:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Angka &cap; Perdana) = P(Angka) &times; P(Perdana) = 1/2 &times; 1/2 = 1/4.",
+    tip: "Ingat bahawa nombor 1 BUKAN nombor perdana. Nombor perdana pada dadu hanya 2, 3, dan 5."
   },
   {
     num: 34,
@@ -854,7 +920,9 @@ const questions = [
       { key: "D", text: "5/18" }
     ],
     answer: "B",
-    solution: "P(Kedua-dua merah) = (6/10) &times; (5/9) = 30/90 = 1/3."
+    concept: "Peristiwa bersandar (tanpa pengembalian): Jumlah guli dan bilangan guli dalam kotak berkurang sebanyak 1 selepas cabutan pertama.",
+    stepByStep: "1. Jumlah awal guli = 6 merah + 4 biru = 10 guli.<br>2. Kebarangkalian guli pertama merah = 6 / 10.<br>3. Selepas 1 guli merah dikeluarkan tanpa pengembalian:<br>&nbsp;&nbsp;&nbsp;&nbsp;Baki guli merah = 5, baki jumlah guli = 9.<br>4. Kebarangkalian guli kedua merah = 5 / 9.<br>5. P(Kedua-dua merah) = (6 / 10) &times; (5 / 9) = 30 / 90 = 1/3.",
+    tip: "Frasa 'tanpa pengembalian' ialah kata kunci utama. Pastikan penyebut pada cabutan kedua dikurangkan kepada 9!"
   },
   {
     num: 35,
@@ -869,7 +937,9 @@ const questions = [
       { key: "D", text: "11/25" }
     ],
     answer: "B",
-    solution: "n(A) = 5, n(B) = 5, A &cap; B = {25}. n(A &cup; B) = 5 + 5 &minus; 1 = 9 &rArr; 9/25."
+    concept: "Hukum Penambahan Kebarangkalian: P(A &cup; B) = P(A) + P(B) &minus; P(A &cap; B). Tolak persilangan supaya unsur sepunya tidak dikira dua kali.",
+    stepByStep: "1. Ruang sampel: n(S) = 25.<br>2. Peristiwa A (gandaan 5): {5, 10, 15, 20, 25} &rArr; n(A) = 5.<br>3. Peristiwa B (kuasa dua sempurna): {1, 4, 9, 16, 25} &rArr; n(B) = 5.<br>4. Unsur sepunya A &cap; B: {25} &rArr; n(A &cap; B) = 1.<br>5. n(A &cup; B) = 5 + 5 &minus; 1 = 9.<br>6. P(A &cup; B) = 9 / 25.",
+    tip: "Nombor 25 ialah gandaan 5 dan juga kuasa dua sempurna (5² = 25). Pastikan tolak 1 supaya ia tidak dikira dua kali!"
   },
   {
     num: 36,
@@ -884,7 +954,9 @@ const questions = [
       { key: "D", text: "1/20" }
     ],
     answer: "C",
-    solution: "1 &minus; P(Gagal kedua-duanya) = 1 &minus; (1/4 &times; 1/5) = 1 &minus; 1/20 = 19/20."
+    concept: "Teknik Kebarangkalian Pelengkap: P(Sekurang-kurangnya satu berjaya) = 1 &minus; P(Kedua-duanya gagal).",
+    stepByStep: "1. Kira kebarangkalian gagal setiap subjek:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Gagal Math) = 1 &minus; 3/4 = 1/4<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Gagal Sains) = 1 &minus; 4/5 = 1/5<br>2. Kebarangkalian gagal kedua-dua subjek:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Gagal kedua-dua) = 1/4 &times; 1/5 = 1/20<br>3. Gunakan pelengkap untuk mencari sekurang-kurangnya satu lulus:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(&ge; 1 lulus) = 1 &minus; 1/20 = 19/20.",
+    tip: "Kaedah pelengkap (1 &minus; gagal semua) adalah jauh lebih pantas berbanding mengira tiga kebarangkalian berasingan (lulus Math saja + lulus Sains saja + lulus dua-dua)."
   },
   {
     num: 37,
@@ -899,7 +971,9 @@ const questions = [
       { key: "D", text: "T &ndash; Berikat masa / Time-bound" }
     ],
     answer: "D",
-    solution: "'Dalam tempoh 12 bulan' ialah jangka masa matlamat, iaitu T (Time-bound / Berikat masa)."
+    concept: "Konsep SMART dalam perancangan kewangan:<br>&bull; S (Specific) - Khusus<br>&bull; M (Measurable) - Boleh diukur nilai wang<br>&bull; A (Attainable) - Boleh dicapai<br>&bull; R (Realistic) - Realistik<br>&bull; T (Time-bound) - Berikat masa (ada tempoh sasaran).",
+    stepByStep: "1. 'Dalam tempoh 12 bulan' menetapkan garis masa atau jangka masa tamat bagi mencapai matlamat.<br>2. Komponen SMART yang mewakili jangka masa ialah T (Time-bound / Berikat masa).",
+    tip: "Jangan terkeliru: RM 7,200 ialah M (Measurable / Boleh diukur), manakala 12 bulan ialah T (Time-bound / Berikat masa)."
   },
   {
     num: 38,
@@ -926,7 +1000,9 @@ const questions = [
       { key: "D", text: "Lebihan RM 1,300" }
     ],
     answer: "C",
-    solution: "Pendapatan = RM 4,300. Aliran keluar = RM 3,430. Aliran tunai = +RM 870 (Lebihan / Surplus)."
+    concept: "Aliran Tunai Bersih = Jumlah Pendapatan &minus; Jumlah Aliran Keluar (Simpanan + Perbelanjaan). Jika nilai positif, ia merupakan Lebihan (Surplus); jika negatif, Defisit.",
+    stepByStep: "1. Jumlah Pendapatan = 3,800 + 500 = RM 4,300.<br>2. Jumlah Aliran Keluar = Simpanan (430) + Perbelanjaan Tetap (1,600) + Perbelanjaan Tidak Tetap (1,400) = RM 3,430.<br>3. Aliran Tunai Bersih = RM 4,300 &minus; RM 3,430 = +RM 870.<br>Nilai positif menandakan aliran tunai LEBIHAN (Surplus) sebanyak RM 870.",
+    tip: "Pastikan simpanan tetap dimasukkan dalam aliran keluar semasa mengira baki tunai akhir."
   },
   {
     num: 39,
@@ -941,7 +1017,9 @@ const questions = [
       { key: "D", text: "RM 19,200" }
     ],
     answer: "B",
-    solution: "Minimum dana kecemasan = 3 &times; RM 3,200 = RM 9,600."
+    concept: "Dana Kecemasan Minimum = 3 &times; Perbelanjaan Bulanan. Dana Kecemasan Maksimum = 6 &times; Perbelanjaan Bulanan.",
+    stepByStep: "1. Perbelanjaan bulanan = RM 3,200.<br>2. Jumlah minimum disyorkan ialah 3 bulan perbelanjaan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Dana Kecemasan = 3 &times; RM 3,200 = RM 9,600.",
+    tip: "Perhatikan kata kunci 'MINIMUM' dalam soalan (3 bulan). Jika soalan meminta maksimum, barulah darab dengan 6 (RM 19,200)."
   },
   {
     num: 40,
@@ -956,11 +1034,12 @@ const questions = [
       { key: "D", text: "RM 250" }
     ],
     answer: "B",
-    solution: "Simpanan sebulan diperlukan = RM 3,000 / 5 = RM 600. Simpanan tambahan = RM 600 &minus; RM 450 = RM 150 sebulan."
+    concept: "Simpanan Bulanan Diperlukan = Harga Matlamat / Tempoh Bulan. Simpanan Tambahan = Simpanan Diperlukan &minus; Lebihan Bulanan Sedia Ada.",
+    stepByStep: "1. Hitung simpanan yang perlu dibuat setiap bulan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Simpanan sebulan = RM 3,000 &divide; 5 bulan = RM 600 sebulan.<br>2. Lebihan wang sedia ada Azman = RM 450 sebulan.<br>3. Simpanan tambahan yang diperlukan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Simpanan tambahan = RM 600 &minus; RM 450 = RM 150 sebulan.",
+    tip: "Soalan menanyakan SIMPANAN TAMBAHAN yang perlu dicari, bukan jumlah simpanan penuh (RM 600). Tolak lebihan sedia ada RM 450."
   }
 ];
 
-// Write questions json file for clean separation or embed directly in index.html
 const questionsJson = JSON.stringify(questions);
 
 const indexHtmlContent = `<!DOCTYPE html>
@@ -968,7 +1047,7 @@ const indexHtmlContent = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ujian Interaktif: Matematik Tingkatan 4 Kertas 1 (1449/1)</title>
+  <title>Ujian Interaktif & Pembelajaran: Matematik Tingkatan 4 (1449/1)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Times+New+Roman&display=swap" rel="stylesheet">
@@ -984,6 +1063,8 @@ const indexHtmlContent = `<!DOCTYPE html>
       --danger-subtle: #fef2f2;
       --warning: #d97706;
       --warning-subtle: #fffbeb;
+      --purple: #7c3aed;
+      --purple-subtle: #f5f3ff;
       --slate-50: #f8fafc;
       --slate-100: #f1f5f9;
       --slate-200: #e2e8f0;
@@ -1009,17 +1090,17 @@ const indexHtmlContent = `<!DOCTYPE html>
 
     /* Header */
     header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
       color: #fff;
-      padding: 1.5rem 1rem;
+      padding: 1.25rem 1rem;
       position: sticky;
       top: 0;
       z-index: 40;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
 
     .header-container {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -1046,8 +1127,33 @@ const indexHtmlContent = `<!DOCTYPE html>
     .header-tools {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
       flex-wrap: wrap;
+    }
+
+    .mode-toggle-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 0.45rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .mode-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .mode-toggle-btn.active-learn {
+      background: #10b981;
+      border-color: #34d399;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
     }
 
     .timer-badge {
@@ -1056,10 +1162,10 @@ const indexHtmlContent = `<!DOCTYPE html>
       gap: 0.4rem;
       background: rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(8px);
-      padding: 0.45rem 0.9rem;
+      padding: 0.45rem 0.85rem;
       border-radius: 9999px;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       border: 1px solid rgba(255,255,255,0.2);
     }
 
@@ -1079,8 +1185,8 @@ const indexHtmlContent = `<!DOCTYPE html>
       justify-content: center;
       gap: 0.4rem;
       font-weight: 600;
-      font-size: 0.875rem;
-      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      padding: 0.5rem 0.9rem;
       border-radius: 0.5rem;
       cursor: pointer;
       transition: all 0.15s ease-in-out;
@@ -1112,7 +1218,7 @@ const indexHtmlContent = `<!DOCTYPE html>
 
     /* Layout */
     .main-layout {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 1.5rem auto;
       padding: 0 1rem;
       display: grid;
@@ -1121,13 +1227,41 @@ const indexHtmlContent = `<!DOCTYPE html>
       align-items: start;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       .main-layout {
         grid-template-columns: 1fr;
       }
     }
 
-    /* Candidate Info Bar */
+    /* Candidate Info & Learning Mode Banner */
+    .mode-banner {
+      background: linear-gradient(135deg, #ecfdf5 0%, #eff6ff 100%);
+      border: 1.5px solid #a7f3d0;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .mode-banner-text h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .mode-banner-text p {
+      font-size: 0.85rem;
+      color: #047857;
+      margin-top: 0.15rem;
+    }
+
     .candidate-card {
       background: #fff;
       border-radius: 0.75rem;
@@ -1139,7 +1273,7 @@ const indexHtmlContent = `<!DOCTYPE html>
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
 
     .candidate-inputs {
@@ -1178,13 +1312,13 @@ const indexHtmlContent = `<!DOCTYPE html>
     /* Question Cards */
     .question-card {
       background: #fff;
-      border-radius: 0.75rem;
+      border-radius: 0.85rem;
       padding: 1.5rem;
-      border: 1px solid var(--slate-200);
-      margin-bottom: 1.25rem;
+      border: 1.5px solid var(--slate-200);
+      margin-bottom: 1.5rem;
       box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      scroll-margin-top: 90px;
+      transition: all 0.2s;
+      scroll-margin-top: 85px;
     }
 
     .question-card:hover {
@@ -1194,7 +1328,17 @@ const indexHtmlContent = `<!DOCTYPE html>
 
     .question-card.active-focus {
       border-color: var(--primary-light);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    }
+
+    .question-card.state-correct {
+      border-color: #10b981;
+      border-left: 6px solid #10b981;
+    }
+
+    .question-card.state-wrong {
+      border-color: #ef4444;
+      border-left: 6px solid #ef4444;
     }
 
     .q-top-row {
@@ -1211,34 +1355,40 @@ const indexHtmlContent = `<!DOCTYPE html>
       letter-spacing: 0.04em;
       color: var(--primary);
       background: var(--primary-subtle);
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 9999px;
     }
 
-    .flag-btn {
-      background: transparent;
-      border: 1px solid var(--slate-200);
-      border-radius: 0.375rem;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--slate-500);
-      cursor: pointer;
-      display: flex;
+    .q-status-badge {
+      display: none;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      animation: popIn 0.3s ease;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.85); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .q-status-badge.badge-correct {
+      display: inline-flex;
       align-items: center;
       gap: 0.3rem;
-      transition: all 0.15s;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
     }
 
-    .flag-btn:hover {
-      background: var(--slate-100);
-      color: var(--slate-700);
-    }
-
-    .flag-btn.flagged {
-      background: var(--warning-subtle);
-      border-color: #fde68a;
-      color: #b45309;
+    .q-status-badge.badge-wrong {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
     }
 
     .q-title-row {
@@ -1252,13 +1402,22 @@ const indexHtmlContent = `<!DOCTYPE html>
       color: #fff;
       font-weight: 800;
       font-size: 0.95rem;
-      min-width: 2rem;
-      height: 2rem;
+      min-width: 2.2rem;
+      height: 2.2rem;
       border-radius: 0.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .question-card.state-correct .q-number-pill {
+      background: #059669;
+    }
+
+    .question-card.state-wrong .q-number-pill {
+      background: #dc2626;
     }
 
     .q-text-wrapper {
@@ -1312,6 +1471,7 @@ const indexHtmlContent = `<!DOCTYPE html>
       cursor: pointer;
       transition: all 0.15s ease-in-out;
       background: #fff;
+      position: relative;
     }
 
     .option-card:hover {
@@ -1324,9 +1484,19 @@ const indexHtmlContent = `<!DOCTYPE html>
       background: var(--primary-subtle);
     }
 
+    .option-card.opt-correct {
+      border-color: #10b981 !important;
+      background: #ecfdf5 !important;
+    }
+
+    .option-card.opt-wrong {
+      border-color: #ef4444 !important;
+      background: #fef2f2 !important;
+    }
+
     .opt-indicator {
-      width: 1.75rem;
-      height: 1.75rem;
+      width: 1.85rem;
+      height: 1.85rem;
       border-radius: 50%;
       border: 1.5px solid var(--slate-300);
       display: flex;
@@ -1345,11 +1515,122 @@ const indexHtmlContent = `<!DOCTYPE html>
       color: #fff;
     }
 
+    .option-card.opt-correct .opt-indicator {
+      background: #10b981 !important;
+      border-color: #10b981 !important;
+      color: #fff !important;
+    }
+
+    .option-card.opt-wrong .opt-indicator {
+      background: #ef4444 !important;
+      border-color: #ef4444 !important;
+      color: #fff !important;
+    }
+
     .opt-label {
       font-size: 0.95rem;
       font-weight: 500;
       color: var(--slate-800);
       flex-grow: 1;
+    }
+
+    .opt-feedback-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      margin-left: 0.5rem;
+    }
+
+    .opt-feedback-tag.tag-correct {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .opt-feedback-tag.tag-wrong {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* Educational Tutorial Card */
+    .teaching-box {
+      display: none;
+      margin-top: 1.25rem;
+      background: #fdfefe;
+      border: 1.5px solid #bfdbfe;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .teaching-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1.5px solid #dbeafe;
+    }
+
+    .teaching-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #1e40af;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .teaching-badge-result {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+    }
+
+    .teach-section {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .teach-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .teach-section h5 {
+      font-size: 0.825rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #3b82f6;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .teach-content {
+      background: #f8fafc;
+      padding: 0.65rem 0.85rem;
+      border-radius: 0.5rem;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+
+    .teach-tip {
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      color: #92400e;
+      padding: 0.65rem 0.85rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
     }
 
     /* Sidebar Navigation */
@@ -1416,7 +1697,7 @@ const indexHtmlContent = `<!DOCTYPE html>
       justify-content: center;
       font-weight: 700;
       font-size: 0.85rem;
-      border: 1px solid var(--slate-300);
+      border: 1.5px solid var(--slate-300);
       border-radius: 0.375rem;
       background: #fff;
       cursor: pointer;
@@ -1429,21 +1710,22 @@ const indexHtmlContent = `<!DOCTYPE html>
       background: var(--slate-100);
     }
 
-    .nav-btn.answered {
+    .nav-btn.answered-correct {
+      background: #10b981;
+      color: #fff;
+      border-color: #10b981;
+    }
+
+    .nav-btn.answered-wrong {
+      background: #ef4444;
+      color: #fff;
+      border-color: #ef4444;
+    }
+
+    .nav-btn.answered-neutral {
       background: #2563eb;
       color: #fff;
       border-color: #2563eb;
-    }
-
-    .nav-btn.flagged::after {
-      content: '';
-      position: absolute;
-      top: 2px;
-      right: 2px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #f59e0b;
     }
 
     .sidebar-legend {
@@ -1469,8 +1751,8 @@ const indexHtmlContent = `<!DOCTYPE html>
     }
 
     .dot-unanswered { background: var(--slate-300); }
-    .dot-answered { background: #2563eb; }
-    .dot-flagged { background: #f59e0b; }
+    .dot-correct { background: #10b981; }
+    .dot-wrong { background: #ef4444; }
 
     /* Results Dashboard */
     .results-section {
@@ -1586,51 +1868,6 @@ const indexHtmlContent = `<!DOCTYPE html>
       font-weight: 700;
     }
 
-    /* Review question states */
-    .question-card.review-correct {
-      border-left: 5px solid var(--success);
-    }
-
-    .question-card.review-incorrect {
-      border-left: 5px solid var(--danger);
-    }
-
-    .option-card.correct-answer {
-      border-color: var(--success);
-      background: var(--success-subtle);
-    }
-
-    .option-card.correct-answer .opt-indicator {
-      background: var(--success);
-      border-color: var(--success);
-      color: #fff;
-    }
-
-    .option-card.wrong-selected {
-      border-color: var(--danger);
-      background: var(--danger-subtle);
-    }
-
-    .option-card.wrong-selected .opt-indicator {
-      background: var(--danger);
-      border-color: var(--danger);
-      color: #fff;
-    }
-
-    .solution-box {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: #f8fafc;
-      border-left: 3px solid #3b82f6;
-      border-radius: 0.375rem;
-      font-size: 0.9rem;
-      color: var(--slate-800);
-    }
-
-    .solution-box strong {
-      color: var(--primary);
-    }
-
     /* Modal */
     .modal-overlay {
       position: fixed;
@@ -1688,10 +1925,15 @@ const indexHtmlContent = `<!DOCTYPE html>
     <div class="header-container">
       <div class="header-brand">
         <h1>📐 MATEMATIK TINGKATAN 4 (1449/1)</h1>
-        <p>Peperiksaan Akhir Tahun &bull; 40 Soalan Objektif KSSM SPM</p>
+        <p>Peperiksaan Akhir Tahun &bull; Mod Pembelajaran &amp; Kuiz Interaktif</p>
       </div>
 
       <div class="header-tools">
+        <!-- Learning mode toggle -->
+        <button class="mode-toggle-btn active-learn" id="modeToggleBtn" onclick="toggleLearningMode()">
+          <span id="modeIcon">🎓</span> <span id="modeText">Mod Belajar (Aktif)</span>
+        </button>
+
         <div class="timer-badge" id="examTimer">
           ⏱️ <span id="timerText">01:30:00</span>
         </div>
@@ -1710,6 +1952,14 @@ const indexHtmlContent = `<!DOCTYPE html>
     <!-- Questions Column -->
     <div class="questions-column">
       
+      <!-- Interactive Learning Banner -->
+      <div class="mode-banner" id="modeBanner">
+        <div class="mode-banner-text">
+          <h3>🎓 Mod Belajar &amp; Bimbingan Interaktif Diaktifkan!</h3>
+          <p>Setiap kali anda klik jawapan, sistem akan terus memaklumkan sama ada jawapan anda <b>Betul</b> atau <b>Salah</b>, memaparkan jawapan sebenar, serta memberi jalan kerja dan petua menyelesaikan soalan!</p>
+        </div>
+      </div>
+
       <!-- Candidate Details -->
       <div class="candidate-card">
         <div class="candidate-inputs">
@@ -1731,9 +1981,9 @@ const indexHtmlContent = `<!DOCTYPE html>
       <div id="questionsContainer"></div>
 
       <!-- Bottom Submit Button -->
-      <div style="text-align: center; margin: 2rem 0;">
-        <button class="btn btn-submit" style="font-size: 1.1rem; padding: 0.75rem 2.5rem;" onclick="confirmSubmit()">
-          ✓ Hantar Jawapan Peperiksaan
+      <div style="text-align: center; margin: 2.5rem 0;">
+        <button class="btn btn-submit" style="font-size: 1.1rem; padding: 0.85rem 2.5rem;" onclick="confirmSubmit()">
+          ✓ Tamat &amp; Lihat Laporan Prestasi Keseluruhan
         </button>
       </div>
     </div>
@@ -1753,8 +2003,8 @@ const indexHtmlContent = `<!DOCTYPE html>
 
       <div class="sidebar-legend">
         <div class="legend-item"><span class="dot dot-unanswered"></span> Belum</div>
-        <div class="legend-item"><span class="dot dot-answered"></span> Selesai</div>
-        <div class="legend-item"><span class="dot dot-flagged"></span> Ditanda</div>
+        <div class="legend-item"><span class="dot dot-correct"></span> Betul</div>
+        <div class="legend-item"><span class="dot dot-wrong"></span> Salah</div>
       </div>
     </aside>
   </main>
@@ -1796,7 +2046,7 @@ const indexHtmlContent = `<!DOCTYPE html>
 
     <!-- Review Section Header -->
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-      <h3 style="font-size:1.25rem; font-weight:800;">Semakan Jawapan & Penyelesaian Lengkap</h3>
+      <h3 style="font-size:1.25rem; font-weight:800;">Semakan Keseluruhan Semua Soalan</h3>
       <div style="display:flex; gap:0.5rem;">
         <button class="btn btn-pdf" style="color:var(--slate-800); border-color:var(--slate-300);" onclick="filterReview('all')">Semua (40)</button>
         <button class="btn btn-pdf" style="color:var(--success); border-color:var(--success);" onclick="filterReview('correct')">Betul Sahaja</button>
@@ -1812,14 +2062,14 @@ const indexHtmlContent = `<!DOCTYPE html>
   <div class="modal-overlay" id="confirmModal">
     <div class="modal-box">
       <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📝</div>
-      <h3>Hantar Kertas Peperiksaan?</h3>
-      <p id="modalMsg">Adakah anda pasti mahu menghantar jawapan anda sekarang?</p>
+      <h3>Tamatkan Peperiksaan &amp; Jana Keputusan?</h3>
+      <p id="modalMsg">Adakah anda bersedia untuk menamatkan sesi ini dan melihat analisis penuh?</p>
       <div class="modal-buttons">
         <button class="btn btn-pdf" style="color: var(--slate-700); border-color: var(--slate-300);" onclick="closeModal()">
-          Batal & Semak Semula
+          Batal &amp; Teruskan Belajar
         </button>
         <button class="btn btn-submit" onclick="submitExam()">
-          Ya, Hantar Sekarang
+          Ya, Tamatkan Sekarang
         </button>
       </div>
     </div>
@@ -1830,7 +2080,7 @@ const indexHtmlContent = `<!DOCTYPE html>
 
     // State
     const userAnswers = {};
-    const flaggedQuestions = new Set();
+    let isLearningMode = true; // Default: instant feedback & teaching enabled!
     let timeLeft = 90 * 60; // 90 minutes
     let timerInterval = null;
     let examSubmitted = false;
@@ -1841,6 +2091,30 @@ const indexHtmlContent = `<!DOCTYPE html>
       renderNavGrid();
       startTimer();
     });
+
+    function toggleLearningMode() {
+      isLearningMode = !isLearningMode;
+      const btn = document.getElementById('modeToggleBtn');
+      const text = document.getElementById('modeText');
+      const banner = document.getElementById('modeBanner');
+
+      if (isLearningMode) {
+        btn.classList.add('active-learn');
+        text.innerText = 'Mod Belajar (Aktif)';
+        banner.style.display = 'flex';
+      } else {
+        btn.classList.remove('active-learn');
+        text.innerText = 'Mod Peperiksaan Sahaja';
+        banner.style.display = 'none';
+      }
+
+      // Re-apply visual states according to mode
+      questionsData.forEach(q => {
+        if (userAnswers[q.num]) {
+          applyQuestionFeedback(q.num, userAnswers[q.num]);
+        }
+      });
+    }
 
     function renderQuestions() {
       const container = document.getElementById('questionsContainer');
@@ -1856,13 +2130,11 @@ const indexHtmlContent = `<!DOCTYPE html>
         card.innerHTML = \`
           <div class="q-top-row">
             <span class="chapter-tag">\${q.chapter}</span>
-            <button class="flag-btn" id="flagBtn-\${q.num}" onclick="toggleFlag(\${q.num})">
-              📌 <span>Tanda untuk semakan</span>
-            </button>
+            <span class="q-status-badge" id="statusBadge-\${q.num}"></span>
           </div>
 
           <div class="q-title-row">
-            <div class="q-number-pill">\${q.num}</div>
+            <div class="q-number-pill" id="pill-\${q.num}">\${q.num}</div>
             <div class="q-text-wrapper">
               <div class="q-text-bm">\${q.bm}</div>
               <div class="q-text-en">\${q.en}</div>
@@ -1876,8 +2148,34 @@ const indexHtmlContent = `<!DOCTYPE html>
               <div class="option-card" id="optCard-\${q.num}-\${opt.key}" onclick="chooseOption(\${q.num}, '\${opt.key}')">
                 <div class="opt-indicator">\${opt.key}</div>
                 <div class="opt-label">\${opt.text}</div>
+                <span class="opt-feedback-tag" id="optFeedback-\${q.num}-\${opt.key}" style="display:none;"></span>
               </div>
             \`).join('')}
+          </div>
+
+          <!-- Educational Teaching Box (Expands when answered in Learning Mode) -->
+          <div class="teaching-box" id="teachBox-\${q.num}">
+            <div class="teaching-header">
+              <div class="teaching-title">
+                <span>💡 Bimbingan Guru &amp; Langkah Penyelesaian</span>
+              </div>
+              <span class="teaching-badge-result" id="teachBadge-\${q.num}"></span>
+            </div>
+
+            <div class="teach-section">
+              <h5>🎯 Konsep Asas &amp; Rumus Berkaitan:</h5>
+              <div class="teach-content">\${q.concept}</div>
+            </div>
+
+            <div class="teach-section">
+              <h5>📝 Langkah Demi Langkah Pengiraan:</h5>
+              <div class="teach-content">\${q.stepByStep}</div>
+            </div>
+
+            <div class="teach-section">
+              <h5>⚠️ Petua Peperiksaan &amp; Kesilapan Lazim:</h5>
+              <div class="teach-tip"><strong>Tip Peperiksaan:</strong> \${q.tip}</div>
+            </div>
           </div>
         \`;
 
@@ -1904,7 +2202,7 @@ const indexHtmlContent = `<!DOCTYPE html>
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
         el.classList.add('active-focus');
-        setTimeout(() => el.classList.remove('active-focus'), 1200);
+        setTimeout(() => el.classList.remove('active-focus'), 1000);
       }
     }
 
@@ -1912,43 +2210,96 @@ const indexHtmlContent = `<!DOCTYPE html>
       if (examSubmitted) return;
 
       userAnswers[qNum] = key;
-
-      // Update option card visual
-      const options = ['A', 'B', 'C', 'D'];
-      options.forEach(opt => {
-        const el = document.getElementById(\`optCard-\${qNum}-\${opt}\`);
-        if (el) {
-          if (opt === key) {
-            el.classList.add('selected');
-          } else {
-            el.classList.remove('selected');
-          }
-        }
-      });
-
-      // Update nav button
-      const navBtn = document.getElementById('navBtn-' + qNum);
-      if (navBtn) {
-        navBtn.classList.add('answered');
-      }
-
+      applyQuestionFeedback(qNum, key);
       updateProgress();
     }
 
-    function toggleFlag(qNum) {
-      const btn = document.getElementById('flagBtn-' + qNum);
+    function applyQuestionFeedback(qNum, chosenKey) {
+      const q = questionsData.find(item => item.num === qNum);
+      const isCorrect = chosenKey === q.answer;
+      const card = document.getElementById('qcard-' + qNum);
+      const teachBox = document.getElementById('teachBox-' + qNum);
+      const teachBadge = document.getElementById('teachBadge-' + qNum);
+      const statusBadge = document.getElementById('statusBadge-' + qNum);
       const navBtn = document.getElementById('navBtn-' + qNum);
 
-      if (flaggedQuestions.has(qNum)) {
-        flaggedQuestions.delete(qNum);
-        btn.classList.remove('flagged');
-        btn.querySelector('span').innerText = 'Tanda untuk semakan';
-        if (navBtn) navBtn.classList.remove('flagged');
+      // Reset option styles
+      const options = ['A', 'B', 'C', 'D'];
+      options.forEach(opt => {
+        const optCard = document.getElementById(\`optCard-\${qNum}-\${opt}\`);
+        const feedbackTag = document.getElementById(\`optFeedback-\${qNum}-\${opt}\`);
+        optCard.classList.remove('selected', 'opt-correct', 'opt-wrong');
+        feedbackTag.style.display = 'none';
+        feedbackTag.className = 'opt-feedback-tag';
+      });
+
+      const selectedOptCard = document.getElementById(\`optCard-\${qNum}-\${chosenKey}\`);
+      selectedOptCard.classList.add('selected');
+
+      if (isLearningMode) {
+        // INSTANT LEARNING FEEDBACK!
+        if (isCorrect) {
+          card.classList.remove('state-wrong');
+          card.classList.add('state-correct');
+          selectedOptCard.classList.add('opt-correct');
+
+          const tag = document.getElementById(\`optFeedback-\${qNum}-\${chosenKey}\`);
+          tag.innerText = '✓ Jawapan Tepat!';
+          tag.classList.add('tag-correct');
+          tag.style.display = 'inline-block';
+
+          statusBadge.className = 'q-status-badge badge-correct';
+          statusBadge.innerHTML = '✓ BETUL (+1)';
+          statusBadge.style.display = 'inline-flex';
+
+          teachBadge.innerText = '✓ Tahniah! Jawapan Tepat';
+          teachBadge.style.background = '#d1fae5';
+          teachBadge.style.color = '#065f46';
+
+          if (navBtn) {
+            navBtn.className = 'nav-btn answered-correct';
+          }
+        } else {
+          card.classList.remove('state-correct');
+          card.classList.add('state-wrong');
+          selectedOptCard.classList.add('opt-wrong');
+
+          const wrongTag = document.getElementById(\`optFeedback-\${qNum}-\${chosenKey}\`);
+          wrongTag.innerText = '✗ Kurang Tepat';
+          wrongTag.classList.add('tag-wrong');
+          wrongTag.style.display = 'inline-block';
+
+          // Reveal correct answer gently in green
+          const correctOptCard = document.getElementById(\`optCard-\${qNum}-\${q.answer}\`);
+          correctOptCard.classList.add('opt-correct');
+          const correctTag = document.getElementById(\`optFeedback-\${qNum}-\${q.answer}\`);
+          correctTag.innerText = '✓ Jawapan Sebenar';
+          correctTag.classList.add('tag-correct');
+          correctTag.style.display = 'inline-block';
+
+          statusBadge.className = 'q-status-badge badge-wrong';
+          statusBadge.innerHTML = '✗ SALAH &bull; Jawapan: ' + q.answer;
+          statusBadge.style.display = 'inline-flex';
+
+          teachBadge.innerText = '⚠️ Semak Jawapan Sebenar: (' + q.answer + ')';
+          teachBadge.style.background = '#fee2e2';
+          teachBadge.style.color = '#991b1b';
+
+          if (navBtn) {
+            navBtn.className = 'nav-btn answered-wrong';
+          }
+        }
+
+        // Show teaching card
+        teachBox.style.display = 'block';
       } else {
-        flaggedQuestions.add(qNum);
-        btn.classList.add('flagged');
-        btn.querySelector('span').innerText = 'Ditanda (Flagged)';
-        if (navBtn) navBtn.classList.add('flagged');
+        // Exam mode: no immediate hints
+        card.classList.remove('state-correct', 'state-wrong');
+        teachBox.style.display = 'none';
+        statusBadge.style.display = 'none';
+        if (navBtn) {
+          navBtn.className = 'nav-btn answered-neutral';
+        }
       }
     }
 
@@ -1992,9 +2343,9 @@ const indexHtmlContent = `<!DOCTYPE html>
       const unAnswered = 40 - answeredCount;
 
       if (unAnswered > 0) {
-        msg.innerHTML = \`<span style="color:#dc2626; font-weight:700;">Amaran:</span> Anda masih mempunyai <b>\${unAnswered} soalan</b> yang belum dijawab!<br>Adakah anda pasti mahu menghantar kertas peperiksaan sekarang?\`;
+        msg.innerHTML = \`<span style="color:#dc2626; font-weight:700;">Pemberitahuan:</span> Anda masih mempunyai <b>\${unAnswered} soalan</b> yang belum dijawab.<br>Adakah anda ingin menamatkan latihan sekarang untuk melihat analisis prestasi penuh?\`;
       } else {
-        msg.innerText = "Tahniah! Anda telah menjawab kesemua 40 soalan. Adakah anda bersedia untuk menghantar jawapan dan melihat keputusan?";
+        msg.innerText = "Tahniah! Anda telah menjawab kesemua 40 soalan. Adakah anda bersedia untuk menjana slip keputusan dan analisis bab?";
       }
 
       modal.style.display = 'flex';
@@ -2085,10 +2436,10 @@ const indexHtmlContent = `<!DOCTYPE html>
       });
 
       // Render reviewed questions
-      renderReviewCards();
+      renderFinalReviewCards();
     }
 
-    function renderReviewCards() {
+    function renderFinalReviewCards() {
       const container = document.getElementById('reviewedQuestionsContainer');
       container.innerHTML = '';
 
@@ -2097,7 +2448,7 @@ const indexHtmlContent = `<!DOCTYPE html>
         const isCorrect = userChoice === q.answer;
 
         const card = document.createElement('div');
-        card.className = 'question-card ' + (isCorrect ? 'review-correct' : 'review-incorrect');
+        card.className = 'question-card ' + (isCorrect ? 'state-correct' : 'state-wrong');
         card.dataset.status = isCorrect ? 'correct' : 'wrong';
 
         card.innerHTML = \`
@@ -2121,27 +2472,39 @@ const indexHtmlContent = `<!DOCTYPE html>
           <div class="options-list">
             \${q.options.map(opt => {
               let optClass = '';
+              let badge = '';
               if (opt.key === q.answer) {
-                optClass = 'correct-answer';
+                optClass = 'opt-correct';
+                badge = ' <b style="color:#059669;">(✓ Jawapan Sebenar)</b>';
               } else if (opt.key === userChoice && !isCorrect) {
-                optClass = 'wrong-selected';
+                optClass = 'opt-wrong';
+                badge = ' <b style="color:#dc2626;">(✗ Pilihan Anda)</b>';
               }
               return \`
                 <div class="option-card \${optClass}" style="cursor:default;">
                   <div class="opt-indicator">\${opt.key}</div>
-                  <div class="opt-label">
-                    \${opt.text}
-                    \${opt.key === q.answer ? ' <b style="color:#059669;">(Jawapan Sebenar)</b>' : ''}
-                    \${opt.key === userChoice && !isCorrect ? ' <b style="color:#dc2626;">(Pilihan Anda)</b>' : ''}
-                  </div>
+                  <div class="opt-label">\${opt.text} \${badge}</div>
                 </div>
               \`;
             }).join('')}
           </div>
 
-          <div class="solution-box">
-            <strong>💡 Jalan Kerja & Penerangan:</strong><br>
-            \${q.solution}
+          <div class="teaching-box" style="display:block; margin-top:1rem;">
+            <div class="teaching-header">
+              <div class="teaching-title"><span>💡 Penerangan Konsep &amp; Jalan Kerja Lengkap</span></div>
+            </div>
+            <div class="teach-section">
+              <h5>🎯 Konsep Asas:</h5>
+              <div class="teach-content">\${q.concept}</div>
+            </div>
+            <div class="teach-section">
+              <h5>📝 Langkah Demi Langkah:</h5>
+              <div class="teach-content">\${q.stepByStep}</div>
+            </div>
+            <div class="teach-section">
+              <h5>⚠️ Tip Penting:</h5>
+              <div class="teach-tip">\${q.tip}</div>
+            </div>
           </div>
         \`;
 
@@ -2163,7 +2526,7 @@ const indexHtmlContent = `<!DOCTYPE html>
     }
 
     function retakeExam() {
-      if (confirm("Adakah anda ingin mengulangi ujian ini semula? Semua pilihan semasa akan ditetapkan semula.")) {
+      if (confirm("Adakah anda ingin mengulangi sesi latihan ini semula? Semua pilihan semasa akan ditetapkan semula.")) {
         location.reload();
       }
     }
@@ -2173,4 +2536,4 @@ const indexHtmlContent = `<!DOCTYPE html>
 `;
 
 fs.writeFileSync(path.join(__dirname, 'index.html'), indexHtmlContent, 'utf8');
-console.log("Interactive website generated successfully at: " + path.join(__dirname, 'index.html'));
+console.log("Interactive Learning website generated successfully at: " + path.join(__dirname, 'index.html'));
