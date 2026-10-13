@@ -1,0 +1,2176 @@
+const fs = require('fs');
+const path = require('path');
+
+// SVGs definitions for web
+function generateParabolaSvg() {
+  return `
+  <svg width="280" height="170" viewBox="0 0 280 170" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
+      </marker>
+    </defs>
+    <line x1="25" y1="130" x2="255" y2="130" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="260" y="134" font-size="12" font-weight="bold">x</text>
+    <line x1="60" y1="155" x2="60" y2="20" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="52" y="15" font-size="12" font-weight="bold">f(x)</text>
+    <text x="48" y="142" font-size="11">O</text>
+    <path d="M 75 142 Q 142 -10 209 142" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+    <line x1="142" y1="130" x2="142" y2="55" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="60" y1="55" x2="142" y2="55" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <circle cx="142" cy="55" r="3.5" fill="#1e293b"/>
+    <text x="147" y="50" font-size="11" font-weight="bold">(3, 4)</text>
+    <text x="82" y="144" font-size="11">1</text>
+    <text x="195" y="144" font-size="11">5</text>
+    <text x="48" y="59" font-size="11">4</text>
+    <text x="136" y="144" font-size="11">3</text>
+    <text x="156" y="96" font-size="11" font-style="italic" fill="#1d4ed8">f(x) = &minus;x² + 6x &minus; 5</text>
+  </svg>`;
+}
+
+function generateVennSvg() {
+  return `
+  <svg width="260" height="160" viewBox="0 0 260 160" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <clipPath id="circleP"><circle cx="100" cy="68" r="46"/></clipPath>
+    </defs>
+    <rect x="8" y="8" width="244" height="144" fill="#f8fafc" stroke="#334155" stroke-width="1.5" rx="4"/>
+    <text x="18" y="26" font-size="13" font-weight="bold">&xi;</text>
+    <g clip-path="url(#circleP)">
+      <circle cx="156" cy="68" r="46" fill="#93c5fd" />
+    </g>
+    <circle cx="128" cy="108" r="40" fill="#f8fafc" stroke="none"/>
+    <circle cx="100" cy="68" r="46" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+    <circle cx="156" cy="68" r="46" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+    <circle cx="128" cy="108" r="40" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+    <text x="72" y="44" font-size="13" font-weight="bold">P</text>
+    <text x="176" y="44" font-size="13" font-weight="bold">Q</text>
+    <text x="124" y="144" font-size="13" font-weight="bold">R</text>
+  </svg>`;
+}
+
+function generateTreeComparisonSvg() {
+  return `
+  <div class="tree-grid">
+    <div class="tree-box">
+      <svg width="100" height="90" viewBox="0 0 100 90">
+        <text x="6" y="15" font-weight="bold">A</text>
+        <line x1="22" y1="65" x2="50" y2="24" stroke="#334155" stroke-width="1.6"/>
+        <line x1="50" y1="24" x2="76" y2="65" stroke="#334155" stroke-width="1.6"/>
+        <line x1="76" y1="65" x2="22" y2="65" stroke="#334155" stroke-width="1.6"/>
+        <line x1="76" y1="65" x2="92" y2="42" stroke="#334155" stroke-width="1.6"/>
+        <circle cx="22" cy="65" r="4" fill="#1e293b"/>
+        <circle cx="50" cy="24" r="4" fill="#1e293b"/>
+        <circle cx="76" cy="65" r="4" fill="#1e293b"/>
+        <circle cx="92" cy="42" r="4" fill="#1e293b"/>
+      </svg>
+    </div>
+    <div class="tree-box">
+      <svg width="100" height="90" viewBox="0 0 100 90">
+        <text x="6" y="15" font-weight="bold">B</text>
+        <line x1="18" y1="32" x2="44" y2="32" stroke="#334155" stroke-width="1.6"/>
+        <line x1="66" y1="32" x2="88" y2="64" stroke="#334155" stroke-width="1.6"/>
+        <circle cx="18" cy="32" r="4" fill="#1e293b"/>
+        <circle cx="44" cy="32" r="4" fill="#1e293b"/>
+        <circle cx="66" cy="32" r="4" fill="#1e293b"/>
+        <circle cx="88" cy="64" r="4" fill="#1e293b"/>
+      </svg>
+    </div>
+    <div class="tree-box">
+      <svg width="100" height="90" viewBox="0 0 100 90">
+        <text x="6" y="15" font-weight="bold">C</text>
+        <line x1="50" y1="18" x2="25" y2="48" stroke="#334155" stroke-width="1.8"/>
+        <line x1="50" y1="18" x2="75" y2="48" stroke="#334155" stroke-width="1.8"/>
+        <line x1="25" y1="48" x2="16" y2="76" stroke="#334155" stroke-width="1.8"/>
+        <line x1="25" y1="48" x2="40" y2="76" stroke="#334155" stroke-width="1.8"/>
+        <circle cx="50" cy="18" r="4" fill="#1e293b"/>
+        <circle cx="25" cy="48" r="4" fill="#1e293b"/>
+        <circle cx="75" cy="48" r="4" fill="#1e293b"/>
+        <circle cx="16" cy="76" r="4" fill="#1e293b"/>
+        <circle cx="40" cy="76" r="4" fill="#1e293b"/>
+      </svg>
+    </div>
+    <div class="tree-box">
+      <svg width="100" height="90" viewBox="0 0 100 90">
+        <text x="6" y="15" font-weight="bold">D</text>
+        <polygon points="24,24 74,24 74,66 24,66" fill="none" stroke="#334155" stroke-width="1.6"/>
+        <circle cx="24" cy="24" r="4" fill="#1e293b"/>
+        <circle cx="74" cy="24" r="4" fill="#1e293b"/>
+        <circle cx="74" cy="66" r="4" fill="#1e293b"/>
+        <circle cx="24" cy="66" r="4" fill="#1e293b"/>
+      </svg>
+    </div>
+  </div>`;
+}
+
+function generateWeightedNetworkSvg() {
+  return `
+  <svg width="300" height="155" viewBox="0 0 300 155" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="32" y1="80" x2="112" y2="34" stroke="#334155" stroke-width="1.6"/>
+    <line x1="32" y1="80" x2="130" y2="122" stroke="#334155" stroke-width="1.6"/>
+    <line x1="112" y1="34" x2="130" y2="122" stroke="#334155" stroke-width="1.6"/>
+    <line x1="112" y1="34" x2="202" y2="38" stroke="#334155" stroke-width="1.6"/>
+    <line x1="130" y1="122" x2="202" y2="38" stroke="#334155" stroke-width="1.6"/>
+    <line x1="130" y1="122" x2="265" y2="80" stroke="#334155" stroke-width="1.6"/>
+    <line x1="202" y1="38" x2="265" y2="80" stroke="#334155" stroke-width="1.6"/>
+
+    <text x="66" y="50" font-size="11" font-weight="bold" fill="#b91c1c">10</text>
+    <text x="68" y="108" font-size="11" font-weight="bold" fill="#b91c1c">14</text>
+    <text x="127" y="78" font-size="11" font-weight="bold" fill="#b91c1c">3</text>
+    <text x="154" y="30" font-size="11" font-weight="bold" fill="#b91c1c">11</text>
+    <text x="171" y="90" font-size="11" font-weight="bold" fill="#b91c1c">6</text>
+    <text x="195" y="118" font-size="11" font-weight="bold" fill="#b91c1c">12</text>
+    <text x="238" y="54" font-size="11" font-weight="bold" fill="#b91c1c">8</text>
+
+    <circle cx="32" cy="80" r="13" fill="#f8fafc" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="28" y="85" font-size="12" font-weight="bold">P</text>
+    <circle cx="112" cy="34" r="13" fill="#f8fafc" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="107" y="39" font-size="12" font-weight="bold">Q</text>
+    <circle cx="130" cy="122" r="13" fill="#f8fafc" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="125" y="127" font-size="12" font-weight="bold">R</text>
+    <circle cx="202" cy="38" r="13" fill="#f8fafc" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="198" y="43" font-size="12" font-weight="bold">S</text>
+    <circle cx="265" cy="80" r="13" fill="#f8fafc" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="261" y="85" font-size="12" font-weight="bold">T</text>
+  </svg>`;
+}
+
+function generateDirectedGraphSvg() {
+  return `
+  <svg width="260" height="155" viewBox="0 0 260 155" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="15" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
+      </marker>
+    </defs>
+    <line x1="34" y1="34" x2="130" y2="78" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+    <line x1="34" y1="122" x2="130" y2="78" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+    <line x1="130" y1="78" x2="226" y2="40" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+    <line x1="130" y1="78" x2="226" y2="114" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+    <path d="M 124 86 Q 78 120 40 126" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+    <line x1="226" y1="114" x2="226" y2="40" stroke="#334155" stroke-width="1.6" marker-end="url(#arr)"/>
+
+    <circle cx="34" cy="34" r="13" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="29" y="39" font-size="12" font-weight="bold">A</text>
+    <circle cx="130" cy="78" r="14" fill="#fed7aa" stroke="#c2410c" stroke-width="2.2"/>
+    <text x="125" y="83" font-size="13" font-weight="bold">B</text>
+    <circle cx="34" cy="122" r="13" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="29" y="127" font-size="12" font-weight="bold">C</text>
+    <circle cx="226" cy="40" r="13" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="221" y="45" font-size="12" font-weight="bold">D</text>
+    <circle cx="226" cy="114" r="13" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="221" y="119" font-size="12" font-weight="bold">E</text>
+  </svg>`;
+}
+
+function generateInequalityRegionSvg() {
+  return `
+  <svg width="260" height="180" viewBox="0 0 260 180" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <marker id="axisArr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
+      </marker>
+      <pattern id="hatch" width="7" height="7" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="0" x2="0" y2="7" stroke="#3b82f6" stroke-width="1.6" />
+      </pattern>
+    </defs>
+    <line x1="22" y1="142" x2="238" y2="142" stroke="#0f172a" stroke-width="1.5" marker-end="url(#axisArr)"/>
+    <text x="243" y="146" font-size="12" font-weight="bold">x</text>
+    <line x1="44" y1="168" x2="44" y2="18" stroke="#0f172a" stroke-width="1.5" marker-end="url(#axisArr)"/>
+    <text x="37" y="14" font-size="12" font-weight="bold">y</text>
+    <text x="33" y="154" font-size="11">O</text>
+
+    <polygon points="44,44 104,83 60,142 44,142" fill="url(#hatch)" stroke="#2563eb" stroke-width="1" fill-opacity="0.6"/>
+    <line x1="27" y1="32" x2="204" y2="148" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="146" y="62" font-size="11" font-style="italic">y = &minus;x + 5</text>
+    <line x1="31" y1="178" x2="138" y2="36" stroke="#0f172a" stroke-width="1.8"/>
+    <text x="116" y="36" font-size="11" font-style="italic">y = 2x &minus; 1</text>
+    <text x="29" y="47" font-size="10">5</text>
+    <text x="189" y="154" font-size="10">5</text>
+    <text x="100" y="154" font-size="10">2</text>
+    <text x="29" y="88" font-size="10">3</text>
+    <line x1="104" y1="142" x2="104" y2="83" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="44" y1="83" x2="104" y2="83" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  </svg>`;
+}
+
+function generateDistTimeSvg() {
+  return `
+  <svg width="280" height="165" viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <marker id="m1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
+      </marker>
+    </defs>
+    <line x1="42" y1="132" x2="255" y2="132" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m1)"/>
+    <text x="194" y="150" font-size="11">Masa / Time (min)</text>
+    <line x1="42" y1="132" x2="42" y2="18" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m1)"/>
+    <text x="6" y="14" font-size="11">Jarak / Distance (km)</text>
+    <text x="31" y="144" font-size="11">O</text>
+
+    <line x1="42" y1="132" x2="114" y2="74" stroke="#1d4ed8" stroke-width="2"/>
+    <line x1="114" y1="74" x2="156" y2="74" stroke="#1d4ed8" stroke-width="2"/>
+    <line x1="156" y1="74" x2="230" y2="28" stroke="#1d4ed8" stroke-width="2"/>
+
+    <line x1="42" y1="74" x2="114" y2="74" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="42" y1="28" x2="230" y2="28" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="114" y1="132" x2="114" y2="74" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="156" y1="132" x2="156" y2="74" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="230" y1="132" x2="230" y2="28" stroke="#94a3b8" stroke-dasharray="3 3"/>
+
+    <text x="24" y="78" font-size="10">36</text>
+    <text x="24" y="32" font-size="10">80</text>
+    <text x="107" y="145" font-size="10">40</text>
+    <text x="149" y="145" font-size="10">60</text>
+    <text x="223" y="145" font-size="10">90</text>
+  </svg>`;
+}
+
+function generateDistTimeLorrySvg() {
+  return `
+  <svg width="270" height="155" viewBox="0 0 270 155" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <marker id="m2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
+      </marker>
+    </defs>
+    <line x1="42" y1="124" x2="245" y2="124" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m2)"/>
+    <text x="186" y="142" font-size="11">Masa / Time (j / h)</text>
+    <line x1="42" y1="124" x2="42" y2="18" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m2)"/>
+    <text x="8" y="14" font-size="11">Jarak / Distance (km)</text>
+    <text x="31" y="136" font-size="11">O</text>
+
+    <line x1="42" y1="124" x2="94" y2="80" stroke="#047857" stroke-width="2"/>
+    <line x1="94" y1="80" x2="127" y2="80" stroke="#047857" stroke-width="2"/>
+    <line x1="127" y1="80" x2="210" y2="28" stroke="#047857" stroke-width="2"/>
+
+    <line x1="42" y1="80" x2="94" y2="80" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="42" y1="28" x2="210" y2="28" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="94" y1="124" x2="94" y2="80" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="127" y1="124" x2="127" y2="80" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="210" y1="124" x2="210" y2="28" stroke="#94a3b8" stroke-dasharray="3 3"/>
+
+    <text x="20" y="84" font-size="10">60</text>
+    <text x="14" y="32" font-size="10">160</text>
+    <text x="88" y="138" font-size="10">1.0</text>
+    <text x="120" y="138" font-size="10">1.4</text>
+    <text x="207" y="138" font-size="11" font-weight="bold" font-style="italic">t</text>
+  </svg>`;
+}
+
+function generateSpeedTimeParticleSvg() {
+  return `
+  <svg width="280" height="155" viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <marker id="m3" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
+      </marker>
+    </defs>
+    <line x1="38" y1="124" x2="255" y2="124" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m3)"/>
+    <text x="198" y="142" font-size="11">Masa / Time (s)</text>
+    <line x1="38" y1="124" x2="38" y2="18" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m3)"/>
+    <text x="6" y="14" font-size="11">Laju / Speed (m s⁻¹)</text>
+    <text x="28" y="136" font-size="11">O</text>
+
+    <line x1="38" y1="92" x2="94" y2="34" stroke="#b91c1c" stroke-width="2"/>
+    <line x1="94" y1="34" x2="172" y2="34" stroke="#b91c1c" stroke-width="2"/>
+    <line x1="172" y1="34" x2="235" y2="124" stroke="#b91c1c" stroke-width="2"/>
+
+    <line x1="38" y1="34" x2="94" y2="34" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="94" y1="124" x2="94" y2="34" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="172" y1="124" x2="172" y2="34" stroke="#94a3b8" stroke-dasharray="3 3"/>
+
+    <text x="22" y="96" font-size="10">8</text>
+    <text x="19" y="38" font-size="10">18</text>
+    <text x="90" y="138" font-size="10">6</text>
+    <text x="166" y="138" font-size="10">14</text>
+    <text x="230" y="138" font-size="10">20</text>
+  </svg>`;
+}
+
+function generateSpeedTimeTrapezoidSvg() {
+  return `
+  <svg width="280" height="155" viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <defs>
+      <marker id="m4" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
+      </marker>
+    </defs>
+    <line x1="38" y1="124" x2="255" y2="124" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m4)"/>
+    <text x="198" y="142" font-size="11">Masa / Time (s)</text>
+    <line x1="38" y1="124" x2="38" y2="18" stroke="#0f172a" stroke-width="1.5" marker-end="url(#m4)"/>
+    <text x="6" y="14" font-size="11">Laju / Speed (m s⁻¹)</text>
+    <text x="28" y="136" font-size="11">O</text>
+
+    <polygon points="38,124 110,38 230,38 230,124" fill="#e0f2fe" stroke="none"/>
+    <line x1="38" y1="124" x2="110" y2="38" stroke="#0284c7" stroke-width="2.2"/>
+    <line x1="110" y1="38" x2="230" y2="38" stroke="#0284c7" stroke-width="2.2"/>
+    <line x1="230" y1="38" x2="230" y2="124" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+    <line x1="38" y1="38" x2="110" y2="38" stroke="#94a3b8" stroke-dasharray="3 3"/>
+    <line x1="110" y1="124" x2="110" y2="38" stroke="#94a3b8" stroke-dasharray="3 3"/>
+
+    <text x="19" y="42" font-size="10">20</text>
+    <text x="105" y="138" font-size="10">10</text>
+    <text x="225" y="138" font-size="10">25</text>
+  </svg>`;
+}
+
+function generateBoxPlotSvg() {
+  return `
+  <svg width="300" height="130" viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="20" y1="95" x2="275" y2="95" stroke="#0f172a" stroke-width="1.5"/>
+    <line x1="25" y1="91" x2="25" y2="99" stroke="#0f172a" stroke-width="1.5"/><text x="22" y="112" font-size="10">0</text>
+    <line x1="73" y1="91" x2="73" y2="99" stroke="#0f172a" stroke-width="1.5"/><text x="68" y="112" font-size="10">20</text>
+    <line x1="121" y1="91" x2="121" y2="99" stroke="#0f172a" stroke-width="1.5"/><text x="116" y="112" font-size="10">40</text>
+    <line x1="169" y1="91" x2="169" y2="99" stroke="#0f172a" stroke-width="1.5"/><text x="164" y="112" font-size="10">60</text>
+    <line x1="217" y1="91" x2="217" y2="99" stroke="#0f172a" stroke-width="1.5"/><text x="212" y="112" font-size="10">80</text>
+    <line x1="265" y1="91" x2="265" y2="99" stroke="#0f172a" stroke-width="1.5"/><text x="257" y="112" font-size="10">100</text>
+
+    <line x1="73" y1="46" x2="133" y2="46" stroke="#0f172a" stroke-width="1.8"/>
+    <line x1="205" y1="46" x2="253" y2="46" stroke="#0f172a" stroke-width="1.8"/>
+
+    <line x1="73" y1="30" x2="73" y2="62" stroke="#0f172a" stroke-width="1.8"/>
+    <line x1="253" y1="30" x2="253" y2="62" stroke="#0f172a" stroke-width="1.8"/>
+
+    <rect x="133" y="20" width="72" height="52" fill="#f1f5f9" stroke="#0f172a" stroke-width="1.8"/>
+    <line x1="169" y1="20" x2="169" y2="72" stroke="#dc2626" stroke-width="2.2"/>
+
+    <text x="67" y="16" font-size="10" font-weight="bold">20</text>
+    <text x="127" y="15" font-size="10" font-weight="bold">45</text>
+    <text x="164" y="15" font-size="10" font-weight="bold" fill="#dc2626">60</text>
+    <text x="199" y="15" font-size="10" font-weight="bold">75</text>
+    <text x="247" y="16" font-size="10" font-weight="bold">95</text>
+  </svg>`;
+}
+
+// 40 questions data
+const questions = [
+  {
+    num: 1,
+    chapter: "Bab 1: Fungsi dan Persamaan Kuadratik",
+    bm: `Rajah 1 menunjukkan graf fungsi kuadratik <i>f</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 6<i>x</i> &minus; 5.<br>Nyatakan persamaan paksi simetri dan nilai maksimum bagi fungsi itu.`,
+    en: `Diagram 1 shows the graph of a quadratic function <i>f</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 6<i>x</i> &minus; 5.<br>State the equation of the axis of symmetry and the maximum value of the function.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateParabolaSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 1 / <i>Diagram 1</i></span></div>`,
+    options: [
+      { key: "A", text: "x = 3, Nilai maksimum / Maximum value = 4" },
+      { key: "B", text: "x = 3, Nilai maksimum / Maximum value = 5" },
+      { key: "C", text: "x = &minus;3, Nilai maksimum / Maximum value = 4" },
+      { key: "D", text: "x = &minus;3, Nilai maksimum / Maximum value = &minus;5" }
+    ],
+    answer: "A",
+    solution: "Paksi simetri: x = &minus;b / (2a) = &minus;6 / [2(&minus;1)] = 3.<br>Nilai maksimum = f(3) = &minus;(3)² + 6(3) &minus; 5 = &minus;9 + 18 &minus; 5 = 4."
+  },
+  {
+    num: 2,
+    chapter: "Bab 1: Fungsi dan Persamaan Kuadratik",
+    bm: `Selesaikan persamaan kuadratik berikut: [3<i>x</i>(<i>x</i> &minus; 1)] / 2 = 2 &minus; <i>x</i>`,
+    en: `Solve the quadratic equation: [3<i>x</i>(<i>x</i> &minus; 1)] / 2 = 2 &minus; <i>x</i>`,
+    diagram: "",
+    options: [
+      { key: "A", text: "x = &minus;1, &nbsp; x = 4/3" },
+      { key: "B", text: "x = 1, &nbsp; x = &minus;4/3" },
+      { key: "C", text: "x = &minus;2, &nbsp; x = 2/3" },
+      { key: "D", text: "x = 2, &nbsp; x = &minus;2/3" }
+    ],
+    answer: "A",
+    solution: "3x(x &minus; 1) = 2(2 &minus; x) &rArr; 3x² &minus; 3x = 4 &minus; 2x &rArr; 3x² &minus; x &minus; 4 = 0.<br>(3x &minus; 4)(x + 1) = 0 &rArr; x = 4/3 atau x = &minus;1."
+  },
+  {
+    num: 3,
+    chapter: "Bab 1: Fungsi dan Persamaan Kuadratik",
+    bm: `Graf bagi fungsi kuadratik <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 5 digerakkan secara menegak ke bawah sebanyak 9 unit untuk menghasilkan fungsi baharu <i>g</i>(<i>x</i>). Graf <i>g</i>(<i>x</i>) menyilang paksi-<i>x</i> pada titik <i>P</i> dan <i>Q</i>. Cari jarak antara titik <i>P</i> dan <i>Q</i>.`,
+    en: `The graph of <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 5 is translated downwards by 9 units to form <i>g</i>(<i>x</i>). The graph intersects the <i>x</i>-axis at <i>P</i> and <i>Q</i>. Find the distance between <i>P</i> and <i>Q</i>.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "2 unit / units" },
+      { key: "B", text: "4 unit / units" },
+      { key: "C", text: "5 unit / units" },
+      { key: "D", text: "8 unit / units" }
+    ],
+    answer: "B",
+    solution: "g(x) = x² + 5 &minus; 9 = x² &minus; 4.<br>Menyilang paksi-x apabila g(x) = 0 &rArr; x² &minus; 4 = 0 &rArr; x = &plusmn;2.<br>Jarak PQ = 2 &minus; (&minus;2) = 4 unit."
+  },
+  {
+    num: 4,
+    chapter: "Bab 1: Fungsi dan Persamaan Kuadratik",
+    bm: `Panjang sebuah segi empat tepat adalah (<i>x</i> + 5) cm dan lebarnya (<i>x</i> &minus; 2) cm. Diberi luasnya 44 cm<sup>2</sup>, hitung perimeter, dalam cm, segi empat tepat itu.`,
+    en: `A rectangle has length (<i>x</i> + 5) cm and width (<i>x</i> &minus; 2) cm. Given its area is 44 cm<sup>2</sup>, calculate its perimeter, in cm.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "24 cm" },
+      { key: "B", text: "30 cm" },
+      { key: "C", text: "44 cm" },
+      { key: "D", text: "60 cm" }
+    ],
+    answer: "B",
+    solution: "(x + 5)(x &minus; 2) = 44 &rArr; x² + 3x &minus; 54 = 0 &rArr; (x + 9)(x &minus; 6) = 0 &rArr; x = 6.<br>Panjang = 11 cm, Lebar = 4 cm. Perimeter = 2(11 + 4) = 30 cm."
+  },
+  {
+    num: 5,
+    chapter: "Bab 2: Asas Nombor",
+    bm: `Nyatakan nilai digit yang bergaris dalam nombor 4<u>3</u>21<sub>5</sub>, dalam asas sepuluh.`,
+    en: `State the value of the underlined digit in 4<u>3</u>21<sub>5</sub>, in base ten.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "15" },
+      { key: "B", text: "25" },
+      { key: "C", text: "75" },
+      { key: "D", text: "375" }
+    ],
+    answer: "C",
+    solution: "Nilai digit = 3 &times; 5² = 3 &times; 25 = 75₁₀."
+  },
+  {
+    num: 6,
+    chapter: "Bab 2: Asas Nombor",
+    bm: `Ungkapkan 111011<sub>2</sub> sebagai satu nombor dalam asas lapan.`,
+    en: `Express 111011<sub>2</sub> as a number in base eight.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "57₈" },
+      { key: "B", text: "71₈" },
+      { key: "C", text: "73₈" },
+      { key: "D", text: "75₈" }
+    ],
+    answer: "C",
+    solution: "Kumpulan 3 bit: [111]₂ = 7, [011]₂ = 3 &rArr; 73₈."
+  },
+  {
+    num: 7,
+    chapter: "Bab 2: Asas Nombor",
+    bm: `Hitung 423<sub>5</sub> &minus; 144<sub>5</sub> dan nyatakan jawapannya dalam asas lima.`,
+    en: `Calculate 423<sub>5</sub> &minus; 144<sub>5</sub> and state the answer in base five.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "214₅" },
+      { key: "B", text: "224₅" },
+      { key: "C", text: "234₅" },
+      { key: "D", text: "324₅" }
+    ],
+    answer: "B",
+    solution: "423₅ = 113₁₀, 144₅ = 49₁₀. 113 &minus; 49 = 64₁₀.<br>Tukar 64₁₀ ke asas 5: 64 &divide; 5 = 12 baki 4; 12 &divide; 5 = 2 baki 2; 2 &divide; 5 = 0 baki 2 &rArr; 224₅."
+  },
+  {
+    num: 8,
+    chapter: "Bab 2: Asas Nombor",
+    bm: `Diberi bahawa 101<sub>2</sub> + <i>p</i><sub>8</sub> = 35<sub>7</sub>, cari nilai <i>p</i>.`,
+    en: `Given that 101<sub>2</sub> + <i>p</i><sub>8</sub> = 35<sub>7</sub>, find the value of <i>p</i>.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "21" },
+      { key: "B", text: "25" },
+      { key: "C", text: "31" },
+      { key: "D", text: "32" }
+    ],
+    answer: "B",
+    solution: "101₂ = 5₁₀, 35₇ = 26₁₀. 5 + p₈ = 26 &rArr; p₁₀ = 21 &rArr; 25₈. Maka p = 25."
+  },
+  {
+    num: 9,
+    chapter: "Bab 3: Penaakulan Matematik",
+    bm: `Antara pernyataan majmuk berikut, yang manakah adalah <b>benar</b>?`,
+    en: `Which of the following compound statements is <b>true</b>?`,
+    diagram: "",
+    options: [
+      { key: "A", text: "3² = 6 dan / and 4 > 2" },
+      { key: "B", text: "9 ialah nombor perdana atau 12 ialah gandaan 4" },
+      { key: "C", text: "Semua poligon mempunyai 5 sisi atau &minus;3 > &minus;1" },
+      { key: "D", text: "5 &times; 0 = 5 dan 7 ialah nombor ganjil" }
+    ],
+    answer: "B",
+    solution: "'9 nombor perdana' (Palsu) ATAU '12 gandaan 4' (Benar). Palsu ATAU Benar = BENAR."
+  },
+  {
+    num: 10,
+    chapter: "Bab 3: Penaakulan Matematik",
+    bm: `Tentukan akas bagi implikasi: &ldquo;Jika <i>x</i> ialah faktor bagi 12, maka <i>x</i> ialah faktor bagi 24.&rdquo;`,
+    en: `Determine the converse of: &ldquo;If <i>x</i> is a factor of 12, then <i>x</i> is a factor of 24.&rdquo;`,
+    diagram: "",
+    options: [
+      { key: "A", text: "Jika x bukan faktor 12, maka x bukan faktor 24." },
+      { key: "B", text: "Jika x ialah faktor 24, maka x ialah faktor 12." },
+      { key: "C", text: "Jika x bukan faktor 24, maka x bukan faktor 12." },
+      { key: "D", text: "x faktor 12 jika dan hanya jika x faktor 24." }
+    ],
+    answer: "B",
+    solution: "Akas (converse) bagi 'Jika p, maka q' ialah 'Jika q, maka p'."
+  },
+  {
+    num: 11,
+    chapter: "Bab 3: Penaakulan Matematik",
+    bm: `Lengkapkan hujah deduktif berikut:<br><b>Premis 1:</b> Jika <i>m</i> ialah gandaan 6, maka <i>m</i> boleh dibahagi tepat dengan 3.<br><b>Premis 2:</b> 42 ialah gandaan 6.<br><b>Kesimpulan:</b> ............................................................................`,
+    en: `Complete the argument: Premise 1: If <i>m</i> is a multiple of 6, then <i>m</i> is divisible by 3. Premise 2: 42 is a multiple of 6. Conclusion: ...`,
+    diagram: "",
+    options: [
+      { key: "A", text: "42 tidak boleh dibahagi tepat dengan 3" },
+      { key: "B", text: "42 boleh dibahagi tepat dengan 3" },
+      { key: "C", text: "m bukan gandaan 6" },
+      { key: "D", text: "m boleh dibahagi tepat dengan 3" }
+    ],
+    answer: "B",
+    solution: "Hujah Bentuk II: Anteseden dipenuhi (42 gandaan 6), maka akibatnya benar (42 boleh dibahagi tepat dengan 3)."
+  },
+  {
+    num: 12,
+    chapter: "Bab 3: Penaakulan Matematik",
+    bm: `Diberi pola: 5 = 3(1)<sup>2</sup> + 2, &nbsp; 14 = 3(2)<sup>2</sup> + 2, &nbsp; 29 = 3(3)<sup>2</sup> + 2, &nbsp; 50 = 3(4)<sup>2</sup> + 2, &hellip;<br>Buat satu kesimpulan secara induksi bagi sebutan ke-<i>n</i> jujukan itu.`,
+    en: `Given the pattern: 5 = 3(1)<sup>2</sup> + 2, 14 = 3(2)<sup>2</sup> + 2, ... Make a conclusion by induction for the <i>n</i>-th term.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "3n² + 2, &nbsp; n = 1, 2, 3, 4, ..." },
+      { key: "B", text: "3n + 2, &nbsp; n = 1, 2, 3, 4, ..." },
+      { key: "C", text: "3n² &minus; 2, &nbsp; n = 1, 2, 3, 4, ..." },
+      { key: "D", text: "2n² + 3, &nbsp; n = 1, 2, 3, 4, ..." }
+    ],
+    answer: "A",
+    solution: "Pola berulang: 3n² + 2 dengan n = 1, 2, 3, 4, ..."
+  },
+  {
+    num: 13,
+    chapter: "Bab 4: Operasi Set",
+    bm: `Diberi set semesta &xi; = {<i>x</i> : 1 &le; <i>x</i> &le; 20, <i>x</i> ialah integer}, set <i>P</i> = {<i>x</i> : <i>x</i> ialah nombor ganjil} dan set <i>Q</i> = {<i>x</i> : <i>x</i> ialah gandaan 3}. Cari <i>n</i>(<i>P</i> &cap; <i>Q</i>&prime;).`,
+    en: `Given &xi; = {<i>x</i> : 1 &le; <i>x</i> &le; 20, <i>x</i> is an integer}, <i>P</i> = {odd numbers} and <i>Q</i> = {multiples of 3}. Find <i>n</i>(<i>P</i> &cap; <i>Q</i>&prime;).`,
+    diagram: "",
+    options: [
+      { key: "A", text: "3" },
+      { key: "B", text: "6" },
+      { key: "C", text: "7" },
+      { key: "D", text: "10" }
+    ],
+    answer: "C",
+    solution: "P = 10 unsur ganjil. Ganjil gandaan 3: {3, 9, 15}. Maka P &cap; Q' = 10 &minus; 3 = 7 unsur."
+  },
+  {
+    num: 14,
+    chapter: "Bab 4: Operasi Set",
+    bm: `Rajah 2 menunjukkan gambar rajah Venn dengan &xi; = <i>P</i> &cup; <i>Q</i> &cup; <i>R</i>.<br>Antara berikut, yang manakah mewakili kawasan berlorek?`,
+    en: `Diagram 2 shows a Venn diagram with &xi; = <i>P</i> &cup; <i>Q</i> &cup; <i>R</i>.<br>Which represents the shaded region?`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateVennSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 2 / <i>Diagram 2</i></span></div>`,
+    options: [
+      { key: "A", text: "(P &cap; Q) &cap; R'" },
+      { key: "B", text: "(P &cup; Q) &cap; R" },
+      { key: "C", text: "(P &cap; Q) &cup; R" },
+      { key: "D", text: "P' &cap; (Q &cup; R)" }
+    ],
+    answer: "A",
+    solution: "Kawasan persilangan P dan Q di luar R &rArr; (P &cap; Q) &cap; R'."
+  },
+  {
+    num: 15,
+    chapter: "Bab 4: Operasi Set",
+    bm: `Dalam sebuah kelas 45 murid, 28 orang menyertai Kelab Sains, 20 orang Kelab Matematik, dan 5 orang tidak menyertai mana-mana kelab. Hitung bilangan murid yang menyertai kedua-dua kelab.`,
+    en: `In a class of 45 students, 28 join Science Club, 20 join Math Club, and 5 join neither. How many join both clubs?`,
+    diagram: "",
+    options: [
+      { key: "A", text: "6" },
+      { key: "B", text: "8" },
+      { key: "C", text: "12" },
+      { key: "D", text: "17" }
+    ],
+    answer: "B",
+    solution: "Murid menyertai sekurang-kurangnya satu kelab = 45 &minus; 5 = 40.<br>n(S &cap; M) = 28 + 20 &minus; 40 = 8."
+  },
+  {
+    num: 16,
+    chapter: "Bab 4: Operasi Set",
+    bm: `Diberi bahawa set <i>A</i> &sub; <i>B</i> dan <i>B</i> &cap; <i>C</i> = &empty;. Antara pernyataan berikut, yang manakah <b>pasti benar</b>?`,
+    en: `Given that <i>A</i> &sub; <i>B</i> and <i>B</i> &cap; <i>C</i> = &empty;. Which statement is <b>definitely true</b>?`,
+    diagram: "",
+    options: [
+      { key: "A", text: "A &cap; C &ne; &empty;" },
+      { key: "B", text: "A &sub; C" },
+      { key: "C", text: "A &cap; C = &empty;" },
+      { key: "D", text: "B &sub; A" }
+    ],
+    answer: "C",
+    solution: "Semua unsur A berada dalam B, dan B tidak berkongsi unsur dengan C, maka A &cap; C = &empty;."
+  },
+  {
+    num: 17,
+    chapter: "Bab 5: Rangkaian dalam Teori Graf",
+    bm: `Satu graf tak terarah mempunyai 6 bucu dengan darjah 3, 2, 4, 3, <i>k</i> dan 2. Diberi graf itu mempunyai 9 tepi, cari nilai <i>k</i>.`,
+    en: `An undirected graph has 6 vertices with degrees 3, 2, 4, 3, <i>k</i>, 2. Given it has 9 edges, find <i>k</i>.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "2" },
+      { key: "B", text: "3" },
+      { key: "C", text: "4" },
+      { key: "D", text: "5" }
+    ],
+    answer: "C",
+    solution: "&sum; d(v) = 2(9) = 18 &rArr; 14 + k = 18 &rArr; k = 4."
+  },
+  {
+    num: 18,
+    chapter: "Bab 5: Rangkaian dalam Teori Graf",
+    bm: `Antara graf berikut, yang manakah merupakan suatu <b>pokok</b> (<i>tree</i>)?`,
+    en: `Which of the following graphs is a <b>tree</b>?`,
+    diagram: generateTreeComparisonSvg(),
+    options: [
+      { key: "A", text: "Graf A / Graph A" },
+      { key: "B", text: "Graf B / Graph B" },
+      { key: "C", text: "Graf C / Graph C" },
+      { key: "D", text: "Graf D / Graph D" }
+    ],
+    answer: "C",
+    solution: "Graf C mempunyai 5 bucu dan 4 tepi, bersambung dan tiada kitaran &rArr; Pokok."
+  },
+  {
+    num: 19,
+    chapter: "Bab 5: Rangkaian dalam Teori Graf",
+    bm: `Rajah 3 menunjukkan rangkaian jalan raya antara bandar <i>P, Q, R, S</i> dan <i>T</i> (jarak dalam km). Cari jarak terpendek, dalam km, dari <i>P</i> ke <i>T</i>.`,
+    en: `Diagram 3 shows a road network between towns <i>P, Q, R, S</i> and <i>T</i>. Find the shortest distance from <i>P</i> to <i>T</i>.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateWeightedNetworkSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 3 / <i>Diagram 3</i></span></div>`,
+    options: [
+      { key: "A", text: "25 km" },
+      { key: "B", text: "26 km" },
+      { key: "C", text: "28 km" },
+      { key: "D", text: "29 km" }
+    ],
+    answer: "A",
+    solution: "Laluan P &rarr; Q &rarr; R &rarr; T = 10 + 3 + 12 = 25 km."
+  },
+  {
+    num: 20,
+    chapter: "Bab 5: Rangkaian dalam Teori Graf",
+    bm: `Rajah 4 menunjukkan graf berarah. Tentukan <i>d</i><sub>in</sub>(<i>B</i>) dan <i>d</i><sub>out</sub>(<i>B</i>) bagi bucu <i>B</i>.`,
+    en: `Diagram 4 shows a directed graph. Determine <i>d</i><sub>in</sub>(<i>B</i>) and <i>d</i><sub>out</sub>(<i>B</i>) for vertex <i>B</i>.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateDirectedGraphSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 4 / <i>Diagram 4</i></span></div>`,
+    options: [
+      { key: "A", text: "d_in(B) = 2, &nbsp; d_out(B) = 3" },
+      { key: "B", text: "d_in(B) = 3, &nbsp; d_out(B) = 2" },
+      { key: "C", text: "d_in(B) = 1, &nbsp; d_out(B) = 4" },
+      { key: "D", text: "d_in(B) = 3, &nbsp; d_out(B) = 3" }
+    ],
+    answer: "A",
+    solution: "Tepi masuk ke B = 2 (dari A, C). Tepi keluar dari B = 3 (ke D, E, C)."
+  },
+  {
+    num: 21,
+    chapter: "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+    bm: `Rajah 5 menunjukkan rantau berlorek pada suatu satah Cartes.<br>Antara sistem ketaksamaan berikut, yang manakah mentakrifkan rantau berlorek itu?`,
+    en: `Diagram 5 shows a shaded region on a Cartesian plane.<br>Which system of inequalities defines the shaded region?`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateInequalityRegionSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 5 / <i>Diagram 5</i></span></div>`,
+    options: [
+      { key: "A", text: "y &le; &minus;x + 5, &nbsp; y &ge; 2x &minus; 1, &nbsp; x &ge; 0" },
+      { key: "B", text: "y &ge; &minus;x + 5, &nbsp; y &le; 2x &minus; 1, &nbsp; x &ge; 0" },
+      { key: "C", text: "y < &minus;x + 5, &nbsp; y > 2x &minus; 1, &nbsp; y &ge; 0" },
+      { key: "D", text: "y &le; &minus;x + 5, &nbsp; y &le; 2x &minus; 1, &nbsp; x &ge; 0" }
+    ],
+    answer: "A",
+    solution: "Di bawah y = &minus;x + 5 (&le;), di atas y = 2x &minus; 1 (&ge;), dan kanan paksi-y (x &ge; 0)."
+  },
+  {
+    num: 22,
+    chapter: "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+    bm: `Antara titik koordinat berikut, yang manakah memuaskan ketiga-tiga ketaksamaan: 2<i>y</i> + <i>x</i> &le; 8, &nbsp; <i>y</i> > <i>x</i> &minus; 2, &nbsp; dan &nbsp; <i>x</i> &ge; 1?`,
+    en: `Which point satisfies all three inequalities: 2<i>y</i> + <i>x</i> &le; 8, <i>y</i> > <i>x</i> &minus; 2, and <i>x</i> &ge; 1?`,
+    diagram: "",
+    options: [
+      { key: "A", text: "(1, 3)" },
+      { key: "B", text: "(2, 4)" },
+      { key: "C", text: "(3, 0)" },
+      { key: "D", text: "(0, 2)" }
+    ],
+    answer: "A",
+    solution: "Titik (1, 3): 2(3) + 1 = 7 &le; 8 (Benar); 3 > &minus;1 (Benar); 1 &ge; 1 (Benar)."
+  },
+  {
+    num: 23,
+    chapter: "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+    bm: `Puan Salmah menjual <i>x</i> bungkus nasi lemak dan <i>y</i> bungkus mee goreng. Jumlah bungkusan adalah selebih-lebihnya 120. Bilangan nasi lemak sekurang-kurangnya dua kali mee goreng. Tulis dua ketaksamaan linear yang mewakili situasi itu.`,
+    en: `Puan Salmah sells <i>x</i> packets nasi lemak and <i>y</i> packets mee goreng. Total is at most 120. Nasi lemak is at least twice mee goreng. Write two inequalities.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "x + y &le; 120 &nbsp; dan / and &nbsp; x &ge; 2y" },
+      { key: "B", text: "x + y < 120 &nbsp; dan / and &nbsp; x &le; 2y" },
+      { key: "C", text: "x + y &ge; 120 &nbsp; dan / and &nbsp; y &ge; 2x" },
+      { key: "D", text: "x + y &le; 120 &nbsp; dan / and &nbsp; y &ge; 2x" }
+    ],
+    answer: "A",
+    solution: "Selebih-lebihnya: x + y &le; 120. Sekurang-kurangnya dua kali: x &ge; 2y."
+  },
+  {
+    num: 24,
+    chapter: "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+    bm: `Rantau berlorek dalam graf ketaksamaan mempunyai bucu (0, 0), (5, 0), (4, 3), dan (0, 5). Cari nilai maksimum bagi fungsi <i>K</i> = 4<i>x</i> + 3<i>y</i>.`,
+    en: `A shaded region has vertices at (0, 0), (5, 0), (4, 3), and (0, 5). Find the maximum value of <i>K</i> = 4<i>x</i> + 3<i>y</i>.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "20" },
+      { key: "B", text: "22" },
+      { key: "C", text: "25" },
+      { key: "D", text: "28" }
+    ],
+    answer: "C",
+    solution: "Pada (4, 3): K = 4(4) + 3(3) = 16 + 9 = 25 (Nilai maksimum)."
+  },
+  {
+    num: 25,
+    chapter: "Bab 7: Graf Gerakan",
+    bm: `Rajah 6 menunjukkan graf jarak-masa bagi perjalanan sebuah motosikal dari Bandar A ke Bandar B. Hitung laju, dalam km/j, motosikal itu bagi 40 minit yang pertama.`,
+    en: `Diagram 6 shows the distance-time graph of a motorcycle. Calculate the speed, in km/h, for the first 40 minutes.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateDistTimeSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 6 / <i>Diagram 6</i></span></div>`,
+    options: [
+      { key: "A", text: "45 km/j / km/h" },
+      { key: "B", text: "54 km/j / km/h" },
+      { key: "C", text: "60 km/j / km/h" },
+      { key: "D", text: "72 km/j / km/h" }
+    ],
+    answer: "B",
+    solution: "Laju = 36 km &divide; (40/60 j) = 36 &times; (3/2) = 54 km/j."
+  },
+  {
+    num: 26,
+    chapter: "Bab 7: Graf Gerakan",
+    bm: `Rajah 7 menunjukkan graf jarak-masa bagi sebuah lori dalam tempoh <i>t</i> jam. Diberi laju purata bagi keseluruhan perjalanan ialah 64 km/j, cari nilai <i>t</i>.`,
+    en: `Diagram 7 shows the distance-time graph of a lorry for <i>t</i> hours. Given average speed for the whole journey is 64 km/h, find <i>t</i>.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateDistTimeLorrySvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 7 / <i>Diagram 7</i></span></div>`,
+    options: [
+      { key: "A", text: "2.0" },
+      { key: "B", text: "2.2" },
+      { key: "C", text: "2.5" },
+      { key: "D", text: "3.0" }
+    ],
+    answer: "C",
+    solution: "Laju purata = 160 / t = 64 &rArr; t = 160 / 64 = 2.5 jam."
+  },
+  {
+    num: 27,
+    chapter: "Bab 7: Graf Gerakan",
+    bm: `Rajah 8 menunjukkan graf laju-masa bagi suatu zarah. Hitung kadar perubahan laju, dalam m s<sup>&minus;2</sup>, zarah itu dalam 6 saat terakhir.`,
+    en: `Diagram 8 shows the speed-time graph of a particle. Calculate the rate of change of speed, in m s<sup>&minus;2</sup>, in the last 6 seconds.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateSpeedTimeParticleSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 8 / <i>Diagram 8</i></span></div>`,
+    options: [
+      { key: "A", text: "&minus;3" },
+      { key: "B", text: "&minus;2" },
+      { key: "C", text: "3" },
+      { key: "D", text: "6" }
+    ],
+    answer: "A",
+    solution: "Kadar perubahan laju = (0 &minus; 18) / 6 = &minus;3 m s⁻²."
+  },
+  {
+    num: 28,
+    chapter: "Bab 7: Graf Gerakan",
+    bm: `Rajah 9 menunjukkan graf laju-masa bagi sebuah kereta dalam 25 saat. Hitung jumlah jarak, dalam meter, yang dilalui kereta itu.`,
+    en: `Diagram 9 shows the speed-time graph of a car for 25 seconds. Calculate the total distance, in metres, travelled.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateSpeedTimeTrapezoidSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 9 / <i>Diagram 9</i></span></div>`,
+    options: [
+      { key: "A", text: "250" },
+      { key: "B", text: "350" },
+      { key: "C", text: "400" },
+      { key: "D", text: "500" }
+    ],
+    answer: "C",
+    solution: "Luas bawah graf = 1/2 &times; [(25 &minus; 10) + 25] &times; 20 = 400 meter."
+  },
+  {
+    num: 29,
+    chapter: "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+    bm: `Cari julat antara kuartil bagi set data: 3, 5, 6, 8, 10, 12, 15, 17, 19, 21, 24.`,
+    en: `Find the interquartile range for the data: 3, 5, 6, 8, 10, 12, 15, 17, 19, 21, 24.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "11" },
+      { key: "B", text: "13" },
+      { key: "C", text: "15" },
+      { key: "D", text: "21" }
+    ],
+    answer: "B",
+    solution: "Median = 12. Q₁ = 6, Q₃ = 19. Julat antara kuartil = 19 &minus; 6 = 13."
+  },
+  {
+    num: 30,
+    chapter: "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+    bm: `Diberi 10 nombor dengan &sum; <i>x</i> = 140 dan &sum; <i>x</i><sup>2</sup> = 2320. Hitung sisihan piawai bagi set nombor itu.`,
+    en: `Given 10 numbers with &sum; <i>x</i> = 140 and &sum; <i>x</i><sup>2</sup> = 2320. Calculate the standard deviation.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "4" },
+      { key: "B", text: "6" },
+      { key: "C", text: "16" },
+      { key: "D", text: "36" }
+    ],
+    answer: "B",
+    solution: "x̄ = 14. Varians &sigma;² = (2320/10) &minus; 14² = 36 &rArr; Sisihan piawai = &radic;36 = 6."
+  },
+  {
+    num: 31,
+    chapter: "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+    bm: `Min dan sisihan piawai bagi suatu set data masing-masing ialah 18 dan 2.5. Jika setiap nilai didarab dengan 3 dan ditambah dengan 4, cari min dan sisihan piawai yang baharu.`,
+    en: `The mean and standard deviation are 18 and 2.5. If each value is multiplied by 3 and added by 4, find the new mean and standard deviation.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "Min = 58, &nbsp; Sisihan piawai = 7.5" },
+      { key: "B", text: "Min = 58, &nbsp; Sisihan piawai = 11.5" },
+      { key: "C", text: "Min = 54, &nbsp; Sisihan piawai = 7.5" },
+      { key: "D", text: "Min = 54, &nbsp; Sisihan piawai = 2.5" }
+    ],
+    answer: "A",
+    solution: "Min baharu = 18 &times; 3 + 4 = 58. Sisihan piawai baharu = 2.5 &times; 3 = 7.5."
+  },
+  {
+    num: 32,
+    chapter: "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+    bm: `Rajah 10 menunjukkan suatu plot kotak bagi markah ujian.<br>Tentukan julat dan julat antara kuartil bagi data itu.`,
+    en: `Diagram 10 shows a box plot for test marks.<br>Determine the range and interquartile range.`,
+    diagram: `<div style="text-align:center; margin:10px 0;">${generateBoxPlotSvg()}<br><span style="font-weight:600; font-size:12px; color:#475569;">Rajah 10 / <i>Diagram 10</i></span></div>`,
+    options: [
+      { key: "A", text: "Julat = 75, &nbsp; Julat antara kuartil = 30" },
+      { key: "B", text: "Julat = 75, &nbsp; Julat antara kuartil = 15" },
+      { key: "C", text: "Julat = 55, &nbsp; Julat antara kuartil = 30" },
+      { key: "D", text: "Julat = 95, &nbsp; Julat antara kuartil = 45" }
+    ],
+    answer: "A",
+    solution: "Julat = 95 &minus; 20 = 75. Julat antara kuartil = 75 &minus; 45 = 30."
+  },
+  {
+    num: 33,
+    chapter: "Bab 9: Kebarangkalian Peristiwa Bergabung",
+    bm: `Sekeping syiling adil dan sebiji dadu adil dilambung serentak. Cari kebarangkalian mendapat angka (<i>head</i>) pada syiling dan nombor perdana pada dadu.`,
+    en: `A fair coin and a fair die are tossed. Find the probability of getting a head on the coin and a prime number on the die.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "1/6" },
+      { key: "B", text: "1/4" },
+      { key: "C", text: "1/3" },
+      { key: "D", text: "1/2" }
+    ],
+    answer: "B",
+    solution: "P(Angka &cap; Perdana) = 1/2 &times; 3/6 = 1/2 &times; 1/2 = 1/4."
+  },
+  {
+    num: 34,
+    chapter: "Bab 9: Kebarangkalian Peristiwa Bergabung",
+    bm: `Sebuah kotak mengandungi 6 guli merah dan 4 guli biru. Dua guli dipilih secara rawak <b>tanpa pengembalian</b>. Cari kebarangkalian kedua-duanya berwarna merah.`,
+    en: `A box contains 6 red and 4 blue marbles. Two marbles are chosen <b>without replacement</b>. Find the probability that both are red.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "9/25" },
+      { key: "B", text: "1/3" },
+      { key: "C", text: "2/5" },
+      { key: "D", text: "5/18" }
+    ],
+    answer: "B",
+    solution: "P(Kedua-dua merah) = (6/10) &times; (5/9) = 30/90 = 1/3."
+  },
+  {
+    num: 35,
+    chapter: "Bab 9: Kebarangkalian Peristiwa Bergabung",
+    bm: `Sekeping kad dipilih secara rawak dari kad 1 hingga 25. Peristiwa <i>A</i> = gandaan 5, peristiwa <i>B</i> = nombor kuasa dua sempurna. Hitung <i>P</i>(<i>A</i> &cup; <i>B</i>).`,
+    en: `A card is drawn from cards 1 to 25. Event <i>A</i> = multiple of 5, event <i>B</i> = perfect square. Calculate <i>P</i>(<i>A</i> &cup; <i>B</i>).`,
+    diagram: "",
+    options: [
+      { key: "A", text: "8/25" },
+      { key: "B", text: "9/25" },
+      { key: "C", text: "2/5" },
+      { key: "D", text: "11/25" }
+    ],
+    answer: "B",
+    solution: "n(A) = 5, n(B) = 5, A &cap; B = {25}. n(A &cup; B) = 5 + 5 &minus; 1 = 9 &rArr; 9/25."
+  },
+  {
+    num: 36,
+    chapter: "Bab 9: Kebarangkalian Peristiwa Bergabung",
+    bm: `Kebarangkalian Farhan lulus Matematik ialah <sup>3</sup>/<sub>4</sub> dan lulus Sains ialah <sup>4</sup>/<sub>5</sub>. Diberi peristiwa tak bersandar, cari kebarangkalian dia lulus <b>sekurang-kurangnya satu</b> ujian.`,
+    en: `Probability Farhan passes Math is 3/4 and Science is 4/5. Find the probability he passes <b>at least one</b> test.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "3/5" },
+      { key: "B", text: "17/20" },
+      { key: "C", text: "19/20" },
+      { key: "D", text: "1/20" }
+    ],
+    answer: "C",
+    solution: "1 &minus; P(Gagal kedua-duanya) = 1 &minus; (1/4 &times; 1/5) = 1 &minus; 1/20 = 19/20."
+  },
+  {
+    num: 37,
+    chapter: "Bab 10: Pengurusan Kewangan",
+    bm: `Encik Hisham menetapkan matlamat kewangan: &ldquo;Menyimpan RM 7,200 dalam tempoh 12 bulan untuk wang pendahuluan kereta dengan menyimpan RM 600 setiap bulan.&rdquo; Antara komponen konsep <b>SMART</b>, yang manakah diwakili oleh &ldquo;dalam tempoh 12 bulan&rdquo;?`,
+    en: `Encik Hisham sets a goal: "Save RM 7,200 within 12 months for car down payment by saving RM 600 monthly." Which <b>SMART</b> component is "within 12 months"?`,
+    diagram: "",
+    options: [
+      { key: "A", text: "S &ndash; Khusus / Specific" },
+      { key: "B", text: "M &ndash; Boleh diukur / Measurable" },
+      { key: "C", text: "A &ndash; Boleh dicapai / Attainable" },
+      { key: "D", text: "T &ndash; Berikat masa / Time-bound" }
+    ],
+    answer: "D",
+    solution: "'Dalam tempoh 12 bulan' ialah jangka masa matlamat, iaitu T (Time-bound / Berikat masa)."
+  },
+  {
+    num: 38,
+    chapter: "Bab 10: Pengurusan Kewangan",
+    bm: `Jadual 1 menunjukkan pendapatan dan perbelanjaan bulanan Cik Nadia.
+         <div style="margin:10px auto; max-width:380px;">
+           <table style="width:100%; border-collapse:collapse; font-size:12px; text-align:left; border:1px solid #cbd5e1;">
+             <tr style="background:#f1f5f9;"><th style="border:1px solid #cbd5e1; padding:5px 8px;">Perkara / Item</th><th style="border:1px solid #cbd5e1; padding:5px 8px;">Jumlah (RM)</th></tr>
+             <tr><td style="border:1px solid #cbd5e1; padding:5px 8px;">Pendapatan aktif</td><td style="border:1px solid #cbd5e1; padding:5px 8px;">3,800</td></tr>
+             <tr><td style="border:1px solid #cbd5e1; padding:5px 8px;">Pendapatan pasif</td><td style="border:1px solid #cbd5e1; padding:5px 8px;">500</td></tr>
+             <tr><td style="border:1px solid #cbd5e1; padding:5px 8px;">Simpanan tetap (10%)</td><td style="border:1px solid #cbd5e1; padding:5px 8px;">430</td></tr>
+             <tr><td style="border:1px solid #cbd5e1; padding:5px 8px;">Perbelanjaan tetap</td><td style="border:1px solid #cbd5e1; padding:5px 8px;">1,600</td></tr>
+             <tr><td style="border:1px solid #cbd5e1; padding:5px 8px;">Perbelanjaan tidak tetap</td><td style="border:1px solid #cbd5e1; padding:5px 8px;">1,400</td></tr>
+           </table>
+           <div style="text-align:center; font-weight:600; font-size:11px; margin-top:4px; color:#475569;">Jadual 1 / <i>Table 1</i></div>
+         </div>
+         Hitung aliran tunai bulanan Cik Nadia dan nyatakan statusnya.`,
+    en: `Table 1 shows monthly finances of Cik Nadia. Calculate monthly cash flow and state its status.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "Defisit RM 440" },
+      { key: "B", text: "Lebihan RM 440" },
+      { key: "C", text: "Lebihan RM 870" },
+      { key: "D", text: "Lebihan RM 1,300" }
+    ],
+    answer: "C",
+    solution: "Pendapatan = RM 4,300. Aliran keluar = RM 3,430. Aliran tunai = +RM 870 (Lebihan / Surplus)."
+  },
+  {
+    num: 39,
+    chapter: "Bab 10: Pengurusan Kewangan",
+    bm: `Pakar kewangan mengesyorkan simpanan dana kecemasan sekurang-kurangnya 3 hingga 6 bulan perbelanjaan bulanan. Diberi perbelanjaan bulanan Encik Daniel ialah RM 3,200, hitung jumlah <b>minimum</b> dana kecemasan yang diperlukannya.`,
+    en: `Emergency fund recommended is 3 to 6 months of expenses. Given Encik Daniel's monthly expenses are RM 3,200, calculate the <b>minimum</b> emergency fund.`,
+    diagram: "",
+    options: [
+      { key: "A", text: "RM 6,400" },
+      { key: "B", text: "RM 9,600" },
+      { key: "C", text: "RM 12,800" },
+      { key: "D", text: "RM 19,200" }
+    ],
+    answer: "B",
+    solution: "Minimum dana kecemasan = 3 &times; RM 3,200 = RM 9,600."
+  },
+  {
+    num: 40,
+    chapter: "Bab 10: Pengurusan Kewangan",
+    bm: `Azman ingin membeli sebuah komputer riba berharga RM 3,000 dalam tempoh 5 bulan. Aliran tunai lebihan bulanannya pada masa ini ialah RM 450. Berapakah simpanan tambahan setiap bulan yang perlu dijana oleh Azman untuk mencapai matlamatnya?`,
+    en: `Azman wants to buy a RM 3,000 laptop in 5 months. His current monthly surplus is RM 450. How much additional monthly savings does he need to achieve his goal?`,
+    diagram: "",
+    options: [
+      { key: "A", text: "RM 100" },
+      { key: "B", text: "RM 150" },
+      { key: "C", text: "RM 200" },
+      { key: "D", text: "RM 250" }
+    ],
+    answer: "B",
+    solution: "Simpanan sebulan diperlukan = RM 3,000 / 5 = RM 600. Simpanan tambahan = RM 600 &minus; RM 450 = RM 150 sebulan."
+  }
+];
+
+// Write questions json file for clean separation or embed directly in index.html
+const questionsJson = JSON.stringify(questions);
+
+const indexHtmlContent = `<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ujian Interaktif: Matematik Tingkatan 4 Kertas 1 (1449/1)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Times+New+Roman&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --primary-subtle: #eff6ff;
+      --success: #059669;
+      --success-light: #10b981;
+      --success-subtle: #ecfdf5;
+      --danger: #dc2626;
+      --danger-subtle: #fef2f2;
+      --warning: #d97706;
+      --warning-subtle: #fffbeb;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-300: #cbd5e1;
+      --slate-500: #64748b;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: var(--slate-900);
+      line-height: 1.5;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+      color: #fff;
+      padding: 1.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .header-brand h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .header-brand p {
+      font-size: 0.85rem;
+      color: #93c5fd;
+      font-weight: 500;
+    }
+
+    .header-tools {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .timer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      padding: 0.45rem 0.9rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .timer-badge.urgent {
+      background: #ef4444;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn-pdf {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-pdf:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-submit {
+      background: #10b981;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-submit:hover {
+      background: #059669;
+      transform: translateY(-1px);
+    }
+
+    /* Layout */
+    .main-layout {
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Candidate Info Bar */
+    .candidate-card {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--slate-200);
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .candidate-inputs {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      flex-grow: 1;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .input-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--slate-700);
+    }
+
+    .input-group input {
+      padding: 0.4rem 0.75rem;
+      border: 1px solid var(--slate-300);
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .input-group input:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    /* Question Cards */
+    .question-card {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid var(--slate-200);
+      margin-bottom: 1.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      scroll-margin-top: 90px;
+    }
+
+    .question-card:hover {
+      border-color: var(--slate-300);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .question-card.active-focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .q-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .chapter-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--primary);
+      background: var(--primary-subtle);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+    }
+
+    .flag-btn {
+      background: transparent;
+      border: 1px solid var(--slate-200);
+      border-radius: 0.375rem;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--slate-500);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.15s;
+    }
+
+    .flag-btn:hover {
+      background: var(--slate-100);
+      color: var(--slate-700);
+    }
+
+    .flag-btn.flagged {
+      background: var(--warning-subtle);
+      border-color: #fde68a;
+      color: #b45309;
+    }
+
+    .q-title-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .q-number-pill {
+      background: var(--slate-800);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      min-width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .q-text-wrapper {
+      flex-grow: 1;
+    }
+
+    .q-text-bm {
+      font-size: 1.025rem;
+      font-weight: 600;
+      color: var(--slate-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .q-text-en {
+      font-size: 0.925rem;
+      font-style: italic;
+      color: var(--slate-500);
+      margin-bottom: 0.75rem;
+    }
+
+    .diagram-container {
+      margin: 1rem 0;
+      text-align: center;
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--slate-200);
+    }
+
+    /* Option Cards */
+    .options-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .options-list.grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .option-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      background: #fff;
+    }
+
+    .option-card:hover {
+      border-color: var(--primary-light);
+      background: #f8fafc;
+    }
+
+    .option-card.selected {
+      border-color: var(--primary);
+      background: var(--primary-subtle);
+    }
+
+    .opt-indicator {
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      border: 1.5px solid var(--slate-300);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--slate-700);
+      flex-shrink: 0;
+      transition: all 0.15s;
+    }
+
+    .option-card.selected .opt-indicator {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .opt-label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      flex-grow: 1;
+    }
+
+    /* Sidebar Navigation */
+    .sticky-sidebar {
+      position: sticky;
+      top: 5.5rem;
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .sidebar-header h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .progress-stats {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .progress-bar-bg {
+      height: 6px;
+      background: var(--slate-200);
+      border-radius: 9999px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.4rem;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+
+    .nav-btn {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 1px solid var(--slate-300);
+      border-radius: 0.375rem;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.15s;
+      position: relative;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--primary);
+      background: var(--slate-100);
+    }
+
+    .nav-btn.answered {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
+
+    .nav-btn.flagged::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #f59e0b;
+    }
+
+    .sidebar-legend {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--slate-200);
+      font-size: 0.75rem;
+      color: var(--slate-500);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .dot-unanswered { background: var(--slate-300); }
+    .dot-answered { background: #2563eb; }
+    .dot-flagged { background: #f59e0b; }
+
+    /* Results Dashboard */
+    .results-section {
+      display: none;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-scorecard {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: #fff;
+      border-radius: 1rem;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+    }
+
+    .score-circle {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 4px solid #60a5fa;
+      margin: 1rem auto;
+    }
+
+    .score-big {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .score-max {
+      font-size: 0.9rem;
+      color: #93c5fd;
+      font-weight: 600;
+    }
+
+    .grade-badge {
+      display: inline-block;
+      padding: 0.4rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      margin-top: 0.75rem;
+    }
+
+    .grade-A-plus { background: #10b981; color: #fff; }
+    .grade-A { background: #059669; color: #fff; }
+    .grade-B { background: #3b82f6; color: #fff; }
+    .grade-C { background: #f59e0b; color: #fff; }
+    .grade-D { background: #f97316; color: #fff; }
+    .grade-E { background: #ef4444; color: #fff; }
+
+    /* Chapter Analysis */
+    .analysis-card {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid var(--slate-200);
+      margin-bottom: 2rem;
+    }
+
+    .analysis-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--slate-800);
+    }
+
+    .chapter-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .chapter-name {
+      flex: 1;
+      font-weight: 600;
+      color: var(--slate-700);
+    }
+
+    .chapter-bar-container {
+      flex: 1.5;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .chapter-bar-val {
+      height: 100%;
+      background: #3b82f6;
+      border-radius: 9999px;
+    }
+
+    .chapter-score-text {
+      width: 50px;
+      text-align: right;
+      font-weight: 700;
+    }
+
+    /* Review question states */
+    .question-card.review-correct {
+      border-left: 5px solid var(--success);
+    }
+
+    .question-card.review-incorrect {
+      border-left: 5px solid var(--danger);
+    }
+
+    .option-card.correct-answer {
+      border-color: var(--success);
+      background: var(--success-subtle);
+    }
+
+    .option-card.correct-answer .opt-indicator {
+      background: var(--success);
+      border-color: var(--success);
+      color: #fff;
+    }
+
+    .option-card.wrong-selected {
+      border-color: var(--danger);
+      background: var(--danger-subtle);
+    }
+
+    .option-card.wrong-selected .opt-indicator {
+      background: var(--danger);
+      border-color: var(--danger);
+      color: #fff;
+    }
+
+    .solution-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f8fafc;
+      border-left: 3px solid #3b82f6;
+      border-radius: 0.375rem;
+      font-size: 0.9rem;
+      color: var(--slate-800);
+    }
+
+    .solution-box strong {
+      color: var(--primary);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      padding: 1rem;
+    }
+
+    .modal-box {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.75rem;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .modal-box h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-box p {
+      font-size: 0.95rem;
+      color: var(--slate-500);
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .tree-grid {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="header-brand">
+        <h1>📐 MATEMATIK TINGKATAN 4 (1449/1)</h1>
+        <p>Peperiksaan Akhir Tahun &bull; 40 Soalan Objektif KSSM SPM</p>
+      </div>
+
+      <div class="header-tools">
+        <div class="timer-badge" id="examTimer">
+          ⏱️ <span id="timerText">01:30:00</span>
+        </div>
+        <a href="Kertas_1_Matematik_Tingkatan_4.pdf" target="_blank" class="btn btn-pdf" download>
+          📄 Muat Turun PDF
+        </a>
+        <button id="submitBtnHeader" class="btn btn-submit" onclick="confirmSubmit()">
+          ✓ Hantar Jawapan
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN EXAM VIEW -->
+  <main class="main-layout" id="examView">
+    <!-- Questions Column -->
+    <div class="questions-column">
+      
+      <!-- Candidate Details -->
+      <div class="candidate-card">
+        <div class="candidate-inputs">
+          <div class="input-group">
+            <label for="studentName">Nama Calon:</label>
+            <input type="text" id="studentName" placeholder="Masukkan nama anda..." />
+          </div>
+          <div class="input-group">
+            <label for="studentClass">Kelas:</label>
+            <input type="text" id="studentClass" placeholder="Contoh: 4 Sains 1" style="width: 140px;" />
+          </div>
+        </div>
+        <div style="font-size: 0.85rem; color: var(--slate-500);">
+          <b>Masa:</b> 1 Jam 30 Minit | <b>Markah Penuh:</b> 40
+        </div>
+      </div>
+
+      <!-- Question List Container -->
+      <div id="questionsContainer"></div>
+
+      <!-- Bottom Submit Button -->
+      <div style="text-align: center; margin: 2rem 0;">
+        <button class="btn btn-submit" style="font-size: 1.1rem; padding: 0.75rem 2.5rem;" onclick="confirmSubmit()">
+          ✓ Hantar Jawapan Peperiksaan
+        </button>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation Palette -->
+    <aside class="sticky-sidebar">
+      <div class="sidebar-header">
+        <h3>Peta Soalan</h3>
+        <span class="progress-stats" id="progressCount">0 / 40</span>
+      </div>
+
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+
+      <div class="nav-grid" id="navGrid"></div>
+
+      <div class="sidebar-legend">
+        <div class="legend-item"><span class="dot dot-unanswered"></span> Belum</div>
+        <div class="legend-item"><span class="dot dot-answered"></span> Selesai</div>
+        <div class="legend-item"><span class="dot dot-flagged"></span> Ditanda</div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- RESULTS DASHBOARD VIEW -->
+  <section class="results-section" id="resultsView" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <!-- Scorecard -->
+    <div class="hero-scorecard">
+      <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem;">KEPUTUSAN PEPERIKSAAN MATEMATIK</h2>
+      <p style="color: #93c5fd; font-size: 0.95rem;" id="resStudentInfo">Calon: -</p>
+
+      <div class="score-circle">
+        <span class="score-big" id="scoreDisplay">0</span>
+        <span class="score-max">/ 40 Markah</span>
+      </div>
+
+      <div>
+        <div class="grade-badge" id="gradeBadge">GRED: -</div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:2rem; margin-top:1.5rem; font-size:0.95rem; color:#cbd5e1;">
+        <div><b>Peratusan:</b> <span id="resPercent">0%</span></div>
+        <div><b>Masa Digunakan:</b> <span id="resTimeUsed">-</span></div>
+        <div><b>Status:</b> <span id="resStatus" style="font-weight:700;">-</span></div>
+      </div>
+
+      <div style="margin-top: 1.75rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-pdf" onclick="retakeExam()">🔄 Uji Semula (Retake)</button>
+        <a href="Kertas_1_Matematik_Tingkatan_4.pdf" target="_blank" class="btn btn-submit" download>📥 Muat Turun Kertas PDF</a>
+        <button class="btn btn-pdf" onclick="window.print()">🖨️ Cetak Keputusan</button>
+      </div>
+    </div>
+
+    <!-- Chapter Breakdown -->
+    <div class="analysis-card">
+      <h3>Analisis Prestasi Mengikut Bab (Bab 1 &ndash; 10)</h3>
+      <div id="chapterAnalysisList"></div>
+    </div>
+
+    <!-- Review Section Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+      <h3 style="font-size:1.25rem; font-weight:800;">Semakan Jawapan & Penyelesaian Lengkap</h3>
+      <div style="display:flex; gap:0.5rem;">
+        <button class="btn btn-pdf" style="color:var(--slate-800); border-color:var(--slate-300);" onclick="filterReview('all')">Semua (40)</button>
+        <button class="btn btn-pdf" style="color:var(--success); border-color:var(--success);" onclick="filterReview('correct')">Betul Sahaja</button>
+        <button class="btn btn-pdf" style="color:var(--danger); border-color:var(--danger);" onclick="filterReview('wrong')">Salah Sahaja</button>
+      </div>
+    </div>
+
+    <!-- Reviewed Questions List -->
+    <div id="reviewedQuestionsContainer"></div>
+  </section>
+
+  <!-- CONFIRM SUBMISSION MODAL -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal-box">
+      <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📝</div>
+      <h3>Hantar Kertas Peperiksaan?</h3>
+      <p id="modalMsg">Adakah anda pasti mahu menghantar jawapan anda sekarang?</p>
+      <div class="modal-buttons">
+        <button class="btn btn-pdf" style="color: var(--slate-700); border-color: var(--slate-300);" onclick="closeModal()">
+          Batal & Semak Semula
+        </button>
+        <button class="btn btn-submit" onclick="submitExam()">
+          Ya, Hantar Sekarang
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const questionsData = ${questionsJson};
+
+    // State
+    const userAnswers = {};
+    const flaggedQuestions = new Set();
+    let timeLeft = 90 * 60; // 90 minutes
+    let timerInterval = null;
+    let examSubmitted = false;
+
+    // Initialize Questions on DOM Load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderQuestions();
+      renderNavGrid();
+      startTimer();
+    });
+
+    function renderQuestions() {
+      const container = document.getElementById('questionsContainer');
+      container.innerHTML = '';
+
+      questionsData.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'question-card';
+        card.id = 'qcard-' + q.num;
+
+        const isSingleCol = q.options.some(opt => opt.text.length > 40);
+
+        card.innerHTML = \`
+          <div class="q-top-row">
+            <span class="chapter-tag">\${q.chapter}</span>
+            <button class="flag-btn" id="flagBtn-\${q.num}" onclick="toggleFlag(\${q.num})">
+              📌 <span>Tanda untuk semakan</span>
+            </button>
+          </div>
+
+          <div class="q-title-row">
+            <div class="q-number-pill">\${q.num}</div>
+            <div class="q-text-wrapper">
+              <div class="q-text-bm">\${q.bm}</div>
+              <div class="q-text-en">\${q.en}</div>
+            </div>
+          </div>
+
+          \${q.diagram ? \`<div class="diagram-container">\${q.diagram}</div>\` : ''}
+
+          <div class="options-list \${isSingleCol ? '' : 'grid-2'}">
+            \${q.options.map(opt => \`
+              <div class="option-card" id="optCard-\${q.num}-\${opt.key}" onclick="chooseOption(\${q.num}, '\${opt.key}')">
+                <div class="opt-indicator">\${opt.key}</div>
+                <div class="opt-label">\${opt.text}</div>
+              </div>
+            \`).join('')}
+          </div>
+        \`;
+
+        container.appendChild(card);
+      });
+    }
+
+    function renderNavGrid() {
+      const grid = document.getElementById('navGrid');
+      grid.innerHTML = '';
+
+      questionsData.forEach(q => {
+        const btn = document.createElement('button');
+        btn.className = 'nav-btn';
+        btn.id = 'navBtn-' + q.num;
+        btn.innerText = q.num;
+        btn.onclick = () => scrollToQuestion(q.num);
+        grid.appendChild(btn);
+      });
+    }
+
+    function scrollToQuestion(num) {
+      const el = document.getElementById('qcard-' + num);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('active-focus');
+        setTimeout(() => el.classList.remove('active-focus'), 1200);
+      }
+    }
+
+    function chooseOption(qNum, key) {
+      if (examSubmitted) return;
+
+      userAnswers[qNum] = key;
+
+      // Update option card visual
+      const options = ['A', 'B', 'C', 'D'];
+      options.forEach(opt => {
+        const el = document.getElementById(\`optCard-\${qNum}-\${opt}\`);
+        if (el) {
+          if (opt === key) {
+            el.classList.add('selected');
+          } else {
+            el.classList.remove('selected');
+          }
+        }
+      });
+
+      // Update nav button
+      const navBtn = document.getElementById('navBtn-' + qNum);
+      if (navBtn) {
+        navBtn.classList.add('answered');
+      }
+
+      updateProgress();
+    }
+
+    function toggleFlag(qNum) {
+      const btn = document.getElementById('flagBtn-' + qNum);
+      const navBtn = document.getElementById('navBtn-' + qNum);
+
+      if (flaggedQuestions.has(qNum)) {
+        flaggedQuestions.delete(qNum);
+        btn.classList.remove('flagged');
+        btn.querySelector('span').innerText = 'Tanda untuk semakan';
+        if (navBtn) navBtn.classList.remove('flagged');
+      } else {
+        flaggedQuestions.add(qNum);
+        btn.classList.add('flagged');
+        btn.querySelector('span').innerText = 'Ditanda (Flagged)';
+        if (navBtn) navBtn.classList.add('flagged');
+      }
+    }
+
+    function updateProgress() {
+      const answeredCount = Object.keys(userAnswers).length;
+      document.getElementById('progressCount').innerText = \`\${answeredCount} / 40\`;
+      const pct = (answeredCount / 40) * 100;
+      document.getElementById('progressBar').style.width = pct + '%';
+    }
+
+    function startTimer() {
+      const timerEl = document.getElementById('timerText');
+      const badge = document.getElementById('examTimer');
+
+      timerInterval = setInterval(() => {
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert("Masa peperiksaan telah tamat! Jawapan anda akan dihantar secara automatik.");
+          submitExam();
+          return;
+        }
+
+        timeLeft--;
+        const hours = Math.floor(timeLeft / 3600);
+        const mins = Math.floor((timeLeft % 3600) / 60);
+        const secs = timeLeft % 60;
+
+        timerEl.innerText = \`\${String(hours).padStart(2, '0')}:\${String(mins).padStart(2, '0')}:\${String(secs).padStart(2, '0')}\`;
+
+        if (timeLeft < 10 * 60) {
+          badge.classList.add('urgent');
+        }
+      }, 1000);
+    }
+
+    function confirmSubmit() {
+      const modal = document.getElementById('confirmModal');
+      const msg = document.getElementById('modalMsg');
+
+      const answeredCount = Object.keys(userAnswers).length;
+      const unAnswered = 40 - answeredCount;
+
+      if (unAnswered > 0) {
+        msg.innerHTML = \`<span style="color:#dc2626; font-weight:700;">Amaran:</span> Anda masih mempunyai <b>\${unAnswered} soalan</b> yang belum dijawab!<br>Adakah anda pasti mahu menghantar kertas peperiksaan sekarang?\`;
+      } else {
+        msg.innerText = "Tahniah! Anda telah menjawab kesemua 40 soalan. Adakah anda bersedia untuk menghantar jawapan dan melihat keputusan?";
+      }
+
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('confirmModal').style.display = 'none';
+    }
+
+    function submitExam() {
+      closeModal();
+      clearInterval(timerInterval);
+      examSubmitted = true;
+
+      // Calculate score
+      let score = 0;
+      const chapterStats = {};
+
+      questionsData.forEach(q => {
+        const isCorrect = userAnswers[q.num] === q.answer;
+        if (isCorrect) score++;
+
+        if (!chapterStats[q.chapter]) {
+          chapterStats[q.chapter] = { total: 0, correct: 0 };
+        }
+        chapterStats[q.chapter].total++;
+        if (isCorrect) chapterStats[q.chapter].correct++;
+      });
+
+      // Hide exam view, show results
+      document.getElementById('examView').style.display = 'none';
+      document.getElementById('submitBtnHeader').style.display = 'none';
+      const resultsView = document.getElementById('resultsView');
+      resultsView.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Populate results
+      const studentName = document.getElementById('studentName').value.trim() || 'Calon Pelajar';
+      const studentClass = document.getElementById('studentClass').value.trim() || '-';
+      document.getElementById('resStudentInfo').innerText = \`Calon: \${studentName} | Kelas: \${studentClass}\`;
+
+      document.getElementById('scoreDisplay').innerText = score;
+      const percent = Math.round((score / 40) * 100);
+      document.getElementById('resPercent').innerText = percent + '%';
+
+      const timeUsedSeconds = (90 * 60) - timeLeft;
+      const mUsed = Math.floor(timeUsedSeconds / 60);
+      const sUsed = timeUsedSeconds % 60;
+      document.getElementById('resTimeUsed').innerText = \`\${mUsed} min \${sUsed} saat\`;
+
+      // Grade determination
+      const badge = document.getElementById('gradeBadge');
+      let grade = 'G';
+      let status = 'PERLU ULANG KAJI';
+      let gradeClass = 'grade-E';
+
+      if (percent >= 85) { grade = 'A+ (Cemerlang Tertinggi)'; status = 'LULUS CEMERLANG'; gradeClass = 'grade-A-plus'; }
+      else if (percent >= 75) { grade = 'A (Cemerlang)'; status = 'LULUS CEMERLANG'; gradeClass = 'grade-A'; }
+      else if (percent >= 70) { grade = 'A- (Cemerlang)'; status = 'LULUS CEMERLANG'; gradeClass = 'grade-A'; }
+      else if (percent >= 65) { grade = 'B+ (Kepujian Tertinggi)'; status = 'KEPUJIAN'; gradeClass = 'grade-B'; }
+      else if (percent >= 60) { grade = 'B (Kepujian Tinggi)'; status = 'KEPUJIAN'; gradeClass = 'grade-B'; }
+      else if (percent >= 55) { grade = 'C+ (Kepujian Atas)'; status = 'KEPUJIAN'; gradeClass = 'grade-C'; }
+      else if (percent >= 50) { grade = 'C (Kepujian)'; status = 'LULUS'; gradeClass = 'grade-C'; }
+      else if (percent >= 45) { grade = 'D (Lulus Atas)'; status = 'LULUS'; gradeClass = 'grade-D'; }
+      else if (percent >= 40) { grade = 'E (Lulus)'; status = 'LULUS'; gradeClass = 'grade-D'; }
+      else { grade = 'G (Gagal)'; status = 'BELUM MENCAPAI TAHAP'; gradeClass = 'grade-E'; }
+
+      badge.innerText = 'GRED: ' + grade;
+      badge.className = 'grade-badge ' + gradeClass;
+      document.getElementById('resStatus').innerText = status;
+
+      // Chapter breakdown
+      const chapList = document.getElementById('chapterAnalysisList');
+      chapList.innerHTML = '';
+      Object.keys(chapterStats).forEach(ch => {
+        const item = chapterStats[ch];
+        const chPct = Math.round((item.correct / item.total) * 100);
+        const row = document.createElement('div');
+        row.className = 'chapter-row';
+        row.innerHTML = \`
+          <span class="chapter-name">\${ch}</span>
+          <div class="chapter-bar-container">
+            <div class="chapter-bar-val" style="width: \${chPct}%; background: \${chPct >= 75 ? '#10b981' : chPct >= 50 ? '#3b82f6' : '#ef4444'};"></div>
+          </div>
+          <span class="chapter-score-text">\${item.correct} / \${item.total}</span>
+        \`;
+        chapList.appendChild(row);
+      });
+
+      // Render reviewed questions
+      renderReviewCards();
+    }
+
+    function renderReviewCards() {
+      const container = document.getElementById('reviewedQuestionsContainer');
+      container.innerHTML = '';
+
+      questionsData.forEach(q => {
+        const userChoice = userAnswers[q.num];
+        const isCorrect = userChoice === q.answer;
+
+        const card = document.createElement('div');
+        card.className = 'question-card ' + (isCorrect ? 'review-correct' : 'review-incorrect');
+        card.dataset.status = isCorrect ? 'correct' : 'wrong';
+
+        card.innerHTML = \`
+          <div class="q-top-row">
+            <span class="chapter-tag">\${q.chapter}</span>
+            <span style="font-weight:700; font-size:0.85rem; color: \${isCorrect ? '#059669' : '#dc2626'};">
+              \${isCorrect ? '✓ JAWAPAN BETUL (+1)' : '✗ JAWAPAN SALAH (0)'}
+            </span>
+          </div>
+
+          <div class="q-title-row">
+            <div class="q-number-pill" style="background: \${isCorrect ? '#059669' : '#dc2626'};">\${q.num}</div>
+            <div class="q-text-wrapper">
+              <div class="q-text-bm">\${q.bm}</div>
+              <div class="q-text-en">\${q.en}</div>
+            </div>
+          </div>
+
+          \${q.diagram ? \`<div class="diagram-container">\${q.diagram}</div>\` : ''}
+
+          <div class="options-list">
+            \${q.options.map(opt => {
+              let optClass = '';
+              if (opt.key === q.answer) {
+                optClass = 'correct-answer';
+              } else if (opt.key === userChoice && !isCorrect) {
+                optClass = 'wrong-selected';
+              }
+              return \`
+                <div class="option-card \${optClass}" style="cursor:default;">
+                  <div class="opt-indicator">\${opt.key}</div>
+                  <div class="opt-label">
+                    \${opt.text}
+                    \${opt.key === q.answer ? ' <b style="color:#059669;">(Jawapan Sebenar)</b>' : ''}
+                    \${opt.key === userChoice && !isCorrect ? ' <b style="color:#dc2626;">(Pilihan Anda)</b>' : ''}
+                  </div>
+                </div>
+              \`;
+            }).join('')}
+          </div>
+
+          <div class="solution-box">
+            <strong>💡 Jalan Kerja & Penerangan:</strong><br>
+            \${q.solution}
+          </div>
+        \`;
+
+        container.appendChild(card);
+      });
+    }
+
+    function filterReview(type) {
+      const cards = document.querySelectorAll('#reviewedQuestionsContainer .question-card');
+      cards.forEach(c => {
+        if (type === 'all') {
+          c.style.display = 'block';
+        } else if (type === 'correct') {
+          c.style.display = c.dataset.status === 'correct' ? 'block' : 'none';
+        } else if (type === 'wrong') {
+          c.style.display = c.dataset.status === 'wrong' ? 'block' : 'none';
+        }
+      });
+    }
+
+    function retakeExam() {
+      if (confirm("Adakah anda ingin mengulangi ujian ini semula? Semua pilihan semasa akan ditetapkan semula.")) {
+        location.reload();
+      }
+    }
+  </script>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.join(__dirname, 'index.html'), indexHtmlContent, 'utf8');
+console.log("Interactive website generated successfully at: " + path.join(__dirname, 'index.html'));
