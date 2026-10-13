@@ -1,0 +1,2366 @@
+{
+  "set1": [
+    {
+      "num": 1,
+      "chapter": "Bab 1: Fungsi dan Persamaan Kuadratik",
+      "bm": "Rajah 1 menunjukkan graf fungsi kuadratik <i>f</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 6<i>x</i> &minus; 5.<br>Nyatakan persamaan paksi simetri dan nilai maksimum bagi fungsi itu.",
+      "en": "Diagram 1 shows the graph of a quadratic function <i>f</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 6<i>x</i> &minus; 5.<br>State the equation of the axis of symmetry and the maximum value of the function.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"280\" height=\"170\" viewBox=\"0 0 280 170\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"25\" y1=\"130\" x2=\"255\" y2=\"130\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n    <text x=\"260\" y=\"134\" font-size=\"12\" font-weight=\"bold\">x</text>\n    <line x1=\"60\" y1=\"155\" x2=\"60\" y2=\"20\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n    <text x=\"52\" y=\"15\" font-size=\"12\" font-weight=\"bold\">f(x)</text>\n    <text x=\"48\" y=\"142\" font-size=\"11\">O</text>\n    <path d=\"M 75 142 Q 142 -10 209 142\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.2\"/>\n    <line x1=\"142\" y1=\"130\" x2=\"142\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"60\" y1=\"55\" x2=\"142\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <circle cx=\"142\" cy=\"55\" r=\"3.5\" fill=\"#1e293b\"/>\n    <text x=\"147\" y=\"50\" font-size=\"11\" font-weight=\"bold\">(3, 4)</text>\n    <text x=\"82\" y=\"144\" font-size=\"11\">1</text>\n    <text x=\"195\" y=\"144\" font-size=\"11\">5</text>\n    <text x=\"48\" y=\"59\" font-size=\"11\">4</text>\n    <text x=\"136\" y=\"144\" font-size=\"11\">3</text>\n    <text x=\"156\" y=\"96\" font-size=\"11\" font-style=\"italic\" fill=\"#1d4ed8\">f(x) = &minus;x² + 6x &minus; 5</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 1 / <i>Diagram 1</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 3, Nilai maksimum / Maximum value = 4"
+        },
+        {
+          "key": "B",
+          "text": "x = 3, Nilai maksimum / Maximum value = 5"
+        },
+        {
+          "key": "C",
+          "text": "x = &minus;3, Nilai maksimum / Maximum value = 4"
+        },
+        {
+          "key": "D",
+          "text": "x = &minus;3, Nilai maksimum / Maximum value = &minus;5"
+        }
+      ],
+      "answer": "A",
+      "concept": "Bagi fungsi kuadratik f(x) = ax² + bx + c dengan a < 0, graf mempunyai titik maksimum (puncak). Persamaan paksi simetri ialah garisan menegak x = &minus;b / (2a).",
+      "stepByStep": "1. Kenal pasti pekali: a = &minus;1, b = 6, c = &minus;5.<br>2. Cari paksi simetri: x = &minus;6 / [2(&minus;1)] = &minus;6 / (&minus;2) = 3.<br>3. Cari nilai maksimum dengan menggantikan x = 3 ke dalam fungsi:<br>&nbsp;&nbsp;&nbsp;&nbsp;f(3) = &minus;(3)² + 6(3) &minus; 5 = &minus;9 + 18 &minus; 5 = 4.<br>Maka, persamaan paksi simetri ialah x = 3 dan nilai maksimum ialah 4.",
+      "tip": "Berhati-hati dengan tanda negatif pada &minus;(3)². Kuasa dua hanya dikenakan pada 3, iaitu &minus;(9) = &minus;9, bukan (&minus;3)² = +9."
+    },
+    {
+      "num": 2,
+      "chapter": "Bab 1: Fungsi dan Persamaan Kuadratik",
+      "bm": "Selesaikan persamaan kuadratik berikut: [3<i>x</i>(<i>x</i> &minus; 1)] / 2 = 2 &minus; <i>x</i>",
+      "en": "Solve the quadratic equation: [3<i>x</i>(<i>x</i> &minus; 1)] / 2 = 2 &minus; <i>x</i>",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = &minus;1, &nbsp; x = 4/3"
+        },
+        {
+          "key": "B",
+          "text": "x = 1, &nbsp; x = &minus;4/3"
+        },
+        {
+          "key": "C",
+          "text": "x = &minus;2, &nbsp; x = 2/3"
+        },
+        {
+          "key": "D",
+          "text": "x = 2, &nbsp; x = &minus;2/3"
+        }
+      ],
+      "answer": "A",
+      "concept": "Untuk menyelesaikan persamaan kuadratik, hilangkan pecahan terlebih dahulu dan kembangkan ungkapan ke dalam bentuk am: ax² + bx + c = 0 sebelum pemfaktoran.",
+      "stepByStep": "1. Darab silang kedua-dua belah dengan 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x(x &minus; 1) = 2(2 &minus; x)<br>2. Kembangkan kurungan:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x² &minus; 3x = 4 &minus; 2x<br>3. Pindahkan semua sebutan ke sebelah kiri:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x² &minus; 3x + 2x &minus; 4 = 0 &rArr; 3x² &minus; x &minus; 4 = 0<br>4. Faktorkan:<br>&nbsp;&nbsp;&nbsp;&nbsp;(3x &minus; 4)(x + 1) = 0<br>5. Punca-punca persamaan:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x &minus; 4 = 0 &rArr; x = 4/3<br>&nbsp;&nbsp;&nbsp;&nbsp;x + 1 = 0 &rArr; x = &minus;1.",
+      "tip": "Semak semula jawapan dengan kalkulator saintifik: Tekan MODE &rarr; EQN &rarr; Degree 2, masukkan a = 3, b = &minus;1, c = &minus;4."
+    },
+    {
+      "num": 3,
+      "chapter": "Bab 1: Fungsi dan Persamaan Kuadratik",
+      "bm": "Graf bagi fungsi kuadratik <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 5 digerakkan secara menegak ke bawah sebanyak 9 unit untuk menghasilkan fungsi baharu <i>g</i>(<i>x</i>). Graf <i>g</i>(<i>x</i>) menyilang paksi-<i>x</i> pada titik <i>P</i> dan <i>Q</i>. Cari jarak antara titik <i>P</i> dan <i>Q</i>.",
+      "en": "The graph of <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 5 is translated downwards by 9 units to form <i>g</i>(<i>x</i>). The graph intersects the <i>x</i>-axis at <i>P</i> and <i>Q</i>. Find the distance between <i>P</i> and <i>Q</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 unit / units"
+        },
+        {
+          "key": "B",
+          "text": "4 unit / units"
+        },
+        {
+          "key": "C",
+          "text": "5 unit / units"
+        },
+        {
+          "key": "D",
+          "text": "8 unit / units"
+        }
+      ],
+      "answer": "B",
+      "concept": "Translasi menegak ke bawah sebanyak k unit menukar f(x) kepada g(x) = f(x) &minus; k. Titik persilangan paksi-x diperoleh apabila g(x) = 0.",
+      "stepByStep": "1. Bentuk fungsi baharu: g(x) = (x² + 5) &minus; 9 = x² &minus; 4.<br>2. Titik persilangan paksi-x berlaku apabila g(x) = 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;x² &minus; 4 = 0 &rArr; x² = 4 &rArr; x = &plusmn;2.<br>3. Koordinat titik ialah P(&minus;2, 0) dan Q(2, 0).<br>4. Jarak antara P dan Q = 2 &minus; (&minus;2) = 4 unit.",
+      "tip": "Jarak antara dua titik pada paksi mengufuk dihitung dengan menolak koordinat x yang lebih kecil daripada koordinat x yang lebih besar: x₂ &minus; x₁."
+    },
+    {
+      "num": 4,
+      "chapter": "Bab 1: Fungsi dan Persamaan Kuadratik",
+      "bm": "Panjang sebuah segi empat tepat adalah (<i>x</i> + 5) cm dan lebarnya (<i>x</i> &minus; 2) cm. Diberi luasnya 44 cm<sup>2</sup>, hitung perimeter, dalam cm, segi empat tepat itu.",
+      "en": "A rectangle has length (<i>x</i> + 5) cm and width (<i>x</i> &minus; 2) cm. Given its area is 44 cm<sup>2</sup>, calculate its perimeter, in cm.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "24 cm"
+        },
+        {
+          "key": "B",
+          "text": "30 cm"
+        },
+        {
+          "key": "C",
+          "text": "44 cm"
+        },
+        {
+          "key": "D",
+          "text": "60 cm"
+        }
+      ],
+      "answer": "B",
+      "concept": "Luas segi empat tepat = Panjang &times; Lebar. Perimeter = 2(Panjang + Lebar). Nilai x yang mewakili panjang mestilah positif.",
+      "stepByStep": "1. Bentuk persamaan luas:<br>&nbsp;&nbsp;&nbsp;&nbsp;(x + 5)(x &minus; 2) = 44<br>&nbsp;&nbsp;&nbsp;&nbsp;x² + 3x &minus; 10 = 44 &rArr; x² + 3x &minus; 54 = 0<br>2. Faktorkan:<br>&nbsp;&nbsp;&nbsp;&nbsp;(x + 9)(x &minus; 6) = 0 &rArr; x = 6 atau x = &minus;9.<br>3. Kerana panjang mesti positif, ambil x = 6.<br>4. Kira dimensi segi empat tepat:<br>&nbsp;&nbsp;&nbsp;&nbsp;Panjang = 6 + 5 = 11 cm, Lebar = 6 &minus; 2 = 4 cm.<br>5. Perimeter = 2(11 + 4) = 2(15) = 30 cm.",
+      "tip": "Jangan berhenti selepas mencari nilai x = 6! Soalan bertanyakan PERIMETER segi empat tepat, bukan nilai x."
+    },
+    {
+      "num": 5,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Nyatakan nilai digit yang bergaris dalam nombor 4<u>3</u>21<sub>5</sub>, dalam asas sepuluh.",
+      "en": "State the value of the underlined digit in 4<u>3</u>21<sub>5</sub>, in base ten.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "15"
+        },
+        {
+          "key": "B",
+          "text": "25"
+        },
+        {
+          "key": "C",
+          "text": "75"
+        },
+        {
+          "key": "D",
+          "text": "375"
+        }
+      ],
+      "answer": "C",
+      "concept": "Nilai tempat bagi sesuatu digit dalam nombor asas b dikira dari kanan bermula dengan b⁰, b¹, b², b³, ... Nilai digit = Digit &times; Nilai tempat.",
+      "stepByStep": "1. Kenal pasti kedudukan digit yang bergaris dalam 4<u>3</u>21₅:<br>&nbsp;&nbsp;&nbsp;&nbsp;Digit 1: tempat ke-0 &rarr; 5⁰ = 1<br>&nbsp;&nbsp;&nbsp;&nbsp;Digit 2: tempat ke-1 &rarr; 5¹ = 5<br>&nbsp;&nbsp;&nbsp;&nbsp;Digit 3 (bergaris): tempat ke-2 &rarr; 5² = 25<br>2. Hitung nilai digit:<br>&nbsp;&nbsp;&nbsp;&nbsp;Nilai digit = 3 &times; 5² = 3 &times; 25 = 75₁₀.",
+      "tip": "Kerap kali murid terkeliru antara 'nilai tempat' (25) dengan 'nilai digit' (75). Pastikan darabkan digit tersebut dengan nilai tempatnya!"
+    },
+    {
+      "num": 6,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Ungkapkan 111011<sub>2</sub> sebagai satu nombor dalam asas lapan.",
+      "en": "Express 111011<sub>2</sub> as a number in base eight.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "57₈"
+        },
+        {
+          "key": "B",
+          "text": "71₈"
+        },
+        {
+          "key": "C",
+          "text": "73₈"
+        },
+        {
+          "key": "D",
+          "text": "75₈"
+        }
+      ],
+      "answer": "C",
+      "concept": "Kerana 2³ = 8, nombor asas dua boleh ditukar ke asas lapan secara pantas dengan mengumpulkan setiap 3 digit bit bermula dari sebelah KANAN.",
+      "stepByStep": "1. Bahagikan 111011₂ kepada kumpulan 3 bit dari kanan:<br>&nbsp;&nbsp;&nbsp;&nbsp;[111] dan [011]<br>2. Tukar setiap kumpulan 3 bit ke nombor perpuluhan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Kumpulan kiri [111]₂ = 1(4) + 1(2) + 1(1) = 7<br>&nbsp;&nbsp;&nbsp;&nbsp;Kumpulan kanan [011]₂ = 0(4) + 1(2) + 1(1) = 3<br>3. Gabungkan digit: 73₈.",
+      "tip": "Ingat kod cepat 3-bit: 4-2-1. Contohnya 011 ialah 2+1=3, dan 111 ialah 4+2+1=7."
+    },
+    {
+      "num": 7,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Hitung 423<sub>5</sub> &minus; 144<sub>5</sub> dan nyatakan jawapannya dalam asas lima.",
+      "en": "Calculate 423<sub>5</sub> &minus; 144<sub>5</sub> and state the answer in base five.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "214₅"
+        },
+        {
+          "key": "B",
+          "text": "224₅"
+        },
+        {
+          "key": "C",
+          "text": "234₅"
+        },
+        {
+          "key": "D",
+          "text": "324₅"
+        }
+      ],
+      "answer": "B",
+      "concept": "Kaedah paling selamat: Tukar kedua-dua nombor ke asas 10, lakukan penolakan, kemudian tukar semula jawapan ke asas 5.",
+      "stepByStep": "1. Tukar ke asas 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;423₅ = 4(25) + 2(5) + 3 = 100 + 10 + 3 = 113₁₀<br>&nbsp;&nbsp;&nbsp;&nbsp;144₅ = 1(25) + 4(5) + 4 = 25 + 20 + 4 = 49₁₀<br>2. Tolak dalam asas 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;113 &minus; 49 = 64₁₀<br>3. Tukar 64₁₀ ke asas 5 (pembahagian berulang dengan 5):<br>&nbsp;&nbsp;&nbsp;&nbsp;64 &divide; 5 = 12 baki 4<br>&nbsp;&nbsp;&nbsp;&nbsp;12 &divide; 5 = 2 baki 2<br>&nbsp;&nbsp;&nbsp;&nbsp;2 &divide; 5 = 0 baki 2<br>Maka, baca dari bawah ke atas: 224₅.",
+      "tip": "Jika menggunakan penolakan lazim terus dalam asas 5: apabila meminjam 1 dari tiang sebelah kiri, nilainya ialah 5 (bukan 10!)."
+    },
+    {
+      "num": 8,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Diberi bahawa 101<sub>2</sub> + <i>p</i><sub>8</sub> = 35<sub>7</sub>, cari nilai <i>p</i>.",
+      "en": "Given that 101<sub>2</sub> + <i>p</i><sub>8</sub> = 35<sub>7</sub>, find the value of <i>p</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "21"
+        },
+        {
+          "key": "B",
+          "text": "25"
+        },
+        {
+          "key": "C",
+          "text": "31"
+        },
+        {
+          "key": "D",
+          "text": "32"
+        }
+      ],
+      "answer": "B",
+      "concept": "Apabila persamaan mengandungi pelbagai asas nombor yang berbeza, tukarkan setiap nombor ke asas 10 untuk menyelesaikan persamaan.",
+      "stepByStep": "1. Tukar 101₂ ke asas 10: 1(4) + 0(2) + 1(1) = 5₁₀.<br>2. Tukar 35₇ ke asas 10: 3(7) + 5(1) = 21 + 5 = 26₁₀.<br>3. Selesaikan persamaan linear:<br>&nbsp;&nbsp;&nbsp;&nbsp;5 + p₈ = 26 &rArr; p₁₀ = 26 &minus; 5 = 21₁₀.<br>4. Tukar 21₁₀ ke asas 8:<br>&nbsp;&nbsp;&nbsp;&nbsp;21 &divide; 8 = 2 baki 5<br>&nbsp;&nbsp;&nbsp;&nbsp;2 &divide; 8 = 0 baki 2<br>Maka p = 25₈. Nilai p ialah 25.",
+      "tip": "Berhati-hati: 21 ialah nilai dalam asas 10. Soalan menyatakan p₈ (asas 8), jadi 21₁₀ mesti ditukar kepada 25₈."
+    },
+    {
+      "num": 9,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Antara pernyataan majmuk berikut, yang manakah adalah <b>benar</b>?",
+      "en": "Which of the following compound statements is <b>true</b>?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "3² = 6 dan / and 4 > 2"
+        },
+        {
+          "key": "B",
+          "text": "9 ialah nombor perdana atau 12 ialah gandaan 4"
+        },
+        {
+          "key": "C",
+          "text": "Semua poligon mempunyai 5 sisi atau &minus;3 > &minus;1"
+        },
+        {
+          "key": "D",
+          "text": "5 &times; 0 = 5 dan 7 ialah nombor ganjil"
+        }
+      ],
+      "answer": "B",
+      "concept": "Jadual Kebenaran: Pernyataan dengan perkataan 'ATAU' adalah BENAR jika sekurang-kurangnya SATU pernyataan komponennya adalah benar. Pernyataan dengan 'DAN' memerlukan kedua-duanya benar.",
+      "stepByStep": "Analisis setiap pilihan:<br>&bull; A: 3² = 6 (Palsu) DAN 4 > 2 (Benar) &rarr; Palsu DAN Benar = PALSU.<br>&bull; B: 9 nombor perdana (Palsu) ATAU 12 gandaan 4 (Benar) &rarr; Palsu ATAU Benar = BENAR! ✓<br>&bull; C: Semua poligon ada 5 sisi (Palsu) ATAU &minus;3 > &minus;1 (Palsu) &rarr; PALSU.<br>&bull; D: 5 &times; 0 = 5 (Palsu) DAN 7 nombor ganjil (Benar) &rarr; PALSU.",
+      "tip": "Untuk operasi 'ATAU', anda hanya perlu mencari satu fakta yang benar sahaja untuk menjadikan keseluruhan pernyataan majmuk itu benar."
+    },
+    {
+      "num": 10,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Tentukan akas bagi implikasi: &ldquo;Jika <i>x</i> ialah faktor bagi 12, maka <i>x</i> ialah faktor bagi 24.&rdquo;",
+      "en": "Determine the converse of: &ldquo;If <i>x</i> is a factor of 12, then <i>x</i> is a factor of 24.&rdquo;",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jika x bukan faktor 12, maka x bukan faktor 24."
+        },
+        {
+          "key": "B",
+          "text": "Jika x ialah faktor 24, maka x ialah faktor 12."
+        },
+        {
+          "key": "C",
+          "text": "Jika x bukan faktor 24, maka x bukan faktor 12."
+        },
+        {
+          "key": "D",
+          "text": "x faktor 12 jika dan hanya jika x faktor 24."
+        }
+      ],
+      "answer": "B",
+      "concept": "Hubungan Implikasi (Jika p, maka q):<br>&bull; Akas (Converse): Jika q, maka p.<br>&bull; Songsangan (Inverse): Jika ~p, maka ~q.<br>&bull; Kontrapositif: Jika ~q, maka ~p.",
+      "stepByStep": "1. Implikasi asal: Jika p (x faktor 12), maka q (x faktor 24).<br>2. Akas diperoleh dengan menukar kedudukan anteseden (p) dan akibat (q):<br>&nbsp;&nbsp;&nbsp;&nbsp;'Jika q, maka p'<br>3. Maka akasnya ialah: 'Jika x ialah faktor bagi 24, maka x ialah faktor bagi 12.'",
+      "tip": "Akas HANYA menukar kedudukan (terbalikkan urutan ayat), tanpa menafikan (tanpa menambah perkataan 'bukan')."
+    },
+    {
+      "num": 11,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Lengkapkan hujah deduktif berikut:<br><b>Premis 1:</b> Jika <i>m</i> ialah gandaan 6, maka <i>m</i> boleh dibahagi tepat dengan 3.<br><b>Premis 2:</b> 42 ialah gandaan 6.<br><b>Kesimpulan:</b> ............................................................................",
+      "en": "Complete the argument: Premise 1: If <i>m</i> is a multiple of 6, then <i>m</i> is divisible by 3. Premise 2: 42 is a multiple of 6. Conclusion: ...",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "42 tidak boleh dibahagi tepat dengan 3"
+        },
+        {
+          "key": "B",
+          "text": "42 boleh dibahagi tepat dengan 3"
+        },
+        {
+          "key": "C",
+          "text": "m bukan gandaan 6"
+        },
+        {
+          "key": "D",
+          "text": "m boleh dibahagi tepat dengan 3"
+        }
+      ],
+      "answer": "B",
+      "concept": "Hujah Deduktif Bentuk II (Modus Ponens):<br>Premis 1: Jika p, maka q.<br>Premis 2: p adalah benar.<br>Kesimpulan: q adalah benar.",
+      "stepByStep": "1. Dalam Premis 1: p = 'm gandaan 6', q = 'm boleh dibahagi tepat dengan 3'.<br>2. Premis 2 mengesahkan p bagi nombor 42: '42 ialah gandaan 6'.<br>3. Kesimpulan mesti mengesahkan q bagi nombor yang sama: '42 boleh dibahagi tepat dengan 3'.",
+      "tip": "Pastikan kesimpulan menyatakan subjek khusus (42) dan bukannya huruf pemboleh ubah m."
+    },
+    {
+      "num": 12,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Diberi pola: 5 = 3(1)<sup>2</sup> + 2, &nbsp; 14 = 3(2)<sup>2</sup> + 2, &nbsp; 29 = 3(3)<sup>2</sup> + 2, &nbsp; 50 = 3(4)<sup>2</sup> + 2, &hellip;<br>Buat satu kesimpulan secara induksi bagi sebutan ke-<i>n</i> jujukan itu.",
+      "en": "Given the pattern: 5 = 3(1)<sup>2</sup> + 2, 14 = 3(2)<sup>2</sup> + 2, ... Make a conclusion by induction for the <i>n</i>-th term.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "3n² + 2, &nbsp; n = 1, 2, 3, 4, ..."
+        },
+        {
+          "key": "B",
+          "text": "3n + 2, &nbsp; n = 1, 2, 3, 4, ..."
+        },
+        {
+          "key": "C",
+          "text": "3n² &minus; 2, &nbsp; n = 1, 2, 3, 4, ..."
+        },
+        {
+          "key": "D",
+          "text": "2n² + 3, &nbsp; n = 1, 2, 3, 4, ..."
+        }
+      ],
+      "answer": "A",
+      "concept": "Penaakulan induktif melibatkan pemerhatian pola nombor khusus untuk membina formula am bagi sebutan ke-n.",
+      "stepByStep": "1. Teliti bahagian yang malar (tidak berubah): nombor 3, kuasa dua ², dan penambahan + 2.<br>2. Teliti bahagian yang berubah mengikut urutan: (1), (2), (3), (4) ... gantikan dengan pemboleh ubah n.<br>3. Pola am: 3n² + 2 di mana n = 1, 2, 3, 4, ...",
+      "tip": "Dalam soalan SPM, ungkapan induksi yang lengkap MESTI menyatakan julat n (iaitu n = 1, 2, 3, 4, ...)."
+    },
+    {
+      "num": 13,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Diberi set semesta &xi; = {<i>x</i> : 1 &le; <i>x</i> &le; 20, <i>x</i> ialah integer}, set <i>P</i> = {<i>x</i> : <i>x</i> ialah nombor ganjil} dan set <i>Q</i> = {<i>x</i> : <i>x</i> ialah gandaan 3}. Cari <i>n</i>(<i>P</i> &cap; <i>Q</i>&prime;).",
+      "en": "Given &xi; = {<i>x</i> : 1 &le; <i>x</i> &le; 20, <i>x</i> is an integer}, <i>P</i> = {odd numbers} and <i>Q</i> = {multiples of 3}. Find <i>n</i>(<i>P</i> &cap; <i>Q</i>&prime;).",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "7"
+        },
+        {
+          "key": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "C",
+      "concept": "P &cap; Q' merujuk kepada semua unsur yang berada di dalam set P TETAPI TIDAK berada di dalam set Q (sama dengan P \\ Q).",
+      "stepByStep": "1. Senaraikan set P (nombor ganjil dari 1 hingga 20):<br>&nbsp;&nbsp;&nbsp;&nbsp;P = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19} &rarr; Jumlah = 10 unsur.<br>2. Senaraikan set Q (gandaan 3):<br>&nbsp;&nbsp;&nbsp;&nbsp;Q = {3, 6, 9, 12, 15, 18}.<br>3. Cari unsur P yang juga gandaan 3 (P &cap; Q):<br>&nbsp;&nbsp;&nbsp;&nbsp;{3, 9, 15} &rarr; 3 unsur.<br>4. Unsur P yang BUKAN gandaan 3 (P &cap; Q'):<br>&nbsp;&nbsp;&nbsp;&nbsp;{1, 5, 7, 11, 13, 17, 19} &rarr; 10 &minus; 3 = 7 unsur.",
+      "tip": "Q' bermaksud pelengkap bagi Q (semua nombor yang bukan gandaan 3). Maka cari nombor ganjil yang tidak boleh dibahagi dengan 3."
+    },
+    {
+      "num": 14,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Rajah 2 menunjukkan gambar rajah Venn dengan &xi; = <i>P</i> &cup; <i>Q</i> &cup; <i>R</i>.<br>Antara berikut, yang manakah mewakili kawasan berlorek?",
+      "en": "Diagram 2 shows a Venn diagram with &xi; = <i>P</i> &cup; <i>Q</i> &cup; <i>R</i>.<br>Which represents the shaded region?",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"260\" height=\"160\" viewBox=\"0 0 260 160\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <clipPath id=\"circleP\"><circle cx=\"100\" cy=\"68\" r=\"46\"/></clipPath>\n    </defs>\n    <rect x=\"8\" y=\"8\" width=\"244\" height=\"144\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.5\" rx=\"4\"/>\n    <text x=\"18\" y=\"26\" font-size=\"13\" font-weight=\"bold\">&xi;</text>\n    <g clip-path=\"url(#circleP)\">\n      <circle cx=\"156\" cy=\"68\" r=\"46\" fill=\"#93c5fd\" />\n    </g>\n    <circle cx=\"128\" cy=\"108\" r=\"40\" fill=\"#f8fafc\" stroke=\"none\"/>\n    <circle cx=\"100\" cy=\"68\" r=\"46\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n    <circle cx=\"156\" cy=\"68\" r=\"46\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n    <circle cx=\"128\" cy=\"108\" r=\"40\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n    <text x=\"72\" y=\"44\" font-size=\"13\" font-weight=\"bold\">P</text>\n    <text x=\"176\" y=\"44\" font-size=\"13\" font-weight=\"bold\">Q</text>\n    <text x=\"124\" y=\"144\" font-size=\"13\" font-weight=\"bold\">R</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 2 / <i>Diagram 2</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "(P &cap; Q) &cap; R'"
+        },
+        {
+          "key": "B",
+          "text": "(P &cup; Q) &cap; R"
+        },
+        {
+          "key": "C",
+          "text": "(P &cap; Q) &cup; R"
+        },
+        {
+          "key": "D",
+          "text": "P' &cap; (Q &cup; R)"
+        }
+      ],
+      "answer": "A",
+      "concept": "Kawasan persilangan dua set P dan Q diwakili oleh P &cap; Q. Jika sebahagian kawasan itu dikeluarkan kerana bertindih dengan R, ia didarab silang dengan pelengkap R (iaitu &cap; R').",
+      "stepByStep": "1. Perhatikan kedudukan kawasan berlorek: ia berada di dalam bulatan P dan bulatan Q serentak &rarr; (P &cap; Q).<br>2. Perhatikan bulatan R: kawasan berlorek langsung tidak memasuki bulatan R &rarr; di luar R (&cap; R').<br>3. Gabungkan kedua-dua syarat: (P &cap; Q) &cap; R'.",
+      "tip": "Kaedah menomborkan kawasan: Labelkan setiap ruang dengan nombor 1, 2, 3, 4, 5, 6, 7 untuk menguji pilihan jawapan dengan pantas."
+    },
+    {
+      "num": 15,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Dalam sebuah kelas 45 murid, 28 orang menyertai Kelab Sains, 20 orang Kelab Matematik, dan 5 orang tidak menyertai mana-mana kelab. Hitung bilangan murid yang menyertai kedua-dua kelab.",
+      "en": "In a class of 45 students, 28 join Science Club, 20 join Math Club, and 5 join neither. How many join both clubs?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "6"
+        },
+        {
+          "key": "B",
+          "text": "8"
+        },
+        {
+          "key": "C",
+          "text": "12"
+        },
+        {
+          "key": "D",
+          "text": "17"
+        }
+      ],
+      "answer": "B",
+      "concept": "Formula kesatuan set: n(A &cup; B) = n(A) + n(B) &minus; n(A &cap; B).",
+      "stepByStep": "1. Cari bilangan murid yang menyertai sekurang-kurangnya satu kelab:<br>&nbsp;&nbsp;&nbsp;&nbsp;n(S &cup; M) = 45 &minus; 5 = 40 orang.<br>2. Masukkan ke dalam rumus kesatuan:<br>&nbsp;&nbsp;&nbsp;&nbsp;40 = n(Sains) + n(Math) &minus; n(Kedua-duanya)<br>&nbsp;&nbsp;&nbsp;&nbsp;40 = 28 + 20 &minus; n(S &cap; M)<br>&nbsp;&nbsp;&nbsp;&nbsp;40 = 48 &minus; n(S &cap; M)<br>3. n(S &cap; M) = 48 &minus; 40 = 8 orang.",
+      "tip": "Jangan lupa tolak 5 orang murid yang TIDAK menyertai mana-mana kelab sebelum mengira persilangan."
+    },
+    {
+      "num": 16,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Diberi bahawa set <i>A</i> &sub; <i>B</i> dan <i>B</i> &cap; <i>C</i> = &empty;. Antara pernyataan berikut, yang manakah <b>pasti benar</b>?",
+      "en": "Given that <i>A</i> &sub; <i>B</i> and <i>B</i> &cap; <i>C</i> = &empty;. Which statement is <b>definitely true</b>?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "A &cap; C &ne; &empty;"
+        },
+        {
+          "key": "B",
+          "text": "A &sub; C"
+        },
+        {
+          "key": "C",
+          "text": "A &cap; C = &empty;"
+        },
+        {
+          "key": "D",
+          "text": "B &sub; A"
+        }
+      ],
+      "answer": "C",
+      "concept": "A &sub; B bermaksud set A terletak sepenuhnya di dalam set B. B &cap; C = &empty; bermaksud set B dan set C saling berpisah (tiada unsur sepunya).",
+      "stepByStep": "1. Kerana semua unsur dalam A adalah unsur dalam B (A &sub; B),<br>2. Dan B tidak berkongsi sebarang unsur dengan C (B &cap; C = &empty;),<br>3. Maka A juga mustahil berkongsi unsur dengan C.<br>4. Oleh itu, A &cap; C = &empty; (set kosong).",
+      "tip": "Lakarkan rajah Venn: Lukis bulatan A di dalam bulatan B, dan lukis bulatan C jauh di luar B. Jelas kelihatan A dan C tidak bersilang."
+    },
+    {
+      "num": 17,
+      "chapter": "Bab 5: Rangkaian dalam Teori Graf",
+      "bm": "Satu graf tak terarah mempunyai 6 bucu dengan darjah 3, 2, 4, 3, <i>k</i> dan 2. Diberi graf itu mempunyai 9 tepi, cari nilai <i>k</i>.",
+      "en": "An undirected graph has 6 vertices with degrees 3, 2, 4, 3, <i>k</i>, 2. Given it has 9 edges, find <i>k</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "C",
+      "concept": "Teorem Jumlah Darjah (Handshaking Lemma): Jumlah darjah bagi semua bucu dalam suatu graf ialah dua kali bilangan tepi: &sum; d(v) = 2E.",
+      "stepByStep": "1. Diberi E = 9 tepi, maka jumlah darjah ialah:<br>&nbsp;&nbsp;&nbsp;&nbsp;&sum; d(v) = 2 &times; 9 = 18.<br>2. Jumlahkan darjah bagi 6 bucu yang diberi:<br>&nbsp;&nbsp;&nbsp;&nbsp;3 + 2 + 4 + 3 + k + 2 = 14 + k.<br>3. Selesaikan persamaan linear:<br>&nbsp;&nbsp;&nbsp;&nbsp;14 + k = 18 &rArr; k = 18 &minus; 14 = 4.",
+      "tip": "Ingat prinsip penting: Jumlah darjah bagi sebarang graf sentiasa merupakan nombor GENAP kerana setiap satu tepi menyambungkan 2 bucu."
+    },
+    {
+      "num": 18,
+      "chapter": "Bab 5: Rangkaian dalam Teori Graf",
+      "bm": "Antara graf berikut, yang manakah merupakan suatu <b>pokok</b> (<i>tree</i>)?",
+      "en": "Which of the following graphs is a <b>tree</b>?",
+      "diagram": "\n  <div class=\"tree-grid\">\n    <div class=\"tree-box\">\n      <svg width=\"100\" height=\"90\" viewBox=\"0 0 100 90\">\n        <text x=\"6\" y=\"15\" font-weight=\"bold\">A</text>\n        <line x1=\"22\" y1=\"65\" x2=\"50\" y2=\"24\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <line x1=\"50\" y1=\"24\" x2=\"76\" y2=\"65\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <line x1=\"76\" y1=\"65\" x2=\"22\" y2=\"65\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <line x1=\"76\" y1=\"65\" x2=\"92\" y2=\"42\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <circle cx=\"22\" cy=\"65\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"50\" cy=\"24\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"76\" cy=\"65\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"92\" cy=\"42\" r=\"4\" fill=\"#1e293b\"/>\n      </svg>\n    </div>\n    <div class=\"tree-box\">\n      <svg width=\"100\" height=\"90\" viewBox=\"0 0 100 90\">\n        <text x=\"6\" y=\"15\" font-weight=\"bold\">B</text>\n        <line x1=\"18\" y1=\"32\" x2=\"44\" y2=\"32\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <line x1=\"66\" y1=\"32\" x2=\"88\" y2=\"64\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <circle cx=\"18\" cy=\"32\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"44\" cy=\"32\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"66\" cy=\"32\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"88\" cy=\"64\" r=\"4\" fill=\"#1e293b\"/>\n      </svg>\n    </div>\n    <div class=\"tree-box\">\n      <svg width=\"100\" height=\"90\" viewBox=\"0 0 100 90\">\n        <text x=\"6\" y=\"15\" font-weight=\"bold\">C</text>\n        <line x1=\"50\" y1=\"18\" x2=\"25\" y2=\"48\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n        <line x1=\"50\" y1=\"18\" x2=\"75\" y2=\"48\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n        <line x1=\"25\" y1=\"48\" x2=\"16\" y2=\"76\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n        <line x1=\"25\" y1=\"48\" x2=\"40\" y2=\"76\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n        <circle cx=\"50\" cy=\"18\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"25\" cy=\"48\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"75\" cy=\"48\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"16\" cy=\"76\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"40\" cy=\"76\" r=\"4\" fill=\"#1e293b\"/>\n      </svg>\n    </div>\n    <div class=\"tree-box\">\n      <svg width=\"100\" height=\"90\" viewBox=\"0 0 100 90\">\n        <text x=\"6\" y=\"15\" font-weight=\"bold\">D</text>\n        <polygon points=\"24,24 74,24 74,66 24,66\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n        <circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"74\" cy=\"24\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"74\" cy=\"66\" r=\"4\" fill=\"#1e293b\"/>\n        <circle cx=\"24\" cy=\"66\" r=\"4\" fill=\"#1e293b\"/>\n      </svg>\n    </div>\n  </div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "Graf A / Graph A"
+        },
+        {
+          "key": "B",
+          "text": "Graf B / Graph B"
+        },
+        {
+          "key": "C",
+          "text": "Graf C / Graph C"
+        },
+        {
+          "key": "D",
+          "text": "Graf D / Graph D"
+        }
+      ],
+      "answer": "C",
+      "concept": "Ciri-ciri Pokok (Tree) dalam Teori Graf:<br>1. Graf bersambung (connected).<br>2. Tiada kitaran / gelung (acyclic).<br>3. Bilangan tepi mesti tepat: E = V &minus; 1.",
+      "stepByStep": "Analisis setiap graf:<br>&bull; Graf A: Mengandungi kitaran segi tiga &rarr; BUKAN pokok.<br>&bull; Graf B: Terputus / tidak bersambung (2 komponen berasingan) &rarr; BUKAN pokok.<br>&bull; Graf C: Mempunyai 5 bucu dan 4 tepi (E = 5 &minus; 1 = 4), bersambung dan tiada kitaran &rarr; POKOK! ✓<br>&bull; Graf D: Mempunyai kitaran tertutup segi empat &rarr; BUKAN pokok.",
+      "tip": "Pokok ialah graf paling ringkas yang menghubungkan semua bucu tanpa membentuk sebarang laluan berulang/kitaran tertutup."
+    },
+    {
+      "num": 19,
+      "chapter": "Bab 5: Rangkaian dalam Teori Graf",
+      "bm": "Rajah 3 menunjukkan rangkaian jalan raya antara bandar <i>P, Q, R, S</i> dan <i>T</i> (jarak dalam km). Cari jarak terpendek, dalam km, dari <i>P</i> ke <i>T</i>.",
+      "en": "Diagram 3 shows a road network between towns <i>P, Q, R, S</i> and <i>T</i>. Find the shortest distance from <i>P</i> to <i>T</i>.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"300\" height=\"155\" viewBox=\"0 0 300 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <line x1=\"32\" y1=\"80\" x2=\"112\" y2=\"34\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"32\" y1=\"80\" x2=\"130\" y2=\"122\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"112\" y1=\"34\" x2=\"130\" y2=\"122\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"112\" y1=\"34\" x2=\"202\" y2=\"38\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"130\" y1=\"122\" x2=\"202\" y2=\"38\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"130\" y1=\"122\" x2=\"265\" y2=\"80\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"202\" y1=\"38\" x2=\"265\" y2=\"80\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n\n    <text x=\"66\" y=\"50\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">10</text>\n    <text x=\"68\" y=\"108\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">14</text>\n    <text x=\"127\" y=\"78\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">3</text>\n    <text x=\"154\" y=\"30\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">11</text>\n    <text x=\"171\" y=\"90\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">6</text>\n    <text x=\"195\" y=\"118\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">12</text>\n    <text x=\"238\" y=\"54\" font-size=\"11\" font-weight=\"bold\" fill=\"#b91c1c\">8</text>\n\n    <circle cx=\"32\" cy=\"80\" r=\"13\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"28\" y=\"85\" font-size=\"12\" font-weight=\"bold\">P</text>\n    <circle cx=\"112\" cy=\"34\" r=\"13\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"107\" y=\"39\" font-size=\"12\" font-weight=\"bold\">Q</text>\n    <circle cx=\"130\" cy=\"122\" r=\"13\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"125\" y=\"127\" font-size=\"12\" font-weight=\"bold\">R</text>\n    <circle cx=\"202\" cy=\"38\" r=\"13\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"198\" y=\"43\" font-size=\"12\" font-weight=\"bold\">S</text>\n    <circle cx=\"265\" cy=\"80\" r=\"13\" fill=\"#f8fafc\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"261\" y=\"85\" font-size=\"12\" font-weight=\"bold\">T</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 3 / <i>Diagram 3</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "25 km"
+        },
+        {
+          "key": "B",
+          "text": "26 km"
+        },
+        {
+          "key": "C",
+          "text": "28 km"
+        },
+        {
+          "key": "D",
+          "text": "29 km"
+        }
+      ],
+      "answer": "A",
+      "concept": "Untuk mencari jarak terpendek dalam graf berpemberat, senaraikan semua laluan yang sah dari bucu mula ke bucu akhir dan bandingkan jumlah beratnya.",
+      "stepByStep": "Kira jumlah berat setiap laluan dari P ke T:<br>&bull; Laluan 1 (P &rarr; Q &rarr; S &rarr; T): 10 + 11 + 8 = 29 km<br>&bull; Laluan 2 (P &rarr; Q &rarr; R &rarr; T): 10 + 3 + 12 = 25 km (Terpendek!) ✓<br>&bull; Laluan 3 (P &rarr; R &rarr; T): 14 + 12 = 26 km<br>&bull; Laluan 4 (P &rarr; Q &rarr; R &rarr; S &rarr; T): 10 + 3 + 6 + 8 = 27 km<br>Jarak terpendek ialah 25 km melalui laluan P &rarr; Q &rarr; R &rarr; T.",
+      "tip": "Walaupun laluan P &rarr; R hanya mempunyai 2 tepi (14+12=26), laluan 3 tepi P &rarr; Q &rarr; R &rarr; T (10+3+12=25) sebenarnya lebih pendek!"
+    },
+    {
+      "num": 20,
+      "chapter": "Bab 5: Rangkaian dalam Teori Graf",
+      "bm": "Rajah 4 menunjukkan graf berarah. Tentukan <i>d</i><sub>in</sub>(<i>B</i>) dan <i>d</i><sub>out</sub>(<i>B</i>) bagi bucu <i>B</i>.",
+      "en": "Diagram 4 shows a directed graph. Determine <i>d</i><sub>in</sub>(<i>B</i>) and <i>d</i><sub>out</sub>(<i>B</i>) for vertex <i>B</i>.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"260\" height=\"155\" viewBox=\"0 0 260 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"15\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"34\" y1=\"34\" x2=\"130\" y2=\"78\" stroke=\"#334155\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/>\n    <line x1=\"34\" y1=\"122\" x2=\"130\" y2=\"78\" stroke=\"#334155\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/>\n    <line x1=\"130\" y1=\"78\" x2=\"226\" y2=\"40\" stroke=\"#334155\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/>\n    <line x1=\"130\" y1=\"78\" x2=\"226\" y2=\"114\" stroke=\"#334155\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/>\n    <path d=\"M 124 86 Q 78 120 40 126\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/>\n    <line x1=\"226\" y1=\"114\" x2=\"226\" y2=\"40\" stroke=\"#334155\" stroke-width=\"1.6\" marker-end=\"url(#arr)\"/>\n\n    <circle cx=\"34\" cy=\"34\" r=\"13\" fill=\"#e2e8f0\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"29\" y=\"39\" font-size=\"12\" font-weight=\"bold\">A</text>\n    <circle cx=\"130\" cy=\"78\" r=\"14\" fill=\"#fed7aa\" stroke=\"#c2410c\" stroke-width=\"2.2\"/>\n    <text x=\"125\" y=\"83\" font-size=\"13\" font-weight=\"bold\">B</text>\n    <circle cx=\"34\" cy=\"122\" r=\"13\" fill=\"#e2e8f0\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"29\" y=\"127\" font-size=\"12\" font-weight=\"bold\">C</text>\n    <circle cx=\"226\" cy=\"40\" r=\"13\" fill=\"#e2e8f0\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"221\" y=\"45\" font-size=\"12\" font-weight=\"bold\">D</text>\n    <circle cx=\"226\" cy=\"114\" r=\"13\" fill=\"#e2e8f0\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"221\" y=\"119\" font-size=\"12\" font-weight=\"bold\">E</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 4 / <i>Diagram 4</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "d_in(B) = 2, &nbsp; d_out(B) = 3"
+        },
+        {
+          "key": "B",
+          "text": "d_in(B) = 3, &nbsp; d_out(B) = 2"
+        },
+        {
+          "key": "C",
+          "text": "d_in(B) = 1, &nbsp; d_out(B) = 4"
+        },
+        {
+          "key": "D",
+          "text": "d_in(B) = 3, &nbsp; d_out(B) = 3"
+        }
+      ],
+      "answer": "A",
+      "concept": "Dalam graf berarah:<br>&bull; d_in (darjah masuk): Bilangan tepi berarah yang menunjuk MASUK ke bucu tersebut.<br>&bull; d_out (darjah keluar): Bilangan tepi berarah yang KELUAR daripada bucu tersebut.",
+      "stepByStep": "Perhatikan bucu B pada Rajah 4:<br>1. Tepi yang MASUK ke B: dari bucu A (A &rarr; B) dan dari bucu C (C &rarr; B) &rarr; d_in(B) = 2.<br>2. Tepi yang KELUAR dari B: ke bucu D (B &rarr; D), ke bucu E (B &rarr; E), dan ke bucu C (B &rarr; C) &rarr; d_out(B) = 3.<br>Maka, d_in(B) = 2 dan d_out(B) = 3.",
+      "tip": "Periksa arah kepala anak panah dengan teliti. Tepi antara B dan C mempunyai dua anak panah berasingan (satu masuk, satu keluar)."
+    },
+    {
+      "num": 21,
+      "chapter": "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+      "bm": "Rajah 5 menunjukkan rantau berlorek pada suatu satah Cartes.<br>Antara sistem ketaksamaan berikut, yang manakah mentakrifkan rantau berlorek itu?",
+      "en": "Diagram 5 shows a shaded region on a Cartesian plane.<br>Which system of inequalities defines the shaded region?",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"260\" height=\"180\" viewBox=\"0 0 260 180\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"axisArr\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n      <pattern id=\"hatch\" width=\"7\" height=\"7\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"7\" stroke=\"#3b82f6\" stroke-width=\"1.6\" />\n      </pattern>\n    </defs>\n    <line x1=\"22\" y1=\"142\" x2=\"238\" y2=\"142\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#axisArr)\"/>\n    <text x=\"243\" y=\"146\" font-size=\"12\" font-weight=\"bold\">x</text>\n    <line x1=\"44\" y1=\"168\" x2=\"44\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#axisArr)\"/>\n    <text x=\"37\" y=\"14\" font-size=\"12\" font-weight=\"bold\">y</text>\n    <text x=\"33\" y=\"154\" font-size=\"11\">O</text>\n\n    <polygon points=\"44,44 104,83 60,142 44,142\" fill=\"url(#hatch)\" stroke=\"#2563eb\" stroke-width=\"1\" fill-opacity=\"0.6\"/>\n    <line x1=\"27\" y1=\"32\" x2=\"204\" y2=\"148\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"146\" y=\"62\" font-size=\"11\" font-style=\"italic\">y = &minus;x + 5</text>\n    <line x1=\"31\" y1=\"178\" x2=\"138\" y2=\"36\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <text x=\"116\" y=\"36\" font-size=\"11\" font-style=\"italic\">y = 2x &minus; 1</text>\n    <text x=\"29\" y=\"47\" font-size=\"10\">5</text>\n    <text x=\"189\" y=\"154\" font-size=\"10\">5</text>\n    <text x=\"100\" y=\"154\" font-size=\"10\">2</text>\n    <text x=\"29\" y=\"88\" font-size=\"10\">3</text>\n    <line x1=\"104\" y1=\"142\" x2=\"104\" y2=\"83\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"44\" y1=\"83\" x2=\"104\" y2=\"83\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 5 / <i>Diagram 5</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "y &le; &minus;x + 5, &nbsp; y &ge; 2x &minus; 1, &nbsp; x &ge; 0"
+        },
+        {
+          "key": "B",
+          "text": "y &ge; &minus;x + 5, &nbsp; y &le; 2x &minus; 1, &nbsp; x &ge; 0"
+        },
+        {
+          "key": "C",
+          "text": "y < &minus;x + 5, &nbsp; y > 2x &minus; 1, &nbsp; y &ge; 0"
+        },
+        {
+          "key": "D",
+          "text": "y &le; &minus;x + 5, &nbsp; y &le; 2x &minus; 1, &nbsp; x &ge; 0"
+        }
+      ],
+      "answer": "A",
+      "concept": "Garis padu melibatkan simbol &le; atau &ge;. Kawasan di bawah garisan menggunakan &le;, kawasan di atas garisan menggunakan &ge;. Paksi-y ialah garisan x = 0 (sebelah kanan ialah x &ge; 0).",
+      "stepByStep": "1. Garisan y = &minus;x + 5: Rantau berlorek berada di sebelah BAWAH garis padu &rarr; y &le; &minus;x + 5.<br>2. Garisan y = 2x &minus; 1: Rantau berlorek berada di sebelah ATAS garis padu &rarr; y &ge; 2x &minus; 1.<br>3. Paksi-y: Rantau berlorek berada di sebelah KANAN &rarr; x &ge; 0.<br>Maka sistem ketaksamaan ialah: y &le; &minus;x + 5, y &ge; 2x &minus; 1, x &ge; 0.",
+      "tip": "Garis padu = ada tanda sama dengan (&le; atau &ge;). Garis putus-putus = tiada tanda sama dengan (< atau >)."
+    },
+    {
+      "num": 22,
+      "chapter": "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+      "bm": "Antara titik koordinat berikut, yang manakah memuaskan ketiga-tiga ketaksamaan: 2<i>y</i> + <i>x</i> &le; 8, &nbsp; <i>y</i> > <i>x</i> &minus; 2, &nbsp; dan &nbsp; <i>x</i> &ge; 1?",
+      "en": "Which point satisfies all three inequalities: 2<i>y</i> + <i>x</i> &le; 8, <i>y</i> > <i>x</i> &minus; 2, and <i>x</i> &ge; 1?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "(1, 3)"
+        },
+        {
+          "key": "B",
+          "text": "(2, 4)"
+        },
+        {
+          "key": "C",
+          "text": "(3, 0)"
+        },
+        {
+          "key": "D",
+          "text": "(0, 2)"
+        }
+      ],
+      "answer": "A",
+      "concept": "Titik (x, y) memuaskan sistem ketaksamaan apabila penggantian nilai x dan y menjadikan SEMUA ketaksamaan dalam sistem itu benar serentak.",
+      "stepByStep": "Uji titik (1, 3):<br>1. 2y + x &le; 8 &rArr; 2(3) + 1 = 6 + 1 = 7 &le; 8 (BENAR)<br>2. y > x &minus; 2 &rArr; 3 > 1 &minus; 2 = &minus;1 (BENAR)<br>3. x &ge; 1 &rArr; 1 &ge; 1 (BENAR)<br>Semua 3 ketaksamaan dipenuhi oleh titik (1, 3).<br><br>Mengapa pilihan lain salah:<br>&bull; (2, 4): 2(4) + 2 = 10 &le; 8 (SALAH)<br>&bull; (3, 0): 0 > 3 &minus; 2 = 1 (SALAH)<br>&bull; (0, 2): x &ge; 1 tidak dipenuhi kerana 0 < 1 (SALAH).",
+      "tip": "Mulakan dengan menyemak ketaksamaan yang paling mudah terlebih dahulu, iaitu x &ge; 1. Ini membolehkan anda menyingkirkan titik (0, 2) serta-merta!"
+    },
+    {
+      "num": 23,
+      "chapter": "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+      "bm": "Puan Salmah menjual <i>x</i> bungkus nasi lemak dan <i>y</i> bungkus mee goreng. Jumlah bungkusan adalah selebih-lebihnya 120. Bilangan nasi lemak sekurang-kurangnya dua kali mee goreng. Tulis dua ketaksamaan linear yang mewakili situasi itu.",
+      "en": "Puan Salmah sells <i>x</i> packets nasi lemak and <i>y</i> packets mee goreng. Total is at most 120. Nasi lemak is at least twice mee goreng. Write two inequalities.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "x + y &le; 120 &nbsp; dan / and &nbsp; x &ge; 2y"
+        },
+        {
+          "key": "B",
+          "text": "x + y < 120 &nbsp; dan / and &nbsp; x &le; 2y"
+        },
+        {
+          "key": "C",
+          "text": "x + y &ge; 120 &nbsp; dan / and &nbsp; y &ge; 2x"
+        },
+        {
+          "key": "D",
+          "text": "x + y &le; 120 &nbsp; dan / and &nbsp; y &ge; 2x"
+        }
+      ],
+      "answer": "A",
+      "concept": "Terjemahan istilah bahasa kepada simbol matematik:<br>&bull; 'selebih-lebihnya / tidak lebih daripada / at most' &rarr; &le;<br>&bull; 'sekurang-kurangnya / tidak kurang daripada / at least' &rarr; &ge;",
+      "stepByStep": "1. Jumlah bungkusan (x + y) selebih-lebihnya 120 &rArr; x + y &le; 120.<br>2. Bilangan nasi lemak (x) sekurang-kurangnya (&ge;) dua kali mee goreng (2y) &rArr; x &ge; 2y.<br>Maka jawapan ialah: x + y &le; 120 dan x &ge; 2y.",
+      "tip": "Awas: Jangan terbalik meletakkan faktor pendarab. 'Nasi lemak (x) sekurang-kurangnya dua kali mee goreng (y)' bermakna x &ge; 2y, BUKAN y &ge; 2x."
+    },
+    {
+      "num": 24,
+      "chapter": "Bab 6: Ketaksamaan Linear dalam Dua Pemboleh Ubah",
+      "bm": "Rantau berlorek dalam graf ketaksamaan mempunyai bucu (0, 0), (5, 0), (4, 3), dan (0, 5). Cari nilai maksimum bagi fungsi <i>K</i> = 4<i>x</i> + 3<i>y</i>.",
+      "en": "A shaded region has vertices at (0, 0), (5, 0), (4, 3), and (0, 5). Find the maximum value of <i>K</i> = 4<i>x</i> + 3<i>y</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "20"
+        },
+        {
+          "key": "B",
+          "text": "22"
+        },
+        {
+          "key": "C",
+          "text": "25"
+        },
+        {
+          "key": "D",
+          "text": "28"
+        }
+      ],
+      "answer": "C",
+      "concept": "Teori Pengaturcaraan Linear: Nilai optimum (maksimum atau minimum) bagi suatu fungsi objektif linear sentiasa dicapai pada salah satu titik bucu (bucu poligon) rantau tersaur.",
+      "stepByStep": "Gantikan setiap koordinat bucu ke dalam fungsi objektif K = 4x + 3y:<br>&bull; Pada (0, 0): K = 4(0) + 3(0) = 0<br>&bull; Pada (5, 0): K = 4(5) + 3(0) = 20<br>&bull; Pada (4, 3): K = 4(4) + 3(3) = 16 + 9 = 25 (Maksimum!) ✓<br>&bull; Pada (0, 5): K = 4(0) + 3(5) = 15<br>Nilai maksimum ialah 25.",
+      "tip": "Hanya uji koordinat bucu sahaja. Anda tidak perlu menguji titik-titik di bahagian dalam rantau berlorek."
+    },
+    {
+      "num": 25,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Rajah 6 menunjukkan graf jarak-masa bagi perjalanan sebuah motosikal dari Bandar A ke Bandar B. Hitung laju, dalam km/j, motosikal itu bagi 40 minit yang pertama.",
+      "en": "Diagram 6 shows the distance-time graph of a motorcycle. Calculate the speed, in km/h, for the first 40 minutes.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"280\" height=\"165\" viewBox=\"0 0 280 165\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"m1\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"42\" y1=\"132\" x2=\"255\" y2=\"132\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m1)\"/>\n    <text x=\"194\" y=\"150\" font-size=\"11\">Masa / Time (min)</text>\n    <line x1=\"42\" y1=\"132\" x2=\"42\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m1)\"/>\n    <text x=\"6\" y=\"14\" font-size=\"11\">Jarak / Distance (km)</text>\n    <text x=\"31\" y=\"144\" font-size=\"11\">O</text>\n\n    <line x1=\"42\" y1=\"132\" x2=\"114\" y2=\"74\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <line x1=\"114\" y1=\"74\" x2=\"156\" y2=\"74\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <line x1=\"156\" y1=\"74\" x2=\"230\" y2=\"28\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n\n    <line x1=\"42\" y1=\"74\" x2=\"114\" y2=\"74\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"42\" y1=\"28\" x2=\"230\" y2=\"28\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"114\" y1=\"132\" x2=\"114\" y2=\"74\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"156\" y1=\"132\" x2=\"156\" y2=\"74\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"230\" y1=\"132\" x2=\"230\" y2=\"28\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n\n    <text x=\"24\" y=\"78\" font-size=\"10\">36</text>\n    <text x=\"24\" y=\"32\" font-size=\"10\">80</text>\n    <text x=\"107\" y=\"145\" font-size=\"10\">40</text>\n    <text x=\"149\" y=\"145\" font-size=\"10\">60</text>\n    <text x=\"223\" y=\"145\" font-size=\"10\">90</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 6 / <i>Diagram 6</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "45 km/j / km/h"
+        },
+        {
+          "key": "B",
+          "text": "54 km/j / km/h"
+        },
+        {
+          "key": "C",
+          "text": "60 km/j / km/h"
+        },
+        {
+          "key": "D",
+          "text": "72 km/j / km/h"
+        }
+      ],
+      "answer": "B",
+      "concept": "Pada graf jarak-masa, Kecerunan graf mewakili Laju. Laju = Jarak dilalui / Masa diambil.",
+      "stepByStep": "1. Dari graf, dalam 40 minit pertama:<br>&nbsp;&nbsp;&nbsp;&nbsp;Jarak dilalui = 36 km &minus; 0 km = 36 km.<br>2. Masa diambil = 40 minit.<br>3. Tukar unit masa kepada jam:<br>&nbsp;&nbsp;&nbsp;&nbsp;Masa = 40 / 60 jam = 2/3 jam.<br>4. Kira laju:<br>&nbsp;&nbsp;&nbsp;&nbsp;Laju = 36 &divide; (2/3) = 36 &times; (3/2) = 54 km/j.",
+      "tip": "Perangkap paling kerap: Murid terus membahagi 36 dengan 40 tanpa menukar minit kepada jam! Pastikan unit masa selaras dengan km/j."
+    },
+    {
+      "num": 26,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Rajah 7 menunjukkan graf jarak-masa bagi sebuah lori dalam tempoh <i>t</i> jam. Diberi laju purata bagi keseluruhan perjalanan ialah 64 km/j, cari nilai <i>t</i>.",
+      "en": "Diagram 7 shows the distance-time graph of a lorry for <i>t</i> hours. Given average speed for the whole journey is 64 km/h, find <i>t</i>.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"270\" height=\"155\" viewBox=\"0 0 270 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"m2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"42\" y1=\"124\" x2=\"245\" y2=\"124\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m2)\"/>\n    <text x=\"186\" y=\"142\" font-size=\"11\">Masa / Time (j / h)</text>\n    <line x1=\"42\" y1=\"124\" x2=\"42\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m2)\"/>\n    <text x=\"8\" y=\"14\" font-size=\"11\">Jarak / Distance (km)</text>\n    <text x=\"31\" y=\"136\" font-size=\"11\">O</text>\n\n    <line x1=\"42\" y1=\"124\" x2=\"94\" y2=\"80\" stroke=\"#047857\" stroke-width=\"2\"/>\n    <line x1=\"94\" y1=\"80\" x2=\"127\" y2=\"80\" stroke=\"#047857\" stroke-width=\"2\"/>\n    <line x1=\"127\" y1=\"80\" x2=\"210\" y2=\"28\" stroke=\"#047857\" stroke-width=\"2\"/>\n\n    <line x1=\"42\" y1=\"80\" x2=\"94\" y2=\"80\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"42\" y1=\"28\" x2=\"210\" y2=\"28\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"94\" y1=\"124\" x2=\"94\" y2=\"80\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"127\" y1=\"124\" x2=\"127\" y2=\"80\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"210\" y1=\"124\" x2=\"210\" y2=\"28\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n\n    <text x=\"20\" y=\"84\" font-size=\"10\">60</text>\n    <text x=\"14\" y=\"32\" font-size=\"10\">160</text>\n    <text x=\"88\" y=\"138\" font-size=\"10\">1.0</text>\n    <text x=\"120\" y=\"138\" font-size=\"10\">1.4</text>\n    <text x=\"207\" y=\"138\" font-size=\"11\" font-weight=\"bold\" font-style=\"italic\">t</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 7 / <i>Diagram 7</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.0"
+        },
+        {
+          "key": "B",
+          "text": "2.2"
+        },
+        {
+          "key": "C",
+          "text": "2.5"
+        },
+        {
+          "key": "D",
+          "text": "3.0"
+        }
+      ],
+      "answer": "C",
+      "concept": "Laju Purata = Jumlah Jarak Dilalui / Jumlah Masa Diambil. Tempoh pegun (berhenti rehat) tetap dikira dalam jumlah masa perjalanan.",
+      "stepByStep": "1. Jumlah jarak dari graf = 160 km.<br>2. Jumlah masa keseluruhan = t jam.<br>3. Gunakan rumus laju purata:<br>&nbsp;&nbsp;&nbsp;&nbsp;Laju purata = Jumlah Jarak / Jumlah Masa<br>&nbsp;&nbsp;&nbsp;&nbsp;64 = 160 / t<br>4. Selesaikan untuk t:<br>&nbsp;&nbsp;&nbsp;&nbsp;t = 160 / 64 = 2.5 jam.",
+      "tip": "Walaupun lori berhenti rehat dari jam 1.0 hingga 1.4, jumlah masa t tetap merangkumi keseluruhan tempoh termasuk masa rehat."
+    },
+    {
+      "num": 27,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Rajah 8 menunjukkan graf laju-masa bagi suatu zarah. Hitung kadar perubahan laju, dalam m s<sup>&minus;2</sup>, zarah itu dalam 6 saat terakhir.",
+      "en": "Diagram 8 shows the speed-time graph of a particle. Calculate the rate of change of speed, in m s<sup>&minus;2</sup>, in the last 6 seconds.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"280\" height=\"155\" viewBox=\"0 0 280 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"m3\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"38\" y1=\"124\" x2=\"255\" y2=\"124\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m3)\"/>\n    <text x=\"198\" y=\"142\" font-size=\"11\">Masa / Time (s)</text>\n    <line x1=\"38\" y1=\"124\" x2=\"38\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m3)\"/>\n    <text x=\"6\" y=\"14\" font-size=\"11\">Laju / Speed (m s⁻¹)</text>\n    <text x=\"28\" y=\"136\" font-size=\"11\">O</text>\n\n    <line x1=\"38\" y1=\"92\" x2=\"94\" y2=\"34\" stroke=\"#b91c1c\" stroke-width=\"2\"/>\n    <line x1=\"94\" y1=\"34\" x2=\"172\" y2=\"34\" stroke=\"#b91c1c\" stroke-width=\"2\"/>\n    <line x1=\"172\" y1=\"34\" x2=\"235\" y2=\"124\" stroke=\"#b91c1c\" stroke-width=\"2\"/>\n\n    <line x1=\"38\" y1=\"34\" x2=\"94\" y2=\"34\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"94\" y1=\"124\" x2=\"94\" y2=\"34\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"172\" y1=\"124\" x2=\"172\" y2=\"34\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n\n    <text x=\"22\" y=\"96\" font-size=\"10\">8</text>\n    <text x=\"19\" y=\"38\" font-size=\"10\">18</text>\n    <text x=\"90\" y=\"138\" font-size=\"10\">6</text>\n    <text x=\"166\" y=\"138\" font-size=\"10\">14</text>\n    <text x=\"230\" y=\"138\" font-size=\"10\">20</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 8 / <i>Diagram 8</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "&minus;3"
+        },
+        {
+          "key": "B",
+          "text": "&minus;2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "A",
+      "concept": "Pada graf laju-masa, Kecerunan graf mewakili Kadar Perubahan Laju (Pecutan). Pecutan = (Laju Akhir &minus; Laju Awal) / Masa.",
+      "stepByStep": "1. Tempoh 6 saat terakhir ialah dari t = 14 hingga t = 20 saat (masa = 20 &minus; 14 = 6 s).<br>2. Pada t = 14 s, laju awal (u) = 18 m s⁻¹.<br>3. Pada t = 20 s, laju akhir (v) = 0 m s⁻¹.<br>4. Pecutan = (v &minus; u) / t = (0 &minus; 18) / 6 = &minus;18 / 6 = &minus;3 m s⁻².",
+      "tip": "Tanda negatif bermaksud objek mengalami nyahpecutan (laju semakin berkurang sehingga berhenti)."
+    },
+    {
+      "num": 28,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Rajah 9 menunjukkan graf laju-masa bagi sebuah kereta dalam 25 saat. Hitung jumlah jarak, dalam meter, yang dilalui kereta itu.",
+      "en": "Diagram 9 shows the speed-time graph of a car for 25 seconds. Calculate the total distance, in metres, travelled.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"280\" height=\"155\" viewBox=\"0 0 280 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"m4\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"38\" y1=\"124\" x2=\"255\" y2=\"124\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m4)\"/>\n    <text x=\"198\" y=\"142\" font-size=\"11\">Masa / Time (s)</text>\n    <line x1=\"38\" y1=\"124\" x2=\"38\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#m4)\"/>\n    <text x=\"6\" y=\"14\" font-size=\"11\">Laju / Speed (m s⁻¹)</text>\n    <text x=\"28\" y=\"136\" font-size=\"11\">O</text>\n\n    <polygon points=\"38,124 110,38 230,38 230,124\" fill=\"#e0f2fe\" stroke=\"none\"/>\n    <line x1=\"38\" y1=\"124\" x2=\"110\" y2=\"38\" stroke=\"#0284c7\" stroke-width=\"2.2\"/>\n    <line x1=\"110\" y1=\"38\" x2=\"230\" y2=\"38\" stroke=\"#0284c7\" stroke-width=\"2.2\"/>\n    <line x1=\"230\" y1=\"38\" x2=\"230\" y2=\"124\" stroke=\"#0284c7\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/>\n\n    <line x1=\"38\" y1=\"38\" x2=\"110\" y2=\"38\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"110\" y1=\"124\" x2=\"110\" y2=\"38\" stroke=\"#94a3b8\" stroke-dasharray=\"3 3\"/>\n\n    <text x=\"19\" y=\"42\" font-size=\"10\">20</text>\n    <text x=\"105\" y=\"138\" font-size=\"10\">10</text>\n    <text x=\"225\" y=\"138\" font-size=\"10\">25</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 9 / <i>Diagram 9</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "250"
+        },
+        {
+          "key": "B",
+          "text": "350"
+        },
+        {
+          "key": "C",
+          "text": "400"
+        },
+        {
+          "key": "D",
+          "text": "500"
+        }
+      ],
+      "answer": "C",
+      "concept": "Pada graf laju-masa, Jumlah Jarak Dilalui bersamaan dengan LUAS DI BAWAH GRAF. Bentuk graf ini ialah trapezium.",
+      "stepByStep": "1. Bentuk di bawah graf ialah trapezium dengan sisi selari a dan b:<br>&nbsp;&nbsp;&nbsp;&nbsp;Sisi selari atas (a) = 25 &minus; 10 = 15 s<br>&nbsp;&nbsp;&nbsp;&nbsp;Sisi selari bawah (b) = 25 s<br>&nbsp;&nbsp;&nbsp;&nbsp;Tinggi (h) = 20 m s⁻¹<br>2. Luas trapezium = 1/2 &times; (a + b) &times; h<br>&nbsp;&nbsp;&nbsp;&nbsp;Luas = 1/2 &times; (15 + 25) &times; 20<br>&nbsp;&nbsp;&nbsp;&nbsp;Luas = 1/2 &times; 40 &times; 20 = 400 meter.",
+      "tip": "Anda juga boleh membahagikan bentuk kepada segi tiga (0 hingga 10s: 1/2 &times; 10 &times; 20 = 100m) dan segi empat tepat (10 hingga 25s: 15 &times; 20 = 300m). Jumlah = 100 + 300 = 400m."
+    },
+    {
+      "num": 29,
+      "chapter": "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+      "bm": "Cari julat antara kuartil bagi set data: 3, 5, 6, 8, 10, 12, 15, 17, 19, 21, 24.",
+      "en": "Find the interquartile range for the data: 3, 5, 6, 8, 10, 12, 15, 17, 19, 21, 24.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "11"
+        },
+        {
+          "key": "B",
+          "text": "13"
+        },
+        {
+          "key": "C",
+          "text": "15"
+        },
+        {
+          "key": "D",
+          "text": "21"
+        }
+      ],
+      "answer": "B",
+      "concept": "Julat antara kuartil (IQR) = Kuartil Ketiga (Q₃) &minus; Kuartil Pertama (Q₁).",
+      "stepByStep": "1. Data telah disusun (N = 11 data):<br>&nbsp;&nbsp;&nbsp;&nbsp;3, 5, 6, 8, 10, [12], 15, 17, 19, 21, 24<br>2. Median (nilai ke-6) = 12.<br>3. Separuh bawah (5 data): 3, 5, [6], 8, 10 &rArr; Kuartil pertama Q₁ = 6.<br>4. Separuh atas (5 data): 15, 17, [19], 21, 24 &rArr; Kuartil ketiga Q₃ = 19.<br>5. Julat antara kuartil = Q₃ &minus; Q₁ = 19 &minus; 6 = 13.",
+      "tip": "Jika bilangan data ganjil, jangan masukkan nilai median tengah ke dalam separuh bawah atau separuh atas semasa mencari kuartil."
+    },
+    {
+      "num": 30,
+      "chapter": "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+      "bm": "Diberi 10 nombor dengan &sum; <i>x</i> = 140 dan &sum; <i>x</i><sup>2</sup> = 2320. Hitung sisihan piawai bagi set nombor itu.",
+      "en": "Given 10 numbers with &sum; <i>x</i> = 140 and &sum; <i>x</i><sup>2</sup> = 2320. Calculate the standard deviation.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "16"
+        },
+        {
+          "key": "D",
+          "text": "36"
+        }
+      ],
+      "answer": "B",
+      "concept": "Min: x̄ = &sum;x / N. Varians: &sigma;² = (&sum;x² / N) &minus; (x̄)². Sisihan piawai: &sigma; = &radic;(&sigma;²).",
+      "stepByStep": "1. Hitung min (x̄):<br>&nbsp;&nbsp;&nbsp;&nbsp;x̄ = 140 / 10 = 14.<br>2. Hitung varians (&sigma;²):<br>&nbsp;&nbsp;&nbsp;&nbsp;&sigma;² = (2320 / 10) &minus; 14² = 232 &minus; 196 = 36.<br>3. Hitung sisihan piawai (&sigma;):<br>&nbsp;&nbsp;&nbsp;&nbsp;&sigma; = &radic;36 = 6.",
+      "tip": "Pastikan anda mengambil punca kuasa dua bagi varians (36) untuk mendapatkan sisihan piawai (6). 36 ialah varians, bukan sisihan piawai."
+    },
+    {
+      "num": 31,
+      "chapter": "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+      "bm": "Min dan sisihan piawai bagi suatu set data masing-masing ialah 18 dan 2.5. Jika setiap nilai didarab dengan 3 dan ditambah dengan 4, cari min dan sisihan piawai yang baharu.",
+      "en": "The mean and standard deviation are 18 and 2.5. If each value is multiplied by 3 and added by 4, find the new mean and standard deviation.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Min = 58, &nbsp; Sisihan piawai = 7.5"
+        },
+        {
+          "key": "B",
+          "text": "Min = 58, &nbsp; Sisihan piawai = 11.5"
+        },
+        {
+          "key": "C",
+          "text": "Min = 54, &nbsp; Sisihan piawai = 7.5"
+        },
+        {
+          "key": "D",
+          "text": "Min = 54, &nbsp; Sisihan piawai = 2.5"
+        }
+      ],
+      "answer": "A",
+      "concept": "Kesan perubahan data: Penambahan pemalar (+k) MENGUBAH min tetapi TIDAK mengubah ukuran serakan (sisihan piawai kekal). Pendaraban pemalar (&times;k) MENGUBAH min dan juga sisihan piawai.",
+      "stepByStep": "1. Min terkesan oleh pendaraban dan penambahan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Min baharu = (18 &times; 3) + 4 = 54 + 4 = 58.<br>2. Sisihan piawai HANYA terkesan oleh pendaraban (penambahan +4 tidak mengubah serakan):<br>&nbsp;&nbsp;&nbsp;&nbsp;Sisihan piawai baharu = 2.5 &times; 3 = 7.5.<br>Maka: Min = 58, Sisihan piawai = 7.5.",
+      "tip": "Ingat peraturan emas: Menambah atau menolak nombor hanya menganjak kedudukan graf secara keseluruhan tanpa melebarkan atau menyempitkan serakannya."
+    },
+    {
+      "num": 32,
+      "chapter": "Bab 8: Sukatan Serakan Data Tak Terkumpul",
+      "bm": "Rajah 10 menunjukkan suatu plot kotak bagi markah ujian.<br>Tentukan julat dan julat antara kuartil bagi data itu.",
+      "en": "Diagram 10 shows a box plot for test marks.<br>Determine the range and interquartile range.",
+      "diagram": "<div style=\"text-align:center; margin:10px 0;\">\n  <svg width=\"300\" height=\"130\" viewBox=\"0 0 300 130\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <line x1=\"20\" y1=\"95\" x2=\"275\" y2=\"95\" stroke=\"#0f172a\" stroke-width=\"1.5\"/>\n    <line x1=\"25\" y1=\"91\" x2=\"25\" y2=\"99\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"22\" y=\"112\" font-size=\"10\">0</text>\n    <line x1=\"73\" y1=\"91\" x2=\"73\" y2=\"99\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"68\" y=\"112\" font-size=\"10\">20</text>\n    <line x1=\"121\" y1=\"91\" x2=\"121\" y2=\"99\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"116\" y=\"112\" font-size=\"10\">40</text>\n    <line x1=\"169\" y1=\"91\" x2=\"169\" y2=\"99\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"164\" y=\"112\" font-size=\"10\">60</text>\n    <line x1=\"217\" y1=\"91\" x2=\"217\" y2=\"99\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"212\" y=\"112\" font-size=\"10\">80</text>\n    <line x1=\"265\" y1=\"91\" x2=\"265\" y2=\"99\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"257\" y=\"112\" font-size=\"10\">100</text>\n\n    <line x1=\"73\" y1=\"46\" x2=\"133\" y2=\"46\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <line x1=\"205\" y1=\"46\" x2=\"253\" y2=\"46\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n\n    <line x1=\"73\" y1=\"30\" x2=\"73\" y2=\"62\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <line x1=\"253\" y1=\"30\" x2=\"253\" y2=\"62\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n\n    <rect x=\"133\" y=\"20\" width=\"72\" height=\"52\" fill=\"#f1f5f9\" stroke=\"#0f172a\" stroke-width=\"1.8\"/>\n    <line x1=\"169\" y1=\"20\" x2=\"169\" y2=\"72\" stroke=\"#dc2626\" stroke-width=\"2.2\"/>\n\n    <text x=\"67\" y=\"16\" font-size=\"10\" font-weight=\"bold\">20</text>\n    <text x=\"127\" y=\"15\" font-size=\"10\" font-weight=\"bold\">45</text>\n    <text x=\"164\" y=\"15\" font-size=\"10\" font-weight=\"bold\" fill=\"#dc2626\">60</text>\n    <text x=\"199\" y=\"15\" font-size=\"10\" font-weight=\"bold\">75</text>\n    <text x=\"247\" y=\"16\" font-size=\"10\" font-weight=\"bold\">95</text>\n  </svg><br><span style=\"font-weight:600; font-size:12px; color:#475569;\">Rajah 10 / <i>Diagram 10</i></span></div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "Julat = 75, &nbsp; Julat antara kuartil = 30"
+        },
+        {
+          "key": "B",
+          "text": "Julat = 75, &nbsp; Julat antara kuartil = 15"
+        },
+        {
+          "key": "C",
+          "text": "Julat = 55, &nbsp; Julat antara kuartil = 30"
+        },
+        {
+          "key": "D",
+          "text": "Julat = 95, &nbsp; Julat antara kuartil = 45"
+        }
+      ],
+      "answer": "A",
+      "concept": "Plot kotak (Box plot) memaparkan 5 nombor ringkasan: Nilai Minimum, Q₁, Median, Q₃, dan Nilai Maksimum. Julat = Maks &minus; Min. Julat antara kuartil = Q₃ &minus; Q₁.",
+      "stepByStep": "1. Baca nilai daripada plot kotak:<br>&nbsp;&nbsp;&nbsp;&nbsp;Nilai minimum = 20<br>&nbsp;&nbsp;&nbsp;&nbsp;Kuartil pertama (Q₁) = 45<br>&nbsp;&nbsp;&nbsp;&nbsp;Median = 60<br>&nbsp;&nbsp;&nbsp;&nbsp;Kuartil ketiga (Q₃) = 75<br>&nbsp;&nbsp;&nbsp;&nbsp;Nilai maksimum = 95<br>2. Kira Julat = 95 &minus; 20 = 75.<br>3. Kira Julat antara kuartil = Q₃ &minus; Q₁ = 75 &minus; 45 = 30.",
+      "tip": "Kotak segi empat di tengah mewakili julat antara kuartil (Q₁ ke Q₃), manakala garis misai luar menunjukkan nilai ekstrem (Min dan Maks)."
+    },
+    {
+      "num": 33,
+      "chapter": "Bab 9: Kebarangkalian Peristiwa Bergabung",
+      "bm": "Sekeping syiling adil dan sebiji dadu adil dilambung serentak. Cari kebarangkalian mendapat angka (<i>head</i>) pada syiling dan nombor perdana pada dadu.",
+      "en": "A fair coin and a fair die are tossed. Find the probability of getting a head on the coin and a prime number on the die.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "1/6"
+        },
+        {
+          "key": "B",
+          "text": "1/4"
+        },
+        {
+          "key": "C",
+          "text": "1/3"
+        },
+        {
+          "key": "D",
+          "text": "1/2"
+        }
+      ],
+      "answer": "B",
+      "concept": "Peristiwa tak bersandar: Kebarangkalian berlakunya peristiwa A dan B serentak ialah hasil darab kebarangkalian individu: P(A &cap; B) = P(A) &times; P(B).",
+      "stepByStep": "1. Kebarangkalian mendapat angka pada syiling:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Angka) = 1/2.<br>2. Nombor perdana pada dadu adil (dari 1 hingga 6):<br>&nbsp;&nbsp;&nbsp;&nbsp;Nombor perdana ialah {2, 3, 5} (3 nombor daripada 6).<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Perdana) = 3/6 = 1/2.<br>3. Kerana kedua-dua peristiwa tidak bersandar:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Angka &cap; Perdana) = P(Angka) &times; P(Perdana) = 1/2 &times; 1/2 = 1/4.",
+      "tip": "Ingat bahawa nombor 1 BUKAN nombor perdana. Nombor perdana pada dadu hanya 2, 3, dan 5."
+    },
+    {
+      "num": 34,
+      "chapter": "Bab 9: Kebarangkalian Peristiwa Bergabung",
+      "bm": "Sebuah kotak mengandungi 6 guli merah dan 4 guli biru. Dua guli dipilih secara rawak <b>tanpa pengembalian</b>. Cari kebarangkalian kedua-duanya berwarna merah.",
+      "en": "A box contains 6 red and 4 blue marbles. Two marbles are chosen <b>without replacement</b>. Find the probability that both are red.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "9/25"
+        },
+        {
+          "key": "B",
+          "text": "1/3"
+        },
+        {
+          "key": "C",
+          "text": "2/5"
+        },
+        {
+          "key": "D",
+          "text": "5/18"
+        }
+      ],
+      "answer": "B",
+      "concept": "Peristiwa bersandar (tanpa pengembalian): Jumlah guli dan bilangan guli dalam kotak berkurang sebanyak 1 selepas cabutan pertama.",
+      "stepByStep": "1. Jumlah awal guli = 6 merah + 4 biru = 10 guli.<br>2. Kebarangkalian guli pertama merah = 6 / 10.<br>3. Selepas 1 guli merah dikeluarkan tanpa pengembalian:<br>&nbsp;&nbsp;&nbsp;&nbsp;Baki guli merah = 5, baki jumlah guli = 9.<br>4. Kebarangkalian guli kedua merah = 5 / 9.<br>5. P(Kedua-dua merah) = (6 / 10) &times; (5 / 9) = 30 / 90 = 1/3.",
+      "tip": "Frasa 'tanpa pengembalian' ialah kata kunci utama. Pastikan penyebut pada cabutan kedua dikurangkan kepada 9!"
+    },
+    {
+      "num": 35,
+      "chapter": "Bab 9: Kebarangkalian Peristiwa Bergabung",
+      "bm": "Sekeping kad dipilih secara rawak dari kad 1 hingga 25. Peristiwa <i>A</i> = gandaan 5, peristiwa <i>B</i> = nombor kuasa dua sempurna. Hitung <i>P</i>(<i>A</i> &cup; <i>B</i>).",
+      "en": "A card is drawn from cards 1 to 25. Event <i>A</i> = multiple of 5, event <i>B</i> = perfect square. Calculate <i>P</i>(<i>A</i> &cup; <i>B</i>).",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "8/25"
+        },
+        {
+          "key": "B",
+          "text": "9/25"
+        },
+        {
+          "key": "C",
+          "text": "2/5"
+        },
+        {
+          "key": "D",
+          "text": "11/25"
+        }
+      ],
+      "answer": "B",
+      "concept": "Hukum Penambahan Kebarangkalian: P(A &cup; B) = P(A) + P(B) &minus; P(A &cap; B). Tolak persilangan supaya unsur sepunya tidak dikira dua kali.",
+      "stepByStep": "1. Ruang sampel: n(S) = 25.<br>2. Peristiwa A (gandaan 5): {5, 10, 15, 20, 25} &rArr; n(A) = 5.<br>3. Peristiwa B (kuasa dua sempurna): {1, 4, 9, 16, 25} &rArr; n(B) = 5.<br>4. Unsur sepunya A &cap; B: {25} &rArr; n(A &cap; B) = 1.<br>5. n(A &cup; B) = 5 + 5 &minus; 1 = 9.<br>6. P(A &cup; B) = 9 / 25.",
+      "tip": "Nombor 25 ialah gandaan 5 dan juga kuasa dua sempurna (5² = 25). Pastikan tolak 1 supaya ia tidak dikira dua kali!"
+    },
+    {
+      "num": 36,
+      "chapter": "Bab 9: Kebarangkalian Peristiwa Bergabung",
+      "bm": "Kebarangkalian Farhan lulus Matematik ialah <sup>3</sup>/<sub>4</sub> dan lulus Sains ialah <sup>4</sup>/<sub>5</sub>. Diberi peristiwa tak bersandar, cari kebarangkalian dia lulus <b>sekurang-kurangnya satu</b> ujian.",
+      "en": "Probability Farhan passes Math is 3/4 and Science is 4/5. Find the probability he passes <b>at least one</b> test.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "3/5"
+        },
+        {
+          "key": "B",
+          "text": "17/20"
+        },
+        {
+          "key": "C",
+          "text": "19/20"
+        },
+        {
+          "key": "D",
+          "text": "1/20"
+        }
+      ],
+      "answer": "C",
+      "concept": "Teknik Kebarangkalian Pelengkap: P(Sekurang-kurangnya satu berjaya) = 1 &minus; P(Kedua-duanya gagal).",
+      "stepByStep": "1. Kira kebarangkalian gagal setiap subjek:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Gagal Math) = 1 &minus; 3/4 = 1/4<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Gagal Sains) = 1 &minus; 4/5 = 1/5<br>2. Kebarangkalian gagal kedua-dua subjek:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(Gagal kedua-dua) = 1/4 &times; 1/5 = 1/20<br>3. Gunakan pelengkap untuk mencari sekurang-kurangnya satu lulus:<br>&nbsp;&nbsp;&nbsp;&nbsp;P(&ge; 1 lulus) = 1 &minus; 1/20 = 19/20.",
+      "tip": "Kaedah pelengkap (1 &minus; gagal semua) adalah jauh lebih pantas berbanding mengira tiga kebarangkalian berasingan (lulus Math saja + lulus Sains saja + lulus dua-dua)."
+    },
+    {
+      "num": 37,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Encik Hisham menetapkan matlamat kewangan: &ldquo;Menyimpan RM 7,200 dalam tempoh 12 bulan untuk wang pendahuluan kereta dengan menyimpan RM 600 setiap bulan.&rdquo; Antara komponen konsep <b>SMART</b>, yang manakah diwakili oleh &ldquo;dalam tempoh 12 bulan&rdquo;?",
+      "en": "Encik Hisham sets a goal: \"Save RM 7,200 within 12 months for car down payment by saving RM 600 monthly.\" Which <b>SMART</b> component is \"within 12 months\"?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "S &ndash; Khusus / Specific"
+        },
+        {
+          "key": "B",
+          "text": "M &ndash; Boleh diukur / Measurable"
+        },
+        {
+          "key": "C",
+          "text": "A &ndash; Boleh dicapai / Attainable"
+        },
+        {
+          "key": "D",
+          "text": "T &ndash; Berikat masa / Time-bound"
+        }
+      ],
+      "answer": "D",
+      "concept": "Konsep SMART dalam perancangan kewangan:<br>&bull; S (Specific) - Khusus<br>&bull; M (Measurable) - Boleh diukur nilai wang<br>&bull; A (Attainable) - Boleh dicapai<br>&bull; R (Realistic) - Realistik<br>&bull; T (Time-bound) - Berikat masa (ada tempoh sasaran).",
+      "stepByStep": "1. 'Dalam tempoh 12 bulan' menetapkan garis masa atau jangka masa tamat bagi mencapai matlamat.<br>2. Komponen SMART yang mewakili jangka masa ialah T (Time-bound / Berikat masa).",
+      "tip": "Jangan terkeliru: RM 7,200 ialah M (Measurable / Boleh diukur), manakala 12 bulan ialah T (Time-bound / Berikat masa)."
+    },
+    {
+      "num": 38,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Jadual 1 menunjukkan pendapatan dan perbelanjaan bulanan Cik Nadia.\n         <div style=\"margin:10px auto; max-width:380px;\">\n           <table style=\"width:100%; border-collapse:collapse; font-size:12px; text-align:left; border:1px solid #cbd5e1;\">\n             <tr style=\"background:#f1f5f9;\"><th style=\"border:1px solid #cbd5e1; padding:5px 8px;\">Perkara / Item</th><th style=\"border:1px solid #cbd5e1; padding:5px 8px;\">Jumlah (RM)</th></tr>\n             <tr><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">Pendapatan aktif</td><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">3,800</td></tr>\n             <tr><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">Pendapatan pasif</td><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">500</td></tr>\n             <tr><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">Simpanan tetap (10%)</td><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">430</td></tr>\n             <tr><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">Perbelanjaan tetap</td><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">1,600</td></tr>\n             <tr><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">Perbelanjaan tidak tetap</td><td style=\"border:1px solid #cbd5e1; padding:5px 8px;\">1,400</td></tr>\n           </table>\n           <div style=\"text-align:center; font-weight:600; font-size:11px; margin-top:4px; color:#475569;\">Jadual 1 / <i>Table 1</i></div>\n         </div>\n         Hitung aliran tunai bulanan Cik Nadia dan nyatakan statusnya.",
+      "en": "Table 1 shows monthly finances of Cik Nadia. Calculate monthly cash flow and state its status.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Defisit RM 440"
+        },
+        {
+          "key": "B",
+          "text": "Lebihan RM 440"
+        },
+        {
+          "key": "C",
+          "text": "Lebihan RM 870"
+        },
+        {
+          "key": "D",
+          "text": "Lebihan RM 1,300"
+        }
+      ],
+      "answer": "C",
+      "concept": "Aliran Tunai Bersih = Jumlah Pendapatan &minus; Jumlah Aliran Keluar (Simpanan + Perbelanjaan). Jika nilai positif, ia merupakan Lebihan (Surplus); jika negatif, Defisit.",
+      "stepByStep": "1. Jumlah Pendapatan = 3,800 + 500 = RM 4,300.<br>2. Jumlah Aliran Keluar = Simpanan (430) + Perbelanjaan Tetap (1,600) + Perbelanjaan Tidak Tetap (1,400) = RM 3,430.<br>3. Aliran Tunai Bersih = RM 4,300 &minus; RM 3,430 = +RM 870.<br>Nilai positif menandakan aliran tunai LEBIHAN (Surplus) sebanyak RM 870.",
+      "tip": "Pastikan simpanan tetap dimasukkan dalam aliran keluar semasa mengira baki tunai akhir."
+    },
+    {
+      "num": 39,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Pakar kewangan mengesyorkan simpanan dana kecemasan sekurang-kurangnya 3 hingga 6 bulan perbelanjaan bulanan. Diberi perbelanjaan bulanan Encik Daniel ialah RM 3,200, hitung jumlah <b>minimum</b> dana kecemasan yang diperlukannya.",
+      "en": "Emergency fund recommended is 3 to 6 months of expenses. Given Encik Daniel's monthly expenses are RM 3,200, calculate the <b>minimum</b> emergency fund.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "RM 6,400"
+        },
+        {
+          "key": "B",
+          "text": "RM 9,600"
+        },
+        {
+          "key": "C",
+          "text": "RM 12,800"
+        },
+        {
+          "key": "D",
+          "text": "RM 19,200"
+        }
+      ],
+      "answer": "B",
+      "concept": "Dana Kecemasan Minimum = 3 &times; Perbelanjaan Bulanan. Dana Kecemasan Maksimum = 6 &times; Perbelanjaan Bulanan.",
+      "stepByStep": "1. Perbelanjaan bulanan = RM 3,200.<br>2. Jumlah minimum disyorkan ialah 3 bulan perbelanjaan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Dana Kecemasan = 3 &times; RM 3,200 = RM 9,600.",
+      "tip": "Perhatikan kata kunci 'MINIMUM' dalam soalan (3 bulan). Jika soalan meminta maksimum, barulah darab dengan 6 (RM 19,200)."
+    },
+    {
+      "num": 40,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Azman ingin membeli sebuah komputer riba berharga RM 3,000 dalam tempoh 5 bulan. Aliran tunai lebihan bulanannya pada masa ini ialah RM 450. Berapakah simpanan tambahan setiap bulan yang perlu dijana oleh Azman untuk mencapai matlamatnya?",
+      "en": "Azman wants to buy a RM 3,000 laptop in 5 months. His current monthly surplus is RM 450. How much additional monthly savings does he need to achieve his goal?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "RM 100"
+        },
+        {
+          "key": "B",
+          "text": "RM 150"
+        },
+        {
+          "key": "C",
+          "text": "RM 200"
+        },
+        {
+          "key": "D",
+          "text": "RM 250"
+        }
+      ],
+      "answer": "B",
+      "concept": "Simpanan Bulanan Diperlukan = Harga Matlamat / Tempoh Bulan. Simpanan Tambahan = Simpanan Diperlukan &minus; Lebihan Bulanan Sedia Ada.",
+      "stepByStep": "1. Hitung simpanan yang perlu dibuat setiap bulan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Simpanan sebulan = RM 3,000 &divide; 5 bulan = RM 600 sebulan.<br>2. Lebihan wang sedia ada Azman = RM 450 sebulan.<br>3. Simpanan tambahan yang diperlukan:<br>&nbsp;&nbsp;&nbsp;&nbsp;Simpanan tambahan = RM 600 &minus; RM 450 = RM 150 sebulan.",
+      "tip": "Soalan menanyakan SIMPANAN TAMBAHAN yang perlu dicari, bukan jumlah simpanan penuh (RM 600). Tolak lebihan sedia ada RM 450."
+    }
+  ],
+  "set2": [
+    {
+      "num": 1,
+      "chapter": "Bab 1: Fungsi Kuadratik",
+      "bm": "Rajah menunjukkan graf bagi fungsi kuadratik <i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> &minus; 8<i>x</i> + 3. Nyatakan koordinat titik minimum bagi graf tersebut.",
+      "en": "The diagram shows the graph of quadratic function <i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> &minus; 8<i>x</i> + 3. State the coordinates of the minimum point of the graph.",
+      "diagram": "\n  <svg width=\"270\" height=\"160\" viewBox=\"0 0 270 160\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"arrow2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"25\" y1=\"65\" x2=\"245\" y2=\"65\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrow2)\"/>\n    <text x=\"250\" y=\"69\" font-size=\"11\" font-family=\"Times New Roman, serif\" font-weight=\"bold\">x</text>\n    <line x1=\"60\" y1=\"150\" x2=\"60\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrow2)\"/>\n    <text x=\"52\" y=\"13\" font-size=\"11\" font-family=\"Times New Roman, serif\" font-weight=\"bold\">f(x)</text>\n    <text x=\"50\" y=\"60\" font-size=\"10\" font-family=\"Times New Roman, serif\">O</text>\n\n    <!-- Parabola opening UP with vertex at (2, -5) represented at (130, 125) -->\n    <path d=\"M 70 28 Q 130 185 190 28\" fill=\"none\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n\n    <line x1=\"130\" y1=\"65\" x2=\"130\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"60\" y1=\"125\" x2=\"130\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <circle cx=\"130\" cy=\"125\" r=\"3\" fill=\"#1e293b\"/>\n    <text x=\"135\" y=\"135\" font-size=\"10\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">(2, &minus;5)</text>\n\n    <text x=\"50\" y=\"32\" font-size=\"10\" font-family=\"Times New Roman, serif\">3</text>\n    <text x=\"126\" y=\"58\" font-size=\"10\" font-family=\"Times New Roman, serif\">2</text>\n    <text x=\"44\" y=\"129\" font-size=\"10\" font-family=\"Times New Roman, serif\">&minus;5</text>\n    \n    <text x=\"150\" y=\"45\" font-size=\"10\" font-style=\"italic\" fill=\"#1e40af\" font-family=\"Times New Roman, serif\">f(x) = 2x² &minus; 8x + 3</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "(2, &minus;5)"
+        },
+        {
+          "key": "B",
+          "text": "(&minus;2, 27)"
+        },
+        {
+          "key": "C",
+          "text": "(4, 3)"
+        },
+        {
+          "key": "D",
+          "text": "(2, 3)"
+        }
+      ],
+      "answer": "A",
+      "solution": "Paksi simetri: <i>x</i> = &minus;<i>b</i>/(2<i>a</i>) = &minus;(&minus;8)/(2 &times; 2) = 2. Nilai minimum <i>f</i>(2) = 2(2)<sup>2</sup> &minus; 8(2) + 3 = 8 &minus; 16 + 3 = &minus;5. Titik minimum = (2, &minus;5).",
+      "concept": "Bagi fungsi kuadratik f(x) = ax² + bx + c, jika a > 0 graf mempunyai titik minimum. Paksi simetri diberi oleh x = &minus;b / (2a).",
+      "stepByStep": "1. a = 2, b = &minus;8, c = 3.<br>2. x = &minus;(&minus;8) / (2 &times; 2) = 8 / 4 = 2.<br>3. f(2) = 2(2)² &minus; 8(2) + 3 = 8 &minus; 16 + 3 = &minus;5.<br>4. Titik minimum = (2, &minus;5).",
+      "tip": "Berhati-hati dengan tanda negatif pada &minus;b. &minus;(&minus;8) menjadi +8!"
+    },
+    {
+      "num": 2,
+      "chapter": "Bab 1: Fungsi Kuadratik",
+      "bm": "Selesaikan persamaan kuadratik berikut:<br><center>3<i>x</i><sup>2</sup> &minus; 5<i>x</i> = 2</center>",
+      "en": "Solve the following quadratic equation:<br><center>3<i>x</i><sup>2</sup> &minus; 5<i>x</i> = 2</center>",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "<i>x</i> = &minus;2, &nbsp; <i>x</i> = <sup>1</sup>/<sub>3</sub>"
+        },
+        {
+          "key": "B",
+          "text": "<i>x</i> = 2, &nbsp; <i>x</i> = &minus;<sup>1</sup>/<sub>3</sub>"
+        },
+        {
+          "key": "C",
+          "text": "<i>x</i> = 2, &nbsp; <i>x</i> = 3"
+        },
+        {
+          "key": "D",
+          "text": "<i>x</i> = &minus;1, &nbsp; <i>x</i> = <sup>2</sup>/<sub>3</sub>"
+        }
+      ],
+      "answer": "B",
+      "solution": "3<i>x</i><sup>2</sup> &minus; 5<i>x</i> &minus; 2 = 0 &rArr; (3<i>x</i> + 1)(<i>x</i> &minus; 2) = 0 &rArr; <i>x</i> = &minus;<sup>1</sup>/<sub>3</sub> atau <i>x</i> = 2.",
+      "concept": "Susun persamaan ke dalam bentuk piawai ax² + bx + c = 0 sebelum pemfaktoran.",
+      "stepByStep": "1. 3x² &minus; 5x &minus; 2 = 0.<br>2. (3x + 1)(x &minus; 2) = 0.<br>3. x = &minus;1/3 atau x = 2.",
+      "tip": "Semak punca dengan kalkulator saintifik: MODE &rarr; EQN &rarr; DEGREE 2."
+    },
+    {
+      "num": 3,
+      "chapter": "Bab 1: Fungsi Kuadratik",
+      "bm": "Graf fungsi kuadratik <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 4 digerakkan secara menegak ke atas sebanyak 7 unit. Apakah persamaan fungsi kuadratik yang baharu?",
+      "en": "The graph of quadratic function <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 4 is translated vertically upwards by 7 units. What is the equation of the new quadratic function?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "<i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 11"
+        },
+        {
+          "key": "B",
+          "text": "<i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 3"
+        },
+        {
+          "key": "C",
+          "text": "<i>g</i>(<i>x</i>) = (<i>x</i> + 7)<sup>2</sup> &minus; 4"
+        },
+        {
+          "key": "D",
+          "text": "<i>g</i>(<i>x</i>) = 7<i>x</i><sup>2</sup> &minus; 4"
+        }
+      ],
+      "answer": "B",
+      "solution": "Perubahan menegak memengaruhi nilai <i>c</i>: <i>g</i>(<i>x</i>) = <i>f</i>(<i>x</i>) + 7 = (<i>x</i><sup>2</sup> &minus; 4) + 7 = <i>x</i><sup>2</sup> + 3.",
+      "concept": "Translasi menegak sebanyak k unit ke atas menambahkan k kepada nilai c: g(x) = f(x) + k.",
+      "stepByStep": "1. f(x) = x² &minus; 4.<br>2. Gerak 7 unit ke atas: g(x) = (x² &minus; 4) + 7 = x² + 3.",
+      "tip": "Translasi menegak tidak mengubah nilai pekali x² atau bentuk lengkung."
+    },
+    {
+      "num": 4,
+      "chapter": "Bab 1: Fungsi Kuadratik",
+      "bm": "Sebuah segi empat tepat mempunyai panjang (<i>x</i> + 4) cm dan lebar (<i>x</i> &minus; 1) cm. Diberi luas segi empat tepat itu ialah 36 cm<sup>2</sup>. Cari nilai positif bagi <i>x</i>.",
+      "en": "A rectangle has a length of (<i>x</i> + 4) cm and a width of (<i>x</i> &minus; 1) cm. Given the area of the rectangle is 36 cm<sup>2</sup>. Find the positive value of <i>x</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "5"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "B",
+      "solution": "(<i>x</i> + 4)(<i>x</i> &minus; 1) = 36 &rArr; <i>x</i><sup>2</sup> + 3<i>x</i> &minus; 4 &minus; 36 = 0 &rArr; <i>x</i><sup>2</sup> + 3<i>x</i> &minus; 40 = 0 &rArr; (<i>x</i> + 8)(<i>x</i> &minus; 5) = 0 &rArr; <i>x</i> = 5 (panjang positif).",
+      "concept": "Luas segi empat tepat = Panjang &times; Lebar. Tolak nilai negatif untuk ukuran fizikal.",
+      "stepByStep": "1. (x + 4)(x &minus; 1) = 36.<br>2. x² + 3x &minus; 4 = 36 &rArr; x² + 3x &minus; 40 = 0.<br>3. (x + 8)(x &minus; 5) = 0 &rArr; x = 5 (panjang positif).",
+      "tip": "Semak: (5 + 4) &times; (5 &minus; 1) = 9 &times; 4 = 36 cm²."
+    },
+    {
+      "num": 5,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Nyatakan nilai digit 4 bagi nombor 2413<sub>5</sub> dalam asas sepuluh.",
+      "en": "State the value of digit 4 in the number 2413<sub>5</sub> in base ten.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "20"
+        },
+        {
+          "key": "B",
+          "text": "80"
+        },
+        {
+          "key": "C",
+          "text": "100"
+        },
+        {
+          "key": "D",
+          "text": "500"
+        }
+      ],
+      "answer": "C",
+      "solution": "Nilai tempat bagi digit 4 ialah 5<sup>2</sup> = 25. Nilai digit = 4 &times; 25 = 100<sub>10</sub>.",
+      "concept": "Nilai digit = Digit &times; Nilai tempat. Nilai tempat asas 5 dari kanan: 5⁰, 5¹, 5², 5³.",
+      "stepByStep": "1. Digit 4 berada pada kedudukan ke-3 dari kanan (5² = 25).<br>2. Nilai digit = 4 &times; 25 = 100₁₀.",
+      "tip": "Soalan minta nilai digit dalam asas 10, bukan sekadar nilai tempat (25)."
+    },
+    {
+      "num": 6,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Hitung nilai 563<sub>8</sub> + 147<sub>8</sub>.",
+      "en": "Calculate the value of 563<sub>8</sub> + 147<sub>8</sub>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "722<sub>8</sub>"
+        },
+        {
+          "key": "B",
+          "text": "730<sub>8</sub>"
+        },
+        {
+          "key": "C",
+          "text": "732<sub>8</sub>"
+        },
+        {
+          "key": "D",
+          "text": "1032<sub>8</sub>"
+        }
+      ],
+      "answer": "C",
+      "solution": "3 + 7 = 10 = 1(8) + 2 (tulis 2, bawa 1). 1 + 6 + 4 = 11 = 1(8) + 3 (tulis 3, bawa 1). 1 + 5 + 1 = 7. Maka 732<sub>8</sub>.",
+      "concept": "Penambahan asas 8: Hasil tambah &ge; 8 ditolak 8 dan bawa 1 ke lajur sebelah kiri.",
+      "stepByStep": "1. 3 + 7 = 10 = 1(8) + 2 (tulis 2, bawa 1).<br>2. 1 + 6 + 4 = 11 = 1(8) + 3 (tulis 3, bawa 1).<br>3. 1 + 5 + 1 = 7. Maka 732₈.",
+      "tip": "Semak dalam asas 10: 371 + 103 = 474₁₀ = 732₈."
+    },
+    {
+      "num": 7,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Tukarkan 110101<sub>2</sub> kepada nombor dalam asas lapan.",
+      "en": "Convert 110101<sub>2</sub> to a number in base eight.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "53<sub>8</sub>"
+        },
+        {
+          "key": "B",
+          "text": "65<sub>8</sub>"
+        },
+        {
+          "key": "C",
+          "text": "67<sub>8</sub>"
+        },
+        {
+          "key": "D",
+          "text": "125<sub>8</sub>"
+        }
+      ],
+      "answer": "B",
+      "solution": "Kumpulkan 3 bit dari kanan: 110 | 101. 110<sub>2</sub> = 4 + 2 = 6, 101<sub>2</sub> = 4 + 1 = 5. Maka 65<sub>8</sub>.",
+      "concept": "Penukaran asas 2 ke asas 8 boleh dibuat terus dengan kumpulkan 3 bit dari kanan.",
+      "stepByStep": "1. Kumpulkan 3 bit: [110] [101].<br>2. 110₂ = 6, 101₂ = 5.<br>3. Jawapan = 65₈.",
+      "tip": "Kumpulan 3-bit: 2³ = 8, sangat cepat berbanding tukar asas 10 dahulu!"
+    },
+    {
+      "num": 8,
+      "chapter": "Bab 2: Asas Nombor",
+      "bm": "Diberi 10110<sub>2</sub> &minus; <i>p</i><sub>2</sub> = 1101<sub>2</sub>. Cari nilai <i>p</i>.",
+      "en": "Given 10110<sub>2</sub> &minus; <i>p</i><sub>2</sub> = 1101<sub>2</sub>. Find the value of <i>p</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "1001"
+        },
+        {
+          "key": "B",
+          "text": "1011"
+        },
+        {
+          "key": "C",
+          "text": "111"
+        },
+        {
+          "key": "D",
+          "text": "10001"
+        }
+      ],
+      "answer": "A",
+      "solution": "10110<sub>2</sub> = 16 + 4 + 2 = 22<sub>10</sub>. 1101<sub>2</sub> = 8 + 4 + 1 = 13<sub>10</sub>. <i>p</i> = 22 &minus; 13 = 9<sub>10</sub> = 1001<sub>2</sub>.",
+      "concept": "Tukarkan nombor kepada asas 10 untuk menyelesaikan persamaan penolakan.",
+      "stepByStep": "1. 10110₂ = 16 + 4 + 2 = 22₁₀.<br>2. 1101₂ = 8 + 4 + 1 = 13₁₀.<br>3. 22 &minus; p = 13 &rArr; p = 9₁₀ = 1001₂.",
+      "tip": "9 = 8 + 1 &rArr; digit pada 2³ dan 2⁰ bernilai 1, jadi 1001₂."
+    },
+    {
+      "num": 9,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Antara pernyataan berikut, yang manakah merupakan suatu <b>pernyataan palsu</b>?",
+      "en": "Which of the following is a <b>false statement</b>?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "{2, 3} &sub; {1, 2, 3, 4}"
+        },
+        {
+          "key": "B",
+          "text": "12 ialah gandaan bagi 3 dan 8"
+        },
+        {
+          "key": "C",
+          "text": "17 ialah nombor perdana atau nombor genap"
+        },
+        {
+          "key": "D",
+          "text": "Jika <i>x</i> = 3, maka <i>x</i><sup>2</sup> = 9"
+        }
+      ],
+      "answer": "B",
+      "solution": "'12 gandaan 3' (Benar) DAN '12 gandaan 8' (Palsu) &rArr; Pernyataan gabungan 'dan' adalah PALSU.",
+      "concept": "Pernyataan majmuk 'dan' palsu jika sekurang-kurangnya satu komponennya palsu.",
+      "stepByStep": "1. 12 ialah gandaan 3 (Benar).<br>2. 12 ialah gandaan 8 (Palsu).<br>3. Benar DAN Palsu &rArr; PALSU.",
+      "tip": "Perhatikan perkataan 'dan' memerlukan kedua-dua benar untuk menjadi benar."
+    },
+    {
+      "num": 10,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Diberi implikasi: &ldquo;Jika <i>x</i> ialah gandaan bagi 6, maka <i>x</i> ialah nombor genap.&rdquo; Tentukan <b>kontrapositif</b> bagi implikasi tersebut.",
+      "en": "Given the implication: &ldquo;If <i>x</i> is a multiple of 6, then <i>x</i> is an even number.&rdquo; Determine the <b>contrapositive</b> of the implication.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jika <i>x</i> bukan nombor genap, maka <i>x</i> bukan gandaan bagi 6."
+        },
+        {
+          "key": "B",
+          "text": "Jika <i>x</i> ialah nombor genap, maka <i>x</i> ialah gandaan bagi 6."
+        },
+        {
+          "key": "C",
+          "text": "Jika <i>x</i> bukan gandaan bagi 6, maka <i>x</i> bukan nombor genap."
+        },
+        {
+          "key": "D",
+          "text": "<i>x</i> gandaan bagi 6 jika dan hanya jika <i>x</i> nombor genap."
+        }
+      ],
+      "answer": "A",
+      "solution": "Kontrapositif bagi 'Jika <i>p</i>, maka <i>q</i>' ialah 'Jika &sim;<i>q</i>, maka &sim;<i>p</i>'.",
+      "concept": "Bagi implikasi 'Jika p, maka q', kontrapositifnya ialah 'Jika ~q, maka ~p'.",
+      "stepByStep": "1. p = x gandaan 6, q = x nombor genap.<br>2. Penafian: ~q = x bukan nombor genap, ~p = x bukan gandaan 6.<br>3. 'Jika x bukan nombor genap, maka x bukan gandaan bagi 6'.",
+      "tip": "Kontrapositif sentiasa mempunyai nilai kebenaran yang sama dengan implikasi asal."
+    },
+    {
+      "num": 11,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Diberi hujah berikut:<br>\n         <b>Premis 1:</b> Semua segi tiga sama sisi mempunyai tiga paksi simetri.<br>\n         <b>Premis 2:</b> Segi tiga <i>PQR</i> ialah sebuah segi tiga sama sisi.<br>\n         <b>Kesimpulan:</b> Segi tiga <i>PQR</i> mempunyai tiga paksi simetri.<br>\n         Tentukan bentuk hujah deduktif ini.",
+      "en": "Given argument: Premise 1: All equilateral triangles have three axes of symmetry. Premise 2: Triangle <i>PQR</i> is an equilateral triangle. Conclusion: Triangle <i>PQR</i> has three axes of symmetry. Determine the form of this deductive argument.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bentuk I / <i>Form I</i>"
+        },
+        {
+          "key": "B",
+          "text": "Bentuk II / <i>Form II</i>"
+        },
+        {
+          "key": "C",
+          "text": "Bentuk III / <i>Form III</i>"
+        },
+        {
+          "key": "D",
+          "text": "Hujah Induktif / <i>Inductive Argument</i>"
+        }
+      ],
+      "answer": "A",
+      "solution": "Bentuk I mengikut format: Premis 1: Semua A adalah B; Premis 2: C ialah A; Kesimpulan: C ialah B.",
+      "concept": "Hujah Deduktif Bentuk I: Premis 1: Semua A adalah B; Premis 2: C ialah A; Kesimpulan: C ialah B.",
+      "stepByStep": "1. Premis 1 bermula dengan 'Semua'.<br>2. Premis 2 kes khusus.<br>3. Kesimpulan merumuskan kes khusus. Menepati Bentuk I.",
+      "tip": "Kata kunci: 'Semua' pada Premis 1 menandakan Bentuk I."
+    },
+    {
+      "num": 12,
+      "chapter": "Bab 3: Penaakulan Matematik",
+      "bm": "Diberi pola nombor: 5 = 4(1) + 1, &nbsp; 9 = 4(2) + 1, &nbsp; 13 = 4(3) + 1, &nbsp; 17 = 4(4) + 1, &hellip;<br>\n         Buat satu kesimpulan secara induktif bagi sebutan ke-<i>n</i> bagi jujukan nombor itu.",
+      "en": "Given pattern: 5 = 4(1) + 1, 9 = 4(2) + 1, 13 = 4(3) + 1, ... Make an inductive conclusion for the <i>n</i>-th term of the number sequence.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "4<i>n</i> + 1, &nbsp; <i>n</i> = 1, 2, 3, 4, &hellip;"
+        },
+        {
+          "key": "B",
+          "text": "4<i>n</i> &minus; 1, &nbsp; <i>n</i> = 1, 2, 3, 4, &hellip;"
+        },
+        {
+          "key": "C",
+          "text": "5<i>n</i> &minus; 1, &nbsp; <i>n</i> = 1, 2, 3, 4, &hellip;"
+        },
+        {
+          "key": "D",
+          "text": "<i>n</i><sup>2</sup> + 4, &nbsp; <i>n</i> = 1, 2, 3, 4, &hellip;"
+        }
+      ],
+      "answer": "A",
+      "solution": "Setiap sebutan mematuhi rumus 4<i>n</i> + 1 dengan <i>n</i> = 1, 2, 3, 4, &hellip;",
+      "concept": "Kesimpulan induktif merumuskan pola umum sebutan ke-n.",
+      "stepByStep": "1. 5 = 4(1) + 1, 9 = 4(2) + 1, 13 = 4(3) + 1, 17 = 4(4) + 1.<br>2. Pola = 4n + 1 bagi n = 1, 2, 3, 4, ...",
+      "tip": "Nyatakan pemboleh ubah n = 1, 2, 3, 4, ..."
+    },
+    {
+      "num": 13,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Rajah menunjukkan gambar rajah Venn dengan bilangan unsur dalam setiap rantau. Cari nilai bagi <i>n</i>(<i>A</i> &cup; <i>B</i>)&prime;.",
+      "en": "The diagram shows a Venn diagram with the number of elements in each region. Find the value of <i>n</i>(<i>A</i> &cup; <i>B</i>)&prime;.",
+      "diagram": "\n  <svg width=\"260\" height=\"150\" viewBox=\"0 0 260 150\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <rect x=\"10\" y=\"10\" width=\"240\" height=\"130\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.4\" rx=\"3\"/>\n    <text x=\"20\" y=\"26\" font-size=\"12\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">&xi;</text>\n\n    <circle cx=\"95\" cy=\"75\" r=\"45\" fill=\"#f1f5f9\" stroke=\"#0f172a\" stroke-width=\"1.4\"/>\n    <circle cx=\"155\" cy=\"75\" r=\"45\" fill=\"#f1f5f9\" stroke=\"#0f172a\" stroke-width=\"1.4\"/>\n\n    <text x=\"75\" y=\"45\" font-size=\"12\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">A</text>\n    <text x=\"175\" y=\"45\" font-size=\"12\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">B</text>\n\n    <text x=\"75\" y=\"80\" font-size=\"11\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">8</text>\n    <text x=\"121\" y=\"80\" font-size=\"11\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">5</text>\n    <text x=\"170\" y=\"80\" font-size=\"11\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">11</text>\n    <text x=\"215\" y=\"125\" font-size=\"11\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">6</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "11"
+        },
+        {
+          "key": "D",
+          "text": "24"
+        }
+      ],
+      "answer": "B",
+      "solution": "(<i>A</i> &cup; <i>B</i>)&prime; ialah rantau di luar bulatan <i>A</i> dan <i>B</i>, iaitu 6 unsur.",
+      "concept": "Pelengkap kesatuan (A &cup; B)' ialah rantau di luar bulatan A dan B dalam semesta &xi;.",
+      "stepByStep": "1. Unsur di dalam A atau B = 8 + 5 + 11 = 24.<br>2. Unsur di luar bulatan A dan B = 6.<br>3. n((A &cup; B)') = 6.",
+      "tip": "Tanda ' bermaksud bukan dalam set tersebut."
+    },
+    {
+      "num": 14,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Diberi set <i>M</i> = {<i>x</i> : <i>x</i> ialah faktor perdana bagi 30}. Cari bilangan subset bagi set <i>M</i>.",
+      "en": "Given set <i>M</i> = {<i>x</i> : <i>x</i> is a prime factor of 30}. Find the number of subsets of set <i>M</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "8"
+        },
+        {
+          "key": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "C",
+      "solution": "Faktor perdana bagi 30 ialah {2, 3, 5}, maka <i>n</i>(<i>M</i>) = 3. Bilangan subset = 2<sup><i>n</i></sup> = 2<sup>3</sup> = 8.",
+      "concept": "Bilangan subset = 2ⁿ dengan n ialah bilangan unsur.",
+      "stepByStep": "1. Faktor perdana bagi 30 = {2, 3, 5}.<br>2. n(M) = 3.<br>3. Bilangan subset = 2³ = 8.",
+      "tip": "Hanya ambil faktor perdana (2, 3, 5), bukan semua faktor."
+    },
+    {
+      "num": 15,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Dalam satu kaji selidik terhadap 80 orang murid, 45 orang murid gemar Matematik, 38 orang gemar Sains, dan 12 orang tidak gemar kedua-duanya. Cari bilangan murid yang gemar <b>kedua-dua</b> mata pelajaran itu.",
+      "en": "In a survey of 80 students, 45 like Mathematics, 38 like Science, and 12 like neither. Find the number of students who like <b>both</b> subjects.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "12"
+        },
+        {
+          "key": "B",
+          "text": "15"
+        },
+        {
+          "key": "C",
+          "text": "18"
+        },
+        {
+          "key": "D",
+          "text": "23"
+        }
+      ],
+      "answer": "B",
+      "solution": "<i>n</i>(<i>M</i> &cup; <i>S</i>) = 80 &minus; 12 = 68. <i>n</i>(<i>M</i> &cap; <i>S</i>) = <i>n</i>(<i>M</i>) + <i>n</i>(<i>S</i>) &minus; <i>n</i>(<i>M</i> &cup; <i>S</i>) = 45 + 38 &minus; 68 = 15.",
+      "concept": "Formula persilangan 2 set: n(M &cap; S) = n(M) + n(S) &minus; n(M &cup; S).",
+      "stepByStep": "1. n(M &cup; S) = 80 &minus; 12 = 68.<br>2. n(M &cap; S) = 45 + 38 &minus; 68 = 83 &minus; 68 = 15.",
+      "tip": "Tolak dahulu murid yang tidak gemar kedua-duanya daripada jumlah keseluruhan."
+    },
+    {
+      "num": 16,
+      "chapter": "Bab 4: Operasi Set",
+      "bm": "Rajah Venn menunjukkan set <i>P</i>, <i>Q</i> dan <i>R</i>. Rantau yang berlorek mewakili operasi set yang mana?",
+      "en": "The Venn diagram shows sets <i>P</i>, <i>Q</i> and <i>R</i>. Which set operation is represented by the shaded region?",
+      "diagram": "\n  <svg width=\"250\" height=\"155\" viewBox=\"0 0 250 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <clipPath id=\"circleR2\"><circle cx=\"125\" cy=\"98\" r=\"42\"/></clipPath>\n    </defs>\n    <rect x=\"8\" y=\"8\" width=\"234\" height=\"138\" fill=\"#f8fafc\" stroke=\"#334155\" stroke-width=\"1.4\" rx=\"3\"/>\n    <text x=\"18\" y=\"24\" font-size=\"12\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">&xi;</text>\n\n    <!-- Shade (P union Q) intersect R -->\n    <g clip-path=\"url(#circleR2)\">\n      <circle cx=\"95\" cy=\"62\" r=\"42\" fill=\"#93c5fd\"/>\n      <circle cx=\"155\" cy=\"62\" r=\"42\" fill=\"#93c5fd\"/>\n    </g>\n\n    <circle cx=\"95\" cy=\"62\" r=\"42\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.4\"/>\n    <circle cx=\"155\" cy=\"62\" r=\"42\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.4\"/>\n    <circle cx=\"125\" cy=\"98\" r=\"42\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.4\"/>\n\n    <text x=\"68\" y=\"42\" font-size=\"12\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">P</text>\n    <text x=\"175\" y=\"42\" font-size=\"12\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">Q</text>\n    <text x=\"122\" y=\"132\" font-size=\"12\" font-weight=\"bold\" font-family=\"Times New Roman, serif\">R</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "(<i>P</i> &cap; <i>Q</i>) &cup; <i>R</i>"
+        },
+        {
+          "key": "B",
+          "text": "(<i>P</i> &cup; <i>Q</i>) &cap; <i>R</i>"
+        },
+        {
+          "key": "C",
+          "text": "(<i>P</i> &cap; <i>R</i>) &cup; <i>Q</i>"
+        },
+        {
+          "key": "D",
+          "text": "<i>P</i> &cup; (<i>Q</i> &cap; <i>R</i>)"
+        }
+      ],
+      "answer": "B",
+      "solution": "Rantau yang berlorek merangkumi bahagian dalam set <i>R</i> yang bertindih dengan sama ada <i>P</i> atau <i>Q</i>, iaitu (<i>P</i> &cup; <i>Q</i>) &cap; <i>R</i>.",
+      "concept": "Persilangan (&cap;) mewakili bahagian bertindih, kesatuan (&cup;) mewakili gabungan kawasan.",
+      "stepByStep": "1. Kawasan berlorek berada di dalam bulatan R.<br>2. Kawasan ini bertindih dengan P dan Q.<br>3. Operasi tepat ialah (P &cup; Q) &cap; R.",
+      "tip": "Uji kawasan dengan menomborkan rantau 1 hingga 8."
+    },
+    {
+      "num": 17,
+      "chapter": "Bab 5: Teori Graf",
+      "bm": "Suatu graf mempunyai 6 bucu dengan darjah bucu masing-masing ialah 2, 3, 3, 4, 4, dan <i>k</i>. Diberi graf tersebut mempunyai 10 tepi. Cari nilai <i>k</i>.",
+      "en": "A graph has 6 vertices with degrees 2, 3, 3, 4, 4, and <i>k</i> respectively. Given that the graph has 10 edges. Find the value of <i>k</i>.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "C",
+      "solution": "&sum; <i>d</i>(<i>v</i>) = 2<i>E</i> &rArr; 2 + 3 + 3 + 4 + 4 + <i>k</i> = 2(10) = 20 &rArr; 16 + <i>k</i> = 20 &rArr; <i>k</i> = 4.",
+      "concept": "Teorem Jabat Tangan: &sum; d(v) = 2E (Jumlah darjah = 2 &times; bilangan tepi).",
+      "stepByStep": "1. 2 + 3 + 3 + 4 + 4 + k = 16 + k.<br>2. 2E = 2(10) = 20.<br>3. 16 + k = 20 &rArr; k = 4.",
+      "tip": "Setiap satu tepi menyumbang tepat 2 darjah kepada graf."
+    },
+    {
+      "num": 18,
+      "chapter": "Bab 5: Teori Graf",
+      "bm": "Antara pernyataan berikut mengenai suatu <b>pokok</b> dalam teori graf, yang manakah <b>palsu</b>?",
+      "en": "Which of the following statements regarding a <b>tree</b> in graph theory is <b>false</b>?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pokok ialah suatu graf mudah."
+        },
+        {
+          "key": "B",
+          "text": "Pokok dengan <i>n</i> bucu mengandungi (<i>n</i> &minus; 1) tepi."
+        },
+        {
+          "key": "C",
+          "text": "Setiap pasangan bucu disambungkan oleh lebih daripada satu laluan."
+        },
+        {
+          "key": "D",
+          "text": "Pokok tidak mengandungi sebarang kitaran atau gelung."
+        }
+      ],
+      "answer": "C",
+      "solution": "C adalah palsu kerana setiap pasangan bucu dalam pokok hanya disambungkan oleh TEPAT SATU laluan unik.",
+      "concept": "Pokok ialah graf mudah tanpa gelung/kitaran di mana setiap pasangan bucu disambungkan oleh TEPAT SATU laluan unik.",
+      "stepByStep": "1. Pokok mempunyai n bucu dan n &minus; 1 tepi.<br>2. Tiada kitaran.<br>3. Pernyataan C palsu kerana laluan antara bucu adalah unik (hanya satu).",
+      "tip": "Ciri penting pokok: graf mudah, bersambung, tiada kitaran, e = v &minus; 1."
+    },
+    {
+      "num": 19,
+      "chapter": "Bab 5: Teori Graf",
+      "bm": "Rajah menunjukkan suatu rangkaian jalan raya antara bandar <i>P</i> dan bandar <i>T</i> berserta jarak dalam km. Cari jarak terpendek, dalam km, dari <i>P</i> ke <i>T</i>.",
+      "en": "The diagram shows a road network between town <i>P</i> and town <i>T</i> with distances in km. Find the shortest distance, in km, from <i>P</i> to <i>T</i>.",
+      "diagram": "\n  <svg width=\"290\" height=\"145\" viewBox=\"0 0 290 145\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <!-- Edges -->\n    <line x1=\"45\" y1=\"72\" x2=\"115\" y2=\"35\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"45\" y1=\"72\" x2=\"115\" y2=\"110\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"115\" y1=\"35\" x2=\"195\" y2=\"110\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"115\" y1=\"110\" x2=\"195\" y2=\"110\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"115\" y1=\"35\" x2=\"255\" y2=\"72\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n    <line x1=\"195\" y1=\"110\" x2=\"255\" y2=\"72\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n\n    <!-- Weights -->\n    <text x=\"70\" y=\"45\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">7 km</text>\n    <text x=\"70\" y=\"102\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">5 km</text>\n    <text x=\"142\" y=\"65\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">6 km</text>\n    <text x=\"150\" y=\"122\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">4 km</text>\n    <text x=\"195\" y=\"45\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">11 km</text>\n    <text x=\"230\" y=\"105\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">8 km</text>\n\n    <!-- Vertices -->\n    <circle cx=\"45\" cy=\"72\" r=\"12\" fill=\"#1e3a8a\"/>\n    <text x=\"40\" y=\"76\" font-size=\"11\" font-weight=\"bold\" fill=\"#fff\">P</text>\n\n    <circle cx=\"115\" cy=\"35\" r=\"12\" fill=\"#1e3a8a\"/>\n    <text x=\"110\" y=\"39\" font-size=\"11\" font-weight=\"bold\" fill=\"#fff\">Q</text>\n\n    <circle cx=\"115\" cy=\"110\" r=\"12\" fill=\"#1e3a8a\"/>\n    <text x=\"110\" y=\"114\" font-size=\"11\" font-weight=\"bold\" fill=\"#fff\">R</text>\n\n    <circle cx=\"195\" cy=\"110\" r=\"12\" fill=\"#1e3a8a\"/>\n    <text x=\"191\" y=\"114\" font-size=\"11\" font-weight=\"bold\" fill=\"#fff\">S</text>\n\n    <circle cx=\"255\" cy=\"72\" r=\"12\" fill=\"#1e3a8a\"/>\n    <text x=\"250\" y=\"76\" font-size=\"11\" font-weight=\"bold\" fill=\"#fff\">T</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "16"
+        },
+        {
+          "key": "B",
+          "text": "17"
+        },
+        {
+          "key": "C",
+          "text": "18"
+        },
+        {
+          "key": "D",
+          "text": "21"
+        }
+      ],
+      "answer": "B",
+      "solution": "Laluan <i>P</i> &rarr; <i>R</i> &rarr; <i>S</i> &rarr; <i>T</i> = 5 + 4 + 8 = 17 km (Laluan lain: <i>P</i>-<i>Q</i>-<i>T</i> = 18 km, <i>P</i>-<i>Q</i>-<i>S</i>-<i>T</i> = 21 km).",
+      "concept": "Laluan terpendek dikira dengan menjumlahkan pemberat setiap laluan dari mula ke tamat.",
+      "stepByStep": "1. P &rarr; Q &rarr; T = 7 + 11 = 18 km.<br>2. P &rarr; Q &rarr; S &rarr; T = 7 + 6 + 8 = 21 km.<br>3. P &rarr; R &rarr; S &rarr; T = 5 + 4 + 8 = 17 km.<br>4. Jarak terpendek = 17 km.",
+      "tip": "Periksa semua laluan yang mungkin untuk mencari nilai minimum."
+    },
+    {
+      "num": 20,
+      "chapter": "Bab 5: Teori Graf",
+      "bm": "Diberi graf <i>G</i> mempunyai set bucu <i>V</i> = {<i>A, B, C, D</i>} dan set tepi <i>E</i> = {(<i>A,B</i>), (<i>B,C</i>), (<i>C,D</i>), (<i>D,A</i>)}. Antara rajah berikut, yang manakah <b>bukan</b> subgraf bagi <i>G</i>?",
+      "en": "Given graph <i>G</i> with vertex set <i>V</i> = {<i>A, B, C, D</i>} and edge set <i>E</i> = {(<i>A,B</i>), (<i>B,C</i>), (<i>C,D</i>), (<i>D,A</i>)}. Which of the following is <b>not</b> a subgraph of <i>G</i>?",
+      "diagram": "\n  <div style=\"display:flex; justify-content:space-around; align-items:center; margin:4px 0;\">\n    <div style=\"text-align:center;\">\n      <svg width=\"90\" height=\"75\" viewBox=\"0 0 90 75\">\n        <text x=\"5\" y=\"14\" font-weight=\"bold\" font-size=\"10\">A</text>\n        <line x1=\"25\" y1=\"20\" x2=\"65\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <line x1=\"65\" y1=\"20\" x2=\"65\" y2=\"55\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <circle cx=\"25\" cy=\"20\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"22\" y=\"14\" font-size=\"8\">A</text>\n        <circle cx=\"65\" cy=\"20\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"14\" font-size=\"8\">B</text>\n        <circle cx=\"65\" cy=\"55\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"65\" font-size=\"8\">C</text>\n      </svg>\n    </div>\n    <div style=\"text-align:center;\">\n      <svg width=\"90\" height=\"75\" viewBox=\"0 0 90 75\">\n        <text x=\"5\" y=\"14\" font-weight=\"bold\" font-size=\"10\">B</text>\n        <line x1=\"25\" y1=\"20\" x2=\"65\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <line x1=\"25\" y1=\"20\" x2=\"25\" y2=\"55\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <circle cx=\"25\" cy=\"20\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"22\" y=\"14\" font-size=\"8\">A</text>\n        <circle cx=\"65\" cy=\"20\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"14\" font-size=\"8\">B</text>\n        <circle cx=\"25\" cy=\"55\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"22\" y=\"65\" font-size=\"8\">D</text>\n        <circle cx=\"65\" cy=\"55\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"65\" font-size=\"8\">C</text>\n      </svg>\n    </div>\n    <div style=\"text-align:center;\">\n      <svg width=\"90\" height=\"75\" viewBox=\"0 0 90 75\">\n        <text x=\"5\" y=\"14\" font-weight=\"bold\" font-size=\"10\">C</text>\n        <line x1=\"25\" y1=\"20\" x2=\"65\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <line x1=\"25\" y1=\"20\" x2=\"65\" y2=\"55\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n        <line x1=\"65\" y1=\"20\" x2=\"65\" y2=\"55\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <circle cx=\"25\" cy=\"20\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"22\" y=\"14\" font-size=\"8\">A</text>\n        <circle cx=\"65\" cy=\"20\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"14\" font-size=\"8\">B</text>\n        <circle cx=\"65\" cy=\"55\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"65\" font-size=\"8\">C</text>\n      </svg>\n    </div>\n    <div style=\"text-align:center;\">\n      <svg width=\"90\" height=\"75\" viewBox=\"0 0 90 75\">\n        <text x=\"5\" y=\"14\" font-weight=\"bold\" font-size=\"10\">D</text>\n        <line x1=\"65\" y1=\"20\" x2=\"65\" y2=\"55\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <line x1=\"65\" y1=\"55\" x2=\"25\" y2=\"55\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n        <circle cx=\"65\" cy=\"20\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"14\" font-size=\"8\">B</text>\n        <circle cx=\"65\" cy=\"55\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"68\" y=\"65\" font-size=\"8\">C</text>\n        <circle cx=\"25\" cy=\"55\" r=\"5\" fill=\"#1e3a8a\"/><text x=\"22\" y=\"65\" font-size=\"8\">D</text>\n      </svg>\n    </div>\n  </div>",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rajah A / <i>Diagram A</i>"
+        },
+        {
+          "key": "B",
+          "text": "Rajah B / <i>Diagram B</i>"
+        },
+        {
+          "key": "C",
+          "text": "Rajah C / <i>Diagram C</i>"
+        },
+        {
+          "key": "D",
+          "text": "Rajah D / <i>Diagram D</i>"
+        }
+      ],
+      "answer": "C",
+      "solution": "Rajah C mengandungi tepi (<i>A,C</i>) yang tidak wujud dalam graf asal <i>G</i>, maka ia bukan subgraf.",
+      "concept": "Subgraf tidak boleh mengandungi sebarang tepi yang tidak wujud dalam graf asal.",
+      "stepByStep": "1. Graf asal G tiada tepi pepenjuru (A, C).<br>2. Rajah C menambah tepi (A, C).<br>3. Maka Rajah C bukan subgraf.",
+      "tip": "Subgraf hanya boleh mengandungi subset bucu dan subset tepi sedia ada."
+    },
+    {
+      "num": 21,
+      "chapter": "Bab 6: Ketaksamaan Linear",
+      "bm": "Rajah menunjukkan rantau berlorek <i>R</i> pada satah Cartes. Antara sistem ketaksamaan linear berikut, yang manakah mentakrifkan rantau <i>R</i>?",
+      "en": "The diagram shows shaded region <i>R</i> on a Cartesian plane. Which of the following systems of linear inequalities defines region <i>R</i>?",
+      "diagram": "\n  <svg width=\"260\" height=\"155\" viewBox=\"0 0 260 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"arrowI2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"20\" y1=\"120\" x2=\"240\" y2=\"120\" stroke=\"#0f172a\" stroke-width=\"1.4\" marker-end=\"url(#arrowI2)\"/>\n    <text x=\"245\" y=\"124\" font-size=\"11\" font-weight=\"bold\">x</text>\n    <line x1=\"70\" y1=\"145\" x2=\"70\" y2=\"15\" stroke=\"#0f172a\" stroke-width=\"1.4\" marker-end=\"url(#arrowI2)\"/>\n    <text x=\"62\" y=\"12\" font-size=\"11\" font-weight=\"bold\">y</text>\n    <text x=\"58\" y=\"132\" font-size=\"10\">O</text>\n\n    <!-- Shaded region polygon between (70, 100), (70, 50), (105, 100) etc. -->\n    <polygon points=\"70,100 70,50 115,50 115,100\" fill=\"#93c5fd\" opacity=\"0.6\"/>\n\n    <!-- Line y = 2x + 4 passes through (70, 50) where y=4, and (115, 10) etc -->\n    <line x1=\"30\" y1=\"90\" x2=\"150\" y2=\"20\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <text x=\"145\" y=\"24\" font-size=\"10\" font-weight=\"bold\" fill=\"#1d4ed8\">y = 2x + 4</text>\n\n    <!-- Horizontal line y = 1 -->\n    <line x1=\"30\" y1=\"100\" x2=\"230\" y2=\"100\" stroke=\"#059669\" stroke-width=\"1.8\"/>\n    <text x=\"205\" y=\"94\" font-size=\"10\" font-weight=\"bold\" fill=\"#059669\">y = 1</text>\n\n    <text x=\"56\" y=\"53\" font-size=\"10\">4</text>\n    <text x=\"58\" y=\"103\" font-size=\"10\">1</text>\n    <text x=\"92\" y=\"80\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">R</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "<i>y</i> &le; 2<i>x</i> + 4, &nbsp; <i>y</i> &ge; 1, &nbsp; <i>x</i> &ge; 0"
+        },
+        {
+          "key": "B",
+          "text": "<i>y</i> &ge; 2<i>x</i> + 4, &nbsp; <i>y</i> &le; 1, &nbsp; <i>x</i> &ge; 0"
+        },
+        {
+          "key": "C",
+          "text": "<i>y</i> < 2<i>x</i> + 4, &nbsp; <i>y</i> > 1, &nbsp; <i>x</i> &le; 0"
+        },
+        {
+          "key": "D",
+          "text": "<i>y</i> &le; 2<i>x</i> &minus; 4, &nbsp; <i>y</i> &ge; 1, &nbsp; <i>x</i> &ge; 0"
+        }
+      ],
+      "answer": "A",
+      "solution": "Rantau berada di bawah/pada garis <i>y</i> = 2<i>x</i> + 4 (<i>y</i> &le; 2<i>x</i> + 4), di atas/pada garis <i>y</i> = 1 (<i>y</i> &ge; 1), dan di sebelah kanan paksi-<i>y</i> (<i>x</i> &ge; 0).",
+      "concept": "Rantau di bawah garis &le;, di atas garis &ge;, dan kanan paksi-y ialah x &ge; 0.",
+      "stepByStep": "1. Di bawah y = 2x + 4 &rArr; y &le; 2x + 4.<br>2. Di atas y = 1 &rArr; y &ge; 1.<br>3. Kanan paksi-y &rArr; x &ge; 0.<br>4. Sistem lengkap: y &le; 2x + 4, y &ge; 1, x &ge; 0.",
+      "tip": "Uji satu titik dalam rantau (cth: (1, 2)) untuk menyemak ketaksamaan."
+    },
+    {
+      "num": 22,
+      "chapter": "Bab 6: Ketaksamaan Linear",
+      "bm": "Antara titik berikut, yang manakah memuaskan ketaksamaan 3<i>x</i> &minus; 2<i>y</i> < 6?",
+      "en": "Which of the following points satisfies the inequality 3<i>x</i> &minus; 2<i>y</i> < 6?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "(3, 1)"
+        },
+        {
+          "key": "B",
+          "text": "(4, 2)"
+        },
+        {
+          "key": "C",
+          "text": "(1, 2)"
+        },
+        {
+          "key": "D",
+          "text": "(5, 3)"
+        }
+      ],
+      "answer": "C",
+      "solution": "Gantikan (1, 2): 3(1) &minus; 2(2) = 3 &minus; 4 = &minus;1 < 6 (Benar). Titik lain: (3,1)&rArr;7&not;<6, (4,2)&rArr;8&not;<6, (5,3)&rArr;9&not;<6.",
+      "concept": "Titik memuaskan ketaksamaan apabila penggantian menghasilkan ketaksamaan yang benar.",
+      "stepByStep": "1. Uji (1, 2): 3(1) &minus; 2(2) = 3 &minus; 4 = &minus;1 < 6 (Benar!).<br>2. Titik lain menghasilkan nilai &ge; 6.",
+      "tip": "Gantikan x dan y dengan teliti mengikut tertib koordinat."
+    },
+    {
+      "num": 23,
+      "chapter": "Bab 6: Ketaksamaan Linear",
+      "bm": "Garis lurus sempang (<i>dashed line</i>) digunakan semasa melukis graf ketaksamaan linear apabila simbol ketaksamaan ialah:",
+      "en": "A dashed line is used when drawing the graph of a linear inequality when the inequality symbol is:",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "&le; atau &ge;"
+        },
+        {
+          "key": "B",
+          "text": "< atau >"
+        },
+        {
+          "key": "C",
+          "text": "= sahaja"
+        },
+        {
+          "key": "D",
+          "text": "&ne; sahaja"
+        }
+      ],
+      "answer": "B",
+      "solution": "Simbol ketaksamaan ketat (< atau >) tidak merangkumi titik pada garis sempadan, maka garis sempang digunakan.",
+      "concept": "Garis sempang digunakan untuk ketaksamaan ketat (< atau >) kerana titik pada sempadan tidak termasuk.",
+      "stepByStep": "1. Garis padu: &le; atau &ge;.<br>2. Garis sempang: < atau >.<br>3. Jawapan = < atau >.",
+      "tip": "Jika ada tanda sama dengan (garis bawah), lukis garis padu."
+    },
+    {
+      "num": 24,
+      "chapter": "Bab 6: Ketaksamaan Linear",
+      "bm": "Sebuah kedai roti menjual <i>x</i> biji kek cawan dan <i>y</i> buku roti. Harga sebiji kek cawan ialah RM 2 dan sebuku roti ialah RM 5. Jumlah jualan mestilah sekurang-kurangnya RM 120, dan bilangan buku roti tidak melebihi dua kali bilangan kek cawan. Tulis dua ketaksamaan linear selain <i>x</i> &ge; 0 dan <i>y</i> &ge; 0.",
+      "en": "A bakery sells <i>x</i> cupcakes and <i>y</i> loaves of bread. Price of cupcake is RM 2 and loaf of bread is RM 5. Total sales must be at least RM 120, and loaves of bread cannot exceed twice cupcakes. Write two linear inequalities other than <i>x</i> &ge; 0 and <i>y</i> &ge; 0.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "2<i>x</i> + 5<i>y</i> &ge; 120 &nbsp;dan&nbsp; <i>y</i> &le; 2<i>x</i>"
+        },
+        {
+          "key": "B",
+          "text": "2<i>x</i> + 5<i>y</i> > 120 &nbsp;dan&nbsp; <i>y</i> &ge; 2<i>x</i>"
+        },
+        {
+          "key": "C",
+          "text": "5<i>x</i> + 2<i>y</i> &ge; 120 &nbsp;dan&nbsp; <i>y</i> &le; 2<i>x</i>"
+        },
+        {
+          "key": "D",
+          "text": "2<i>x</i> + 5<i>y</i> &le; 120 &nbsp;dan&nbsp; <i>y</i> < 2<i>x</i>"
+        }
+      ],
+      "answer": "A",
+      "solution": "Sekurang-kurangnya RM 120: 2<i>x</i> + 5<i>y</i> &ge; 120. Roti tidak melebihi 2 kali kek cawan: <i>y</i> &le; 2<i>x</i>.",
+      "concept": "'Sekurang-kurangnya' ialah &ge;. 'Tidak melebihi' ialah &le;.",
+      "stepByStep": "1. Jualan sekurang-kurangnya RM 120: 2x + 5y &ge; 120.<br>2. Roti tidak melebihi dua kali kek cawan: y &le; 2x.",
+      "tip": "Jangan terbalikkan pemboleh ubah x (kek cawan) dan y (roti)."
+    },
+    {
+      "num": 25,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Rajah menunjukkan graf jarak-masa bagi perjalanan sebuah kereta. Hitung laju purata, dalam km/j, bagi keseluruhan perjalanan itu.",
+      "en": "The diagram shows the distance-time graph of a car's journey. Calculate the average speed, in km/h, for the whole journey.",
+      "diagram": "\n  <svg width=\"270\" height=\"155\" viewBox=\"0 0 270 155\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"arrDT2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"45\" y1=\"125\" x2=\"255\" y2=\"125\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrDT2)\"/>\n    <text x=\"235\" y=\"140\" font-size=\"10\" font-weight=\"bold\">Masa / Time (jam)</text>\n    <line x1=\"45\" y1=\"135\" x2=\"45\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrDT2)\"/>\n    <text x=\"35\" y=\"12\" font-size=\"10\" font-weight=\"bold\">Jarak / Distance (km)</text>\n    <text x=\"34\" y=\"137\" font-size=\"10\">O</text>\n\n    <line x1=\"45\" y1=\"125\" x2=\"115\" y2=\"65\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <line x1=\"115\" y1=\"65\" x2=\"160\" y2=\"65\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <line x1=\"160\" y1=\"65\" x2=\"225\" y2=\"25\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n\n    <line x1=\"45\" y1=\"65\" x2=\"115\" y2=\"65\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"115\" y1=\"65\" x2=\"115\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"160\" y1=\"65\" x2=\"160\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"45\" y1=\"25\" x2=\"225\" y2=\"25\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"225\" y1=\"25\" x2=\"225\" y2=\"125\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n\n    <text x=\"25\" y=\"68\" font-size=\"10\">90</text>\n    <text x=\"20\" y=\"29\" font-size=\"10\">150</text>\n    <text x=\"105\" y=\"138\" font-size=\"10\">1.5</text>\n    <text x=\"150\" y=\"138\" font-size=\"10\">2.0</text>\n    <text x=\"215\" y=\"138\" font-size=\"10\">2.5</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "50"
+        },
+        {
+          "key": "B",
+          "text": "55"
+        },
+        {
+          "key": "C",
+          "text": "60"
+        },
+        {
+          "key": "D",
+          "text": "65"
+        }
+      ],
+      "answer": "C",
+      "solution": "Laju purata = Jumlah jarak / Jumlah masa = 150 km / 2.5 jam = 60 km/j.",
+      "concept": "Laju purata = Jumlah jarak / Jumlah masa.",
+      "stepByStep": "1. Jumlah jarak = 150 km.<br>2. Jumlah masa = 2.5 jam.<br>3. Laju purata = 150 / 2.5 = 60 km/j.",
+      "tip": "Baca kedudukan jarak akhir graf pada paksi menegak untuk jumlah jarak."
+    },
+    {
+      "num": 26,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Berdasarkan graf jarak-masa pada Soalan 25, nyatakan tempoh masa, dalam minit, apabila kereta itu berada dalam keadaan pegun.",
+      "en": "Based on the distance-time graph in Question 25, state the duration of time, in minutes, when the car is stationary.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "20"
+        },
+        {
+          "key": "B",
+          "text": "30"
+        },
+        {
+          "key": "C",
+          "text": "45"
+        },
+        {
+          "key": "D",
+          "text": "60"
+        }
+      ],
+      "answer": "B",
+      "solution": "Keadaan pegun berlaku dari <i>t</i> = 1.5 jam hingga <i>t</i> = 2.0 jam &rArr; 0.5 jam &times; 60 minit = 30 minit.",
+      "concept": "Garis mendatar pada graf jarak-masa bermaksud objek pegun (kecerunan sifar).",
+      "stepByStep": "1. Tempoh mendatar: dari t = 1.5 jam hingga t = 2.0 jam.<br>2. Masa = 0.5 jam &times; 60 minit = 30 minit.",
+      "tip": "Tukar jam kepada minit dengan mendarab 60."
+    },
+    {
+      "num": 27,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Rajah menunjukkan graf laju-masa bagi pergerakan suatu zarah. Hitung pecutan, dalam m s<sup>&minus;2</sup>, zarah itu dalam tempoh 5 saat pertama.",
+      "en": "The diagram shows the speed-time graph of a particle. Calculate the acceleration, in m s<sup>&minus;2</sup>, of the particle in the first 5 seconds.",
+      "diagram": "\n  <svg width=\"260\" height=\"150\" viewBox=\"0 0 260 150\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"arrST2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"45\" y1=\"120\" x2=\"245\" y2=\"120\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrST2)\"/>\n    <text x=\"225\" y=\"135\" font-size=\"10\" font-weight=\"bold\">Masa / Time (s)</text>\n    <line x1=\"45\" y1=\"130\" x2=\"45\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrST2)\"/>\n    <text x=\"35\" y=\"12\" font-size=\"10\" font-weight=\"bold\">Laju / Speed (m s⁻¹)</text>\n    <text x=\"34\" y=\"132\" font-size=\"10\">O</text>\n\n    <line x1=\"45\" y1=\"80\" x2=\"180\" y2=\"35\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <line x1=\"45\" y1=\"35\" x2=\"180\" y2=\"35\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"180\" y1=\"35\" x2=\"180\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n\n    <text x=\"26\" y=\"84\" font-size=\"10\">12</text>\n    <text x=\"26\" y=\"39\" font-size=\"10\">32</text>\n    <text x=\"176\" y=\"133\" font-size=\"10\">5</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.4"
+        },
+        {
+          "key": "B",
+          "text": "4.0"
+        },
+        {
+          "key": "C",
+          "text": "6.4"
+        },
+        {
+          "key": "D",
+          "text": "8.8"
+        }
+      ],
+      "answer": "B",
+      "solution": "Pecutan = Kecerunan graf laju-masa = (32 &minus; 12) / 5 = 20 / 5 = 4.0 m s<sup>&minus;2</sup>.",
+      "concept": "Pecutan ialah kecerunan graf laju-masa: a = (v &minus; u) / t.",
+      "stepByStep": "1. u = 12 m/s, v = 32 m/s, t = 5 s.<br>2. a = (32 &minus; 12) / 5 = 20 / 5 = 4.0 m s⁻².",
+      "tip": "Kecerunan positif = pecutan; kecerunan negatif = nyahpecutan."
+    },
+    {
+      "num": 28,
+      "chapter": "Bab 7: Graf Gerakan",
+      "bm": "Rajah menunjukkan graf laju-masa bagi sebuah motosikal. Hitung jumlah jarak yang dilalui, dalam meter, dalam tempoh 14 saat itu.",
+      "en": "The diagram shows the speed-time graph of a motorcycle. Calculate the total distance travelled, in metres, in the 14 seconds.",
+      "diagram": "\n  <svg width=\"270\" height=\"150\" viewBox=\"0 0 270 150\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <defs>\n      <marker id=\"arrTrap2\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1.5 L 8 5 L 0 8.5 z\" fill=\"#1e293b\"/>\n      </marker>\n    </defs>\n    <line x1=\"45\" y1=\"120\" x2=\"255\" y2=\"120\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrTrap2)\"/>\n    <text x=\"235\" y=\"135\" font-size=\"10\" font-weight=\"bold\">Masa / Time (s)</text>\n    <line x1=\"45\" y1=\"130\" x2=\"45\" y2=\"18\" stroke=\"#0f172a\" stroke-width=\"1.5\" marker-end=\"url(#arrTrap2)\"/>\n    <text x=\"35\" y=\"12\" font-size=\"10\" font-weight=\"bold\">Laju / Speed (m s⁻¹)</text>\n    <text x=\"34\" y=\"132\" font-size=\"10\">O</text>\n\n    <!-- Trapezium line and shaded area -->\n    <polygon points=\"45,120 95,40 165,40 220,120\" fill=\"#93c5fd\" opacity=\"0.45\"/>\n    <line x1=\"45\" y1=\"120\" x2=\"95\" y2=\"40\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <line x1=\"95\" y1=\"40\" x2=\"165\" y2=\"40\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n    <line x1=\"165\" y1=\"40\" x2=\"220\" y2=\"120\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n\n    <line x1=\"45\" y1=\"40\" x2=\"95\" y2=\"40\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"95\" y1=\"40\" x2=\"95\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n    <line x1=\"165\" y1=\"40\" x2=\"165\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/>\n\n    <text x=\"26\" y=\"44\" font-size=\"10\">25</text>\n    <text x=\"91\" y=\"133\" font-size=\"10\">4</text>\n    <text x=\"158\" y=\"133\" font-size=\"10\">10</text>\n    <text x=\"214\" y=\"133\" font-size=\"10\">14</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "200"
+        },
+        {
+          "key": "B",
+          "text": "225"
+        },
+        {
+          "key": "C",
+          "text": "250"
+        },
+        {
+          "key": "D",
+          "text": "300"
+        }
+      ],
+      "answer": "C",
+      "solution": "Jumlah jarak = Luas trapezium di bawah graf = <sup>1</sup>/<sub>2</sub> &times; [(10 &minus; 4) + 14] &times; 25 = <sup>1</sup>/<sub>2</sub> &times; 20 &times; 25 = 250 m.",
+      "concept": "Jarak pada graf laju-masa bersamaan dengan luas di bawah graf (luas trapezium).",
+      "stepByStep": "1. Sisi selari: (10 &minus; 4) = 6 dan 14.<br>2. Tinggi = 25.<br>3. Luas = 1/2 &times; (6 + 14) &times; 25 = 1/2 &times; 20 &times; 25 = 250 m.",
+      "tip": "Formula luas trapezium: 1/2 &times; (a + b) &times; h."
+    },
+    {
+      "num": 29,
+      "chapter": "Bab 8: Sukatan Serakan",
+      "bm": "Diberi satu set data: 4, 6, 7, 9, 11, 13, 15, 18, 20. Cari julat antara kuartil bagi set data tersebut.",
+      "en": "Given a set of data: 4, 6, 7, 9, 11, 13, 15, 18, 20. Find the interquartile range of the data set.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "8"
+        },
+        {
+          "key": "B",
+          "text": "9.5"
+        },
+        {
+          "key": "C",
+          "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "C",
+      "solution": "Median = 11. Kuartil pertama <i>Q</i><sub>1</sub> = (6 + 7)/2 = 6.5. Kuartil ketiga <i>Q</i><sub>3</sub> = (15 + 18)/2 = 16.5. Julat antara kuartil = 16.5 &minus; 6.5 = 10.",
+      "concept": "Julat antara kuartil = Q₃ &minus; Q₁.",
+      "stepByStep": "1. Data tersusun (n = 9): 4, 6, 7, 9, 11, 13, 15, 18, 20.<br>2. Median = 11.<br>3. Q₁ = (6 + 7)/2 = 6.5. Q₃ = (15 + 18)/2 = 16.5.<br>4. IQR = 16.5 &minus; 6.5 = 10.",
+      "tip": "Keluarkan nilai median apabila membahagikan data ganjil kepada dua bahagian."
+    },
+    {
+      "num": 30,
+      "chapter": "Bab 8: Sukatan Serakan",
+      "bm": "Rajah menunjukkan satu plot kotak bagi suatu set markah ujian. Cari julat antara kuartil bagi markah ujian tersebut.",
+      "en": "The diagram shows a box plot for a set of test marks. Find the interquartile range of the test marks.",
+      "diagram": "\n  <svg width=\"270\" height=\"120\" viewBox=\"0 0 270 120\" xmlns=\"http://www.w3.org/2000/svg\" class=\"exam-diagram\">\n    <!-- Number line -->\n    <line x1=\"30\" y1=\"85\" x2=\"245\" y2=\"85\" stroke=\"#0f172a\" stroke-width=\"1.4\"/>\n    \n    <!-- Scale ticks: 10, 20, 30, 40, 50 -->\n    <line x1=\"40\" y1=\"82\" x2=\"40\" y2=\"88\" stroke=\"#0f172a\" stroke-width=\"1.2\"/><text x=\"35\" y=\"100\" font-size=\"9\">10</text>\n    <line x1=\"85\" y1=\"82\" x2=\"85\" y2=\"88\" stroke=\"#0f172a\" stroke-width=\"1.2\"/><text x=\"80\" y=\"100\" font-size=\"9\">20</text>\n    <line x1=\"130\" y1=\"82\" x2=\"130\" y2=\"88\" stroke=\"#0f172a\" stroke-width=\"1.2\"/><text x=\"125\" y=\"100\" font-size=\"9\">30</text>\n    <line x1=\"175\" y1=\"82\" x2=\"175\" y2=\"88\" stroke=\"#0f172a\" stroke-width=\"1.2\"/><text x=\"170\" y=\"100\" font-size=\"9\">40</text>\n    <line x1=\"220\" y1=\"82\" x2=\"220\" y2=\"88\" stroke=\"#0f172a\" stroke-width=\"1.2\"/><text x=\"215\" y=\"100\" font-size=\"9\">50</text>\n\n    <!-- Box plot: Min 12 (49), Q1 20 (85), Med 28 (121), Q3 36 (157), Max 45 (197.5) -->\n    <line x1=\"49\" y1=\"35\" x2=\"49\" y2=\"55\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <line x1=\"49\" y1=\"45\" x2=\"85\" y2=\"45\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n\n    <rect x=\"85\" y=\"28\" width=\"72\" height=\"34\" fill=\"#dbeafe\" stroke=\"#1e3a8a\" stroke-width=\"1.6\"/>\n    <line x1=\"121\" y1=\"28\" x2=\"121\" y2=\"62\" stroke=\"#dc2626\" stroke-width=\"2\"/>\n\n    <line x1=\"157\" y1=\"45\" x2=\"197\" y2=\"45\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <line x1=\"197\" y1=\"35\" x2=\"197\" y2=\"55\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n\n    <text x=\"43\" y=\"24\" font-size=\"8.5\" font-weight=\"bold\">12</text>\n    <text x=\"79\" y=\"24\" font-size=\"8.5\" font-weight=\"bold\">20</text>\n    <text x=\"115\" y=\"24\" font-size=\"8.5\" font-weight=\"bold\" fill=\"#dc2626\">28</text>\n    <text x=\"151\" y=\"24\" font-size=\"8.5\" font-weight=\"bold\">36</text>\n    <text x=\"191\" y=\"24\" font-size=\"8.5\" font-weight=\"bold\">45</text>\n  </svg>",
+      "options": [
+        {
+          "key": "A",
+          "text": "16"
+        },
+        {
+          "key": "B",
+          "text": "25"
+        },
+        {
+          "key": "C",
+          "text": "28"
+        },
+        {
+          "key": "D",
+          "text": "33"
+        }
+      ],
+      "answer": "A",
+      "solution": "Dari plot kotak: <i>Q</i><sub>1</sub> = 20, <i>Q</i><sub>3</sub> = 36. Julat antara kuartil = <i>Q</i><sub>3</sub> &minus; <i>Q</i><sub>1</sub> = 36 &minus; 20 = 16.",
+      "concept": "Plot kotak memaparkan Min, Q₁, Median, Q₃, Max. Kotak mewakili julat antara kuartil.",
+      "stepByStep": "1. Q₁ = 20, Q₃ = 36.<br>2. IQR = Q₃ &minus; Q₁ = 36 &minus; 20 = 16.",
+      "tip": "Panjang badan kotak segi empat tepat menunjukkan julat antara kuartil secara langsung."
+    },
+    {
+      "num": 31,
+      "chapter": "Bab 8: Sukatan Serakan",
+      "bm": "Diberi sisihan piawai bagi suatu set data ialah 3.2. Jika setiap nilai data didarab dengan 3 dan kemudian ditambah dengan 5, apakah nilai sisihan piawai yang baharu?",
+      "en": "Given the standard deviation of a set of data is 3.2. If each data value is multiplied by 3 and then added by 5, what is the new standard deviation?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "3.2"
+        },
+        {
+          "key": "B",
+          "text": "8.2"
+        },
+        {
+          "key": "C",
+          "text": "9.6"
+        },
+        {
+          "key": "D",
+          "text": "14.6"
+        }
+      ],
+      "answer": "C",
+      "solution": "Penambahan pemalar tidak mengubah serakan. Pendaraban dengan <i>k</i> mendarab sisihan piawai dengan <i>k</i>: &sigma;<sub>baru</sub> = 3 &times; 3.2 = 9.6.",
+      "concept": "Penambahan pemalar c tidak mengubah serakan. Pendaraban dengan k mendarab sisihan piawai dengan k.",
+      "stepByStep": "1. &sigma; asal = 3.2.<br>2. Tambah 5 tidak ubah &sigma;.<br>3. Darab 3 mendarab &sigma;: 3 &times; 3.2 = 9.6.",
+      "tip": "Ukuran serakan (julat, IQR, sisihan piawai) kalis terhadap penambahan atau penolakan."
+    },
+    {
+      "num": 32,
+      "chapter": "Bab 8: Sukatan Serakan",
+      "bm": "Diberi satu set 10 nombor dengan &sum;<i>x</i> = 120 dan &sum;<i>x</i><sup>2</sup> = 1540. Hitung varians bagi set data itu.",
+      "en": "Given a set of 10 numbers with &sum;<i>x</i> = 120 and &sum;<i>x</i><sup>2</sup> = 1540. Calculate the variance of the data set.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "12"
+        },
+        {
+          "key": "C",
+          "text": "14.4"
+        },
+        {
+          "key": "D",
+          "text": "100"
+        }
+      ],
+      "answer": "A",
+      "solution": "Min x̄ = 120 / 10 = 12. Varians &sigma;<sup>2</sup> = (&sum;<i>x</i><sup>2</sup> / <i>N</i>) &minus; (x̄)<sup>2</sup> = (1540 / 10) &minus; 12<sup>2</sup> = 154 &minus; 144 = 10.",
+      "concept": "Varians: &sigma;² = (&sum;x² / N) &minus; (x̄)².",
+      "stepByStep": "1. Min x̄ = 120 / 10 = 12.<br>2. (x̄)² = 144.<br>3. &sigma;² = (1540 / 10) &minus; 144 = 154 &minus; 144 = 10.",
+      "tip": "Soalan minta varians (&sigma;²), jadi tidak perlu punca kuasa dua."
+    },
+    {
+      "num": 33,
+      "chapter": "Bab 9: Kebarangkalian",
+      "bm": "Sebuah kotak mengandungi 8 keping kad merah, 6 keping kad biru, dan 10 keping kad kuning. Sekeping kad dipilih secara rawak. Cari kebarangkalian memilih kad merah <b>atau</b> kad biru.",
+      "en": "A box contains 8 red cards, 6 blue cards, and 10 yellow cards. A card is picked at random. Find the probability of choosing a red card <b>or</b> a blue card.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "<sup>1</sup>/<sub>3</sub>"
+        },
+        {
+          "key": "B",
+          "text": "<sup>7</sup>/<sub>12</sub>"
+        },
+        {
+          "key": "C",
+          "text": "<sup>5</sup>/<sub>8</sub>"
+        },
+        {
+          "key": "D",
+          "text": "<sup>3</sup>/<sub>4</sub>"
+        }
+      ],
+      "answer": "B",
+      "solution": "Jumlah kad = 8 + 6 + 10 = 24. Peristiwa saling eksklusif: <i>P</i>(Merah &cup; Biru) = (8 + 6) / 24 = 14 / 24 = <sup>7</sup>/<sub>12</sub>.",
+      "concept": "Peristiwa saling eksklusif: P(A &cup; B) = P(A) + P(B).",
+      "stepByStep": "1. Jumlah kad = 8 + 6 + 10 = 24.<br>2. Merah atau biru = 8 + 6 = 14.<br>3. P = 14 / 24 = 7/12.",
+      "tip": "Permudahkan pecahan 14/24 dengan membahagikan pengangka dan penyebut dengan 2."
+    },
+    {
+      "num": 34,
+      "chapter": "Bab 9: Kebarangkalian",
+      "bm": "Sekeping syiling adil dan sebiji dadu adil dilambung serentak. Cari kebarangkalian mendapat angka (<i>Heads</i>) <b>dan</b> nombor perdana pada dadu.",
+      "en": "A fair coin and a fair dice are tossed simultaneously. Find the probability of getting Heads <b>and</b> a prime number on the dice.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "<sup>1</sup>/<sub>6</sub>"
+        },
+        {
+          "key": "B",
+          "text": "<sup>1</sup>/<sub>4</sub>"
+        },
+        {
+          "key": "C",
+          "text": "<sup>1</sup>/<sub>3</sub>"
+        },
+        {
+          "key": "D",
+          "text": "<sup>1</sup>/<sub>2</sub>"
+        }
+      ],
+      "answer": "B",
+      "solution": "Peristiwa tak bersandar: <i>P</i>(Angka) = <sup>1</sup>/<sub>2</sub>. Nombor perdana dadu {2, 3, 5} &rArr; <i>P</i>(Perdana) = <sup>3</sup>/<sub>6</sub> = <sup>1</sup>/<sub>2</sub>. <i>P</i> = <sup>1</sup>/<sub>2</sub> &times; <sup>1</sup>/<sub>2</sub> = <sup>1</sup>/<sub>4</sub>.",
+      "concept": "Peristiwa tidak bersandar: P(A &cap; B) = P(A) &times; P(B).",
+      "stepByStep": "1. P(Angka) = 1/2.<br>2. Nombor perdana dadu {2, 3, 5} &rArr; P = 3/6 = 1/2.<br>3. P = 1/2 &times; 1/2 = 1/4.",
+      "tip": "1 bukan nombor perdana. Nombor perdana pada dadu ialah 2, 3, 5."
+    },
+    {
+      "num": 35,
+      "chapter": "Bab 9: Kebarangkalian",
+      "bm": "Sebuah beg mengandungi 5 biji guli hijau dan 4 biji guli putih. Dua biji guli dikeluarkan secara rawak satu demi satu <b>tanpa pengembalian</b>. Cari kebarangkalian bahawa kedua-dua guli itu berwarna hijau.",
+      "en": "A bag contains 5 green marbles and 4 white marbles. Two marbles are chosen at random one by one <b>without replacement</b>. Find the probability that both marbles are green.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "<sup>25</sup>/<sub>81</sub>"
+        },
+        {
+          "key": "B",
+          "text": "<sup>5</sup>/<sub>18</sub>"
+        },
+        {
+          "key": "C",
+          "text": "<sup>1</sup>/<sub>3</sub>"
+        },
+        {
+          "key": "D",
+          "text": "<sup>4</sup>/<sub>9</sub>"
+        }
+      ],
+      "answer": "B",
+      "solution": "Guli pertama hijau = 5/9. Baki guli hijau = 4, jumlah baki = 8. Guli kedua hijau = 4/8. <i>P</i> = <sup>5</sup>/<sub>9</sub> &times; <sup>4</sup>/<sub>8</sub> = <sup>20</sup>/<sub>72</sub> = <sup>5</sup>/<sub>18</sub>.",
+      "concept": "Peristiwa bersandar (tanpa pengembalian): Jumlah berkurang untuk cabutan kedua.",
+      "stepByStep": "1. Cabutan 1 hijau = 5/9.<br>2. Cabutan 2 hijau = 4/8.<br>3. P = (5/9) &times; (4/8) = 20/72 = 5/18.",
+      "tip": "Kurangkan pengangka dan penyebut pada cabutan kedua kerana tiada pengembalian."
+    },
+    {
+      "num": 36,
+      "chapter": "Bab 9: Kebarangkalian",
+      "bm": "Kebarangkalian Amin lulus ujian ialah <sup>3</sup>/<sub>5</sub> dan kebarangkalian Basri lulus ialah <sup>3</sup>/<sub>4</sub>. Cari kebarangkalian bahawa <b>sekurang-kurangnya seorang</b> daripada mereka lulus ujian itu.",
+      "en": "The probability of Amin passing an exam is <sup>3</sup>/<sub>5</sub> and Basri passing is <sup>3</sup>/<sub>4</sub>. Find the probability that <b>at least one</b> of them passes the exam.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "<sup>9</sup>/<sub>20</sub>"
+        },
+        {
+          "key": "B",
+          "text": "<sup>7</sup>/<sub>10</sub>"
+        },
+        {
+          "key": "C",
+          "text": "<sup>9</sup>/<sub>10</sub>"
+        },
+        {
+          "key": "D",
+          "text": "<sup>19</sup>/<sub>20</sub>"
+        }
+      ],
+      "answer": "C",
+      "solution": "<i>P</i>(sekurang-kurangnya seorang lulus) = 1 &minus; <i>P</i>(kedua-dua gagal) = 1 &minus; [(1 &minus; <sup>3</sup>/<sub>5</sub>) &times; (1 &minus; <sup>3</sup>/<sub>4</sub>)] = 1 &minus; [<sup>2</sup>/<sub>5</sub> &times; <sup>1</sup>/<sub>4</sub>] = 1 &minus; <sup>1</sup>/<sub>10</sub> = <sup>9</sup>/<sub>10</sub>.",
+      "concept": "P(Sekurang-kurangnya seorang lulus) = 1 &minus; P(Kedua-duanya gagal).",
+      "stepByStep": "1. P(Amin gagal) = 1 &minus; 3/5 = 2/5.<br>2. P(Basri gagal) = 1 &minus; 3/4 = 1/4.<br>3. P(Kedua gagal) = (2/5) &times; (1/4) = 2/20 = 1/10.<br>4. P(Sekurang-kurangnya 1 lulus) = 1 &minus; 1/10 = 9/10.",
+      "tip": "Kaedah pelengkap '1 tolak semua gagal' menjimatkan masa menjawab."
+    },
+    {
+      "num": 37,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Encik Razak mempunyai pendapatan aktif sebanyak RM 4,500 dan pendapatan pasif RM 600 sebulan. Jumlah perbelanjaan tetapnya ialah RM 2,400 dan perbelanjaan tidak tetap ialah RM 1,800. Hitung aliran tunai bulanan Encik Razak.",
+      "en": "Encik Razak has an active income of RM 4,500 and passive income of RM 600 per month. His fixed expenses are RM 2,400 and variable expenses are RM 1,800. Calculate Encik Razak's monthly cash flow.",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "RM 300 (Aliran tunai positif)"
+        },
+        {
+          "key": "B",
+          "text": "RM 900 (Aliran tunai positif)"
+        },
+        {
+          "key": "C",
+          "text": "RM 900 (Aliran tunai negatif)"
+        },
+        {
+          "key": "D",
+          "text": "RM 1,500 (Aliran tunai positif)"
+        }
+      ],
+      "answer": "B",
+      "solution": "Jumlah pendapatan = 4,500 + 600 = RM 5,100. Jumlah perbelanjaan = 2,400 + 1,800 = RM 4,200. Aliran tunai = 5,100 &minus; 4,200 = +RM 900 (Lebihan/Positif).",
+      "concept": "Aliran tunai = Pendapatan &minus; Perbelanjaan. Positif = Lebihan, Negatif = Defisit.",
+      "stepByStep": "1. Pendapatan = 4,500 + 600 = RM 5,100.<br>2. Perbelanjaan = 2,400 + 1,800 = RM 4,200.<br>3. Aliran tunai = 5,100 &minus; 4,200 = +RM 900 (Lebihan/Positif).",
+      "tip": "Aliran tunai positif menunjukkan kesihatan kewangan yang baik."
+    },
+    {
+      "num": 38,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Antara pernyataan berikut, yang manakah menerangkan konsep <b>'M'</b> dalam penetapan matlamat kewangan berasaskan konsep <b>SMART</b>?",
+      "en": "Which of the following describes the concept <b>'M'</b> in setting financial goals based on the <b>SMART</b> approach?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khusus (<i>Specific</i>) &ndash; matlamat jelas"
+        },
+        {
+          "key": "B",
+          "text": "Boleh diukur (<i>Measurable</i>) &ndash; boleh dikira dalam nilai wang"
+        },
+        {
+          "key": "C",
+          "text": "Boleh dicapai (<i>Attainable</i>) &ndash; matlamat realistik"
+        },
+        {
+          "key": "D",
+          "text": "Bermakna (<i>Meaningful</i>) &ndash; memberi impak"
+        }
+      ],
+      "answer": "B",
+      "solution": "'M' bermaksud <i>Measurable</i> (boleh diukur) di mana matlamat boleh diukur secara kuantitatif dalam nilai jumlah wang yang khusus.",
+      "concept": "Konsep SMART: S = Specific, M = Measurable (Boleh diukur dalam nilai wang).",
+      "stepByStep": "1. M = Measurable.<br>2. Matlamat kewangan boleh diukur secara kuantitatif dalam nilai jumlah ringgit.",
+      "tip": "Hafal akronim SMART: Specific, Measurable, Attainable, Realistic, Time-bound."
+    },
+    {
+      "num": 39,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Puan Aisyah mempunyai perbelanjaan bulanan sebanyak RM 3,200. Mengikut prinsip perancangan kewangan yang bijak, berapakah jumlah dana kecemasan minimum (3 bulan perbelanjaan) yang patut disimpannya?",
+      "en": "Puan Aisyah has monthly expenses of RM 3,200. According to prudent financial planning principles, what is the minimum emergency fund (3 months expenses) she should maintain?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "RM 6,400"
+        },
+        {
+          "key": "B",
+          "text": "RM 9,600"
+        },
+        {
+          "key": "C",
+          "text": "RM 12,800"
+        },
+        {
+          "key": "D",
+          "text": "RM 19,200"
+        }
+      ],
+      "answer": "B",
+      "solution": "Dana kecemasan minimum = 3 &times; RM 3,200 = RM 9,600.",
+      "concept": "Dana kecemasan minimum = 3 bulan perbelanjaan bulanan asas.",
+      "stepByStep": "1. Perbelanjaan sebulan = RM 3,200.<br>2. Minimum 3 bulan = 3 &times; RM 3,200 = RM 9,600.",
+      "tip": "Jika soalan minta maksimum, darab dengan 6 (RM 19,200)."
+    },
+    {
+      "num": 40,
+      "chapter": "Bab 10: Pengurusan Kewangan",
+      "bm": "Farhan ingin membeli sebuah komputer riba berharga RM 3,600 dalam tempoh 15 bulan dari sekarang. Dia telah mempunyai simpanan sedia ada sebanyak RM 600. Berapakah simpanan bulanan yang perlu diperuntukkan oleh Farhan?",
+      "en": "Farhan wants to buy a laptop worth RM 3,600 in 15 months from now. He already has existing savings of RM 600. How much monthly savings should Farhan set aside?",
+      "diagram": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "RM 180"
+        },
+        {
+          "key": "B",
+          "text": "RM 200"
+        },
+        {
+          "key": "C",
+          "text": "RM 240"
+        },
+        {
+          "key": "D",
+          "text": "RM 260"
+        }
+      ],
+      "answer": "B",
+      "solution": "Baki wang yang diperlukan = RM 3,600 &minus; RM 600 = RM 3,000. Simpanan bulanan = RM 3,000 / 15 = RM 200 sebulan.",
+      "concept": "Simpanan bulanan = Baki diperlukan / Tempoh bulan. Tolak simpanan sedia ada dahulu.",
+      "stepByStep": "1. Baki = RM 3,600 &minus; RM 600 = RM 3,000.<br>2. Simpanan sebulan = RM 3,000 / 15 = RM 200 sebulan.",
+      "tip": "Tolak simpanan sedia ada RM 600 sebelum membahagikan dengan bilangan bulan."
+    }
+  ]
+}

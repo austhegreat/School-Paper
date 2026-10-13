@@ -75,8 +75,9 @@ Cukup dengan dwiklik fail `index.html` pada komputer anda untuk membuka kuiz dal
 
 ---
 
-## 🔑 Kunci Jawapan Pantas (Answer Key)
+## 🔑 Kunci Jawapan Pantas (Answer Keys)
 
+### Set 1:
 ```text
  1. A     2. A     3. B     4. B     5. C     6. C     7. B     8. B
  9. B    10. B    11. B    12. A    13. C    14. A    15. B    16. C
@@ -85,15 +86,35 @@ Cukup dengan dwiklik fail `index.html` pada komputer anda untuk membuka kuiz dal
 33. B    34. B    35. B    36. C    37. D    38. C    39. B    40. B
 ```
 
+### Set 2:
+```text
+ 1. A     2. B     3. B     4. B     5. C     6. C     7. B     8. A
+ 9. B    10. A    11. A    12. A    13. B    14. C    15. B    16. B
+17. C    18. C    19. B    20. C    21. A    22. C    23. B    24. A
+25. C    26. B    27. B    28. C    29. C    30. A    31. C    32. A
+33. B    34. B    35. B    36. C    37. B    38. B    39. B    40. B
+```
+
 ---
 
 ## 📄 Struktur Repositori / Repository Structure
 
 ```text
-├── index.html                           # Laman web kuiz interaktif CBT (Online Quiz)
-├── Kertas_1_Matematik_Tingkatan_4.pdf   # Buku soalan peperiksaan rasmi sedia cetak (18 muka surat)
-├── Kertas_1_Matematik_Tingkatan_4.html  # Templat cetakan dokumen peperiksaan
-├── build_exam_pdf.js                    # Skrip penjana PDF
+├── index.html                                # Laman web kuiz interaktif CBT dwiset (Set 1 & Set 2)
+├── questions_data.json                       # Pangkalan data soalan & modul bimbingan (80 soalan)
+├── Kertas_1_Matematik_Tingkatan_4.pdf        # Buku soalan peperiksaan Set 1 (18 muka surat)
+├── Kertas_1_Matematik_Tingkatan_4_Set2.pdf   # Buku soalan peperiksaan Set 2 (18 muka surat)
+├── Kertas_1_Matematik_Tingkatan_4.html       # Templat cetakan dokumen Set 1
+├── Kertas_1_Matematik_Tingkatan_4_Set2.html  # Templat cetakan dokumen Set 2
+├── build_exam_pdf.js                         # Skrip penjana PDF Set 1
+├── build_exam_pdf_set2.js                    # Skrip penjana PDF Set 2
+├── build_dual_site.js                        # Skrip pembina laman web dwiset
+├── generate_website.js                       # Skrip penjana laman web
+├── server.js                                 # Pelayan HTTP Node.js (untuk Render / Local)
+├── render.yaml                               # Konfigurasi Render Blueprint
+├── package.json                              # Konfigurasi npm
+└── README.md                                 # Dokumentasi projek
+```
 ├── generate_website.js                  # Skrip penjana laman web
 └── README.md                            # Dokumentasi projek
 ```
