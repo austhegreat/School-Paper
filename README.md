@@ -50,13 +50,21 @@
 ### Cara 1: Buka Terus Secara Tempatan (Local)
 Cukup dengan dwiklik fail `index.html` pada komputer anda untuk membuka kuiz dalam pelayar web seperti Google Chrome, Microsoft Edge, atau Firefox. Tiada sebarang pemasangan perisian tambahan diperlukan!
 
-### Cara 2: Hoskan di GitHub Pages (Percuma & Boleh Diakses Semua Murid)
+### Cara 2: Hoskan di Render (Percuma & Automatik)
+1. Buka [dashboard.render.com](https://dashboard.render.com/) dan log masuk dengan akaun GitHub anda.
+2. Klik butang **New +** dan pilih:
+   - **Static Site:** Sambungkan repo `austhegreat/School-Paper`, tetapkan *Publish Directory* kepada `.` (atau kosongkan build command), lalu klik **Create Static Site**.
+   - *(Atau)* **Web Service:** Render akan mengesan `package.json` dan menjalankan `node server.js` secara automatik.
+   - *(Atau)* **Blueprint:** Pilih repo `austhegreat/School-Paper` dan Render akan membaca `render.yaml` untuk deploy serta-merta!
+3. Laman web anda akan aktif secara percuma dengan domain Render (cth: `https://school-paper.onrender.com`).
+
+### Cara 3: Hoskan di GitHub Pages (Percuma & Boleh Diakses Semua Murid)
 1. Pergi ke tab **Settings** repositori anda di GitHub.
 2. Di menu kiri, klik **Pages**.
-3. Di bawah bahagian **Build and deployment** > **Branch**, pilih `main` (atau `master`) dan folder `/ (root)`, kemudian klik **Save**.
+3. Di bawah bahagian **Build and deployment** > **Branch**, pilih `main` dan folder `/ (root)`, kemudian klik **Save**.
 4. Laman web interaktif anda akan tersedia secara umum di:
    ```text
-   https://<username>.github.io/<nama-repo>/
+   https://austhegreat.github.io/School-Paper/
    ```
 
 ---
