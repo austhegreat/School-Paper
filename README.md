@@ -17,14 +17,20 @@
    - Dilengkapi muka hadapan rasmi, senarai rumus matematik, rajah vektor berkualiti tinggi (SVG), borang jawapan OMR, dan skema jawapan terperinci dengan jalan kira langkah demi langkah.
    - Fail PDF: [`Kertas_1_Matematik_Tingkatan_4.pdf`](./Kertas_1_Matematik_Tingkatan_4.pdf).
 
-2. **💻 Laman Web Kuiz Interaktif (Online CBT / Computer-Based Test)**
-   - Murid boleh menjawab soalan secara langsung di pelayar web (*browser*).
+2. **💻 Laman Web Kuiz & Pembelajaran Interaktif (Interactive CBT & Learning Mode)**
+   - **Mod Belajar & Bimbingan Serta-merta (Educational Mode):**
+     - Setiap kali murid klik jawapan, sistem terus memberi maklum balas: pilihan betul ditanda hijau, manakala pilihan salah ditanda merah berserta paparan jawapan sebenar.
+     - **Kad Pengajaran Lengkap:** Setiap soalan memaparkan:
+       - 🎯 **Konsep Asas & Rumus Berkaitan**
+       - 📝 **Langkah Demi Langkah Pengiraan**
+       - ⚠️ **Petua Peperiksaan & Kesilapan Lazim**
+     - Butang togol membolehkan murid memilih antara **Mod Belajar (Aktif)** atau **Mod Peperiksaan Sahaja** (tanpa petunjuk serta-merta).
    - **Pemasa Peperiksaan:** 1 jam 30 minit (90 minit) dengan amaran masa tamat.
-   - **Peta Soalan (Navigator 1–40):** Memaparkan status soalan (belum dijawab, selesai dijawab, atau ditanda untuk semakan).
+   - **Peta Soalan (Navigator 1–40):** Memaparkan status soalan (belum dijawab, betul, salah, atau telah dijawab).
    - **Pemarkahan Automatik:** Menjana markah serta-merta sejurus butang hantar ditekan (Contoh: 36 / 40 &ndash; 90%).
-   - **Gred SPM & Analisis Bab:** Memaparkan gred pencapaian (A+, A, B, C, dsb.) dan graf analisis prestasi bagi setiap 10 bab.
-   - **Semakan Terperinci:** Menunjukkan pilihan murid vs jawapan sebenar serta jalan kerja lengkap bagi setiap soalan.
-   - Boleh dihoskan secara percuma melalui **GitHub Pages**!
+   - **Gred SPM & Analisis Bab:** Memaparkan gred pencapaian rasmi (A+, A, B, C, dsb.) dan graf bar analisis prestasi bagi setiap 10 bab.
+   - **Semakan Terperinci:** Menapis soalan (Semua / Betul / Salah) dengan penerangan jalan kerja lengkap.
+   - Sedia dideploy di **Render** atau **GitHub Pages**!
 
 ---
 
