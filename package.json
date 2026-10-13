@@ -1,0 +1,23 @@
+{
+  "name": "school-paper",
+  "version": "1.0.0",
+  "description": "Peperiksaan Akhir Tahun Matematik Tingkatan 4 Kertas 1 - Kuiz Interaktif & PDF",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node generate_website.js"
+  },
+  "keywords": [
+    "spm",
+    "mathematics",
+    "form4",
+    "quiz",
+    "cbt",
+    "exam"
+  ],
+  "author": "austhegreat",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
