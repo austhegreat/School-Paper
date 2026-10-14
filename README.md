@@ -95,28 +95,35 @@ Cukup dengan dwiklik fail `index.html` pada komputer anda untuk membuka kuiz dal
 33. B    34. B    35. B    36. C    37. B    38. B    39. B    40. B
 ```
 
+### Modul Topikal Bab 1 (Fungsi & Persamaan Kuadratik - 30 Soalan):
+```text
+ 1. A     2. A     3. A     4. B     5. C     6. B     7. A     8. D     9. A    10. B
+11. A    12. B    13. C    14. B    15. C    16. A    17. B    18. A    19. B    20. A
+21. B    22. A    23. B    24. C    25. A    26. B    27. A    28. B    29. A    30. B
+```
+
 ---
 
 ## 📄 Struktur Repositori / Repository Structure
 
 ```text
-├── index.html                                # Laman web kuiz interaktif CBT dwiset (Set 1 & Set 2)
-├── questions_data.json                       # Pangkalan data soalan & modul bimbingan (80 soalan)
-├── Kertas_1_Matematik_Tingkatan_4.pdf        # Buku soalan peperiksaan Set 1 (18 muka surat)
-├── Kertas_1_Matematik_Tingkatan_4_Set2.pdf   # Buku soalan peperiksaan Set 2 (18 muka surat)
-├── Kertas_1_Matematik_Tingkatan_4.html       # Templat cetakan dokumen Set 1
-├── Kertas_1_Matematik_Tingkatan_4_Set2.html  # Templat cetakan dokumen Set 2
-├── build_exam_pdf.js                         # Skrip penjana PDF Set 1
-├── build_exam_pdf_set2.js                    # Skrip penjana PDF Set 2
-├── build_dual_site.js                        # Skrip pembina laman web dwiset
-├── generate_website.js                       # Skrip penjana laman web
-├── server.js                                 # Pelayan HTTP Node.js (untuk Render / Local)
-├── render.yaml                               # Konfigurasi Render Blueprint
-├── package.json                              # Konfigurasi npm
-└── README.md                                 # Dokumentasi projek
-```
-├── generate_website.js                  # Skrip penjana laman web
-└── README.md                            # Dokumentasi projek
+├── index.html                                          # Laman web kuiz interaktif CBT dwiset (Set 1 & Set 2)
+├── questions_data.json                                 # Pangkalan data soalan & modul bimbingan (80 soalan)
+├── Kertas_1_Matematik_Tingkatan_4.pdf                  # Buku soalan peperiksaan Set 1 (18 muka surat)
+├── Kertas_1_Matematik_Tingkatan_4_Set2.pdf             # Buku soalan peperiksaan Set 2 (18 muka surat)
+├── Modul_Bab_1_Fungsi_Kuadratik_Tingkatan_4.pdf        # Modul latih tubi cetak Bab 1 (12 muka surat, 30 soalan)
+├── Kertas_1_Matematik_Tingkatan_4.html                 # Templat cetakan dokumen Set 1
+├── Kertas_1_Matematik_Tingkatan_4_Set2.html            # Templat cetakan dokumen Set 2
+├── Modul_Bab_1_Fungsi_Kuadratik_Tingkatan_4.html       # Templat cetakan dokumen Bab 1
+├── build_exam_pdf.js                                   # Skrip penjana PDF Set 1
+├── build_exam_pdf_set2.js                              # Skrip penjana PDF Set 2
+├── build_chapter1_pdf.js                               # Skrip penjana PDF Modul Bab 1
+├── build_dual_site.js                                  # Skrip pembina laman web dwiset
+├── generate_website.js                                 # Skrip pelancar laman web
+├── server.js                                           # Pelayan HTTP Node.js (untuk Render / Local)
+├── render.yaml                                         # Konfigurasi Render Blueprint
+├── package.json                                        # Konfigurasi npm
+└── README.md                                           # Dokumentasi projek
 ```
 
 Dilesenkan di bawah [MIT License](LICENSE) &bull; Disediakan untuk kegunaan guru dan murid di seluruh Malaysia.

@@ -1,0 +1,2172 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Modul Latih Tubi Topikal: Bab 1 Fungsi dan Persamaan Kuadratik (Tingkatan 4)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 1.1cm 1.3cm 1.1cm 1.3cm;
+  }
+  
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10.2pt;
+    line-height: 1.28;
+    color: #0f172a;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .running-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    font-weight: bold;
+    border-bottom: 1.2px solid #000;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  .running-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    border-top: 1px solid #64748b;
+    padding-top: 3px;
+    margin-top: 6px;
+    color: #334155;
+  }
+
+  .cover-border {
+    border: 3px double #000;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .module-title-box {
+    margin: 10px 0;
+    text-align: center;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+  }
+
+  .module-title-bm {
+    font-size: 15.5pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+
+  .module-title-en {
+    font-size: 11pt;
+    font-style: italic;
+    color: #334155;
+  }
+
+  .candidate-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+  }
+
+  .candidate-table td {
+    border: 1.2px solid #000;
+    padding: 5px 8px;
+    font-size: 9.5pt;
+  }
+
+  .formula-box {
+    border: 1.2px solid #1e3a8a;
+    background: #f8fafc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 10px;
+  }
+
+  .formula-title {
+    font-size: 9.5pt;
+    font-weight: bold;
+    color: #1e3a8a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .formula-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 14px;
+    font-size: 8.5pt;
+  }
+
+  .question-item {
+    margin-bottom: 10px;
+  }
+
+  .q-header {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .q-num {
+    font-weight: bold;
+    font-size: 10.5pt;
+    width: 24px;
+    flex-shrink: 0;
+  }
+
+  .q-body { flex-grow: 1; }
+  .q-bm { font-size: 10pt; margin-bottom: 2px; }
+  .q-en { font-size: 9pt; font-style: italic; color: #374151; margin-bottom: 4px; }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 14px;
+    margin-top: 4px;
+    margin-left: 20px;
+  }
+
+  .options-grid.single-col { grid-template-columns: 1fr; }
+
+  .option-choice {
+    display: flex;
+    align-items: flex-start;
+    font-size: 9.5pt;
+  }
+
+  .opt-letter {
+    font-weight: bold;
+    width: 18px;
+    flex-shrink: 0;
+  }
+
+  .exam-diagram {
+    display: block;
+    margin: 2px auto;
+  }
+
+  /* OMR Grid */
+  .omr-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .omr-col {
+    border: 1px solid #cbd5e1;
+    padding: 6px 10px;
+    background: #f8fafc;
+    border-radius: 4px;
+  }
+
+  .omr-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.5px;
+    font-size: 9pt;
+  }
+
+  .omr-qnum { font-weight: bold; width: 22px; }
+  .omr-bubbles { display: flex; gap: 5px; }
+
+  .bubble {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1.2px solid #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7.5pt;
+    font-weight: bold;
+    color: #334155;
+  }
+
+  .answers-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.2pt;
+  }
+
+  .answers-table th {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 4px 6px;
+    border: 1px solid #1e3a8a;
+    text-align: left;
+    font-size: 8.5pt;
+  }
+
+  .answers-table td {
+    padding: 3.5px 6px;
+    border: 1px solid #cbd5e1;
+    vertical-align: top;
+  }
+
+  .answers-table tr:nth-child(even) { background: #f8fafc; }
+
+  .badge-ans {
+    display: inline-block;
+    background: #047857;
+    color: #fff;
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-size: 8pt;
+  }
+</style>
+</head>
+<body>
+
+  <div class="page-container page-break">
+    <div class="cover-border">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:11pt; font-weight:bold; letter-spacing:1.5px;">MODUL LATIH TUBI TOPIKAL SPM</span>
+          <span style="font-size:11pt; font-weight:bold;">TINGKATAN 4</span>
+        </div>
+
+        <div class="module-title-box">
+          <div style="font-size: 9.5pt; font-weight: bold; letter-spacing: 1px; color:#1e40af; margin-bottom: 2px;">MATEMATIK KSSM &bull; BAB 1</div>
+          <div class="module-title-bm">FUNGSI DAN PERSAMAAN KUADRATIK DALAM SATU PEMBOLEH UBAH</div>
+          <div class="module-title-en">Quadratic Functions and Equations in One Variable</div>
+          <div style="font-size: 10pt; font-weight: bold; margin-top: 5px;">30 SOALAN PEPERIKSAAN OBJEKTIF &bull; <i>30 EXAM OBJECTIVE QUESTIONS</i></div>
+        </div>
+
+        <div style="text-align:center; font-size:10pt; font-weight:bold; margin: 4px 0 8px 0;">
+          Masa yang dicadangkan: 1 jam 15 minit (75 minit)<br>
+          <span style="font-style:italic; font-weight:normal; font-size:9pt; color:#475569;">Suggested time: 1 hour 15 minutes</span>
+        </div>
+
+        <table class="candidate-table">
+          <tr>
+            <td style="width: 25%; font-weight: bold; background:#f8fafc;">NAMA / <i>NAME</i>:</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background:#f8fafc;">KELAS / <i>CLASS</i>:</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background:#f8fafc;">TARIKH / <i>DATE</i>:</td>
+            <td></td>
+          </tr>
+        </table>
+
+        <!-- Summary & Formula Box -->
+        <div class="formula-box">
+          <div class="formula-title">📐 RUMUS &amp; KONSEP PENTING BAB 1 / <i>KEY FORMULAE &amp; CONCEPTS</i></div>
+          <div class="formula-grid">
+            <div>&bull; <b>Bentuk Am:</b> <i>f</i>(<i>x</i>) = <i>ax</i><sup>2</sup> + <i>bx</i> + <i>c</i>, &nbsp; <i>a</i> &ne; 0</div>
+            <div>&bull; <b>Paksi Simetri:</b> <i>x</i> = &minus;<sup><i>b</i></sup>/<sub>2<i>a</i></sub></div>
+            <div>&bull; <b>Titik Minimum:</b> <i>a</i> > 0 (Bentuk &cup;)</div>
+            <div>&bull; <b>Titik Maksimum:</b> <i>a</i> < 0 (Bentuk &cap;)</div>
+            <div>&bull; <b>Pintasan-<i>y</i>:</b> Koordinat (0, <i>c</i>)</div>
+            <div>&bull; <b>Lebar Graf:</b> |<i>a</i>| bertambah &rArr; Graf semakin sempit</div>
+            <div>&bull; <b>Punca Kuadratik:</b> <i>x</i> = <sup>&minus;<i>b</i> &plusmn; &radic;[<i>b</i><sup>2</sup> &minus; 4<i>ac</i>]</sup>/<sub>2<i>a</i></sub></div>
+            <div>&bull; <b>Pembezalayan:</b> <i>b</i><sup>2</sup> &minus; 4<i>ac</i> > 0 (2 punca), = 0 (1 punca), < 0 (tiada punca)</div>
+            <div>&bull; <b>Bentuk dari Punca:</b> <i>x</i><sup>2</sup> &minus; (HTP)<i>x</i> + (HDP) = 0</div>
+            <div>&bull; <b>Titik Simetri Punca:</b> <i>x</i> = <sup>(<i>x</i><sub>1</sub> + <i>x</i><sub>2</sub>)</sup>/<sub>2</sub></div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; font-size:8.5pt; color:#334155; line-height:1.35; border:1px dashed #cbd5e1; padding:6px 10px; background:#fff;">
+          <b>ARAHAN KEPADA CALON:</b><br>
+          1. Jawab semua 30 soalan. Bagi setiap soalan, pilih satu jawapan sahaja (A, B, C atau D).<br>
+          2. Gunakan borang jawapan OMR yang disediakan di halaman 10.<br>
+          3. Skema jawapan dan jalan kerja lengkap disediakan di halaman 11 dan 12 untuk semakan kendiri.
+        </div>
+      </div>
+
+      <div style="border-top:1.2px solid #000; padding-top:4px; display:flex; justify-content:space-between; font-size:8pt;">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span style="font-weight:bold; text-align:right;">[Lihat halaman sebelah / <i>Turn over</i><br>SULIT</span>
+      </div>
+    </div>
+  </div>
+  
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">1.</div>
+          <div class="q-body">
+            <div class="q-bm">Antara ungkapan berikut, yang manakah merupakan suatu <b>ungkapan kuadratik dalam satu pemboleh ubah</b>?</div>
+            <div class="q-en">Which of the following expressions is a <b>quadratic expression in one variable</b>?</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>3<i>x</i><sup>2</sup> &minus; 5<i>x</i> + 2</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>2<i>x</i><sup>3</sup> &minus; 4<i>x</i> + 1</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i><sup>2</sup> + 2<i>y</i> &minus; 5</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><sup>2</sup>/<sub><i>x</i><sup>2</sup></sub> + 3<i>x</i> &minus; 1</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">2.</div>
+          <div class="q-body">
+            <div class="q-bm">Ungkapkan persamaan kuadratik 2<i>x</i>(<i>x</i> &minus; 3) = 5 &minus; <i>x</i> dalam bentuk am <i>ax</i><sup>2</sup> + <i>bx</i> + <i>c</i> = 0 dan nyatakan nilai <i>a</i>, <i>b</i> dan <i>c</i>.</div>
+            <div class="q-en">Express 2<i>x</i>(<i>x</i> &minus; 3) = 5 &minus; <i>x</i> in general form <i>ax</i><sup>2</sup> + <i>bx</i> + <i>c</i> = 0 and state values of <i>a</i>, <i>b</i> and <i>c</i>.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>a</i> = 2, <i>b</i> = &minus;5, <i>c</i> = &minus;5</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>a</i> = 2, <i>b</i> = &minus;7, <i>c</i> = 5</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>a</i> = 2, <i>b</i> = &minus;6, <i>c</i> = &minus;5</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>a</i> = 2, <i>b</i> = 5, <i>c</i> = 5</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">3.</div>
+          <div class="q-body">
+            <div class="q-bm">Tentukan jenis titik pegun dan koordinatnya bagi fungsi kuadratik <i>f</i>(<i>x</i>) = &minus;3<i>x</i><sup>2</sup> + 6<i>x</i> &minus; 1.</div>
+            <div class="q-en">Determine the type of stationary point and its coordinates for <i>f</i>(<i>x</i>) = &minus;3<i>x</i><sup>2</sup> + 6<i>x</i> &minus; 1.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>Titik maksimum / <i>Maximum point</i> (1, 2)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>Titik minimum / <i>Minimum point</i> (1, 2)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>Titik maksimum / <i>Maximum point</i> (&minus;1, &minus;10)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>Titik minimum / <i>Minimum point</i> (2, &minus;1)</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">4.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan graf bagi dua fungsi kuadratik <i>f</i>(<i>x</i>) = <i>ax</i><sup>2</sup> dan <i>g</i>(<i>x</i>) = <i>bx</i><sup>2</sup>. Antara pernyataan berikut, yang manakah <b>benar</b>?</div>
+            <div class="q-en">The diagram shows graphs of <i>f</i>(<i>x</i>) = <i>ax</i><sup>2</sup> and <i>g</i>(<i>x</i>) = <i>bx</i><sup>2</sup>. Which statement is <b>true</b>?</div>
+            
+  <svg width="250" height="135" viewBox="0 0 250 135" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="20" y1="105" x2="230" y2="105" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="235" y="108" font-size="10" font-family="Times New Roman">x</text>
+    <line x1="125" y1="125" x2="125" y2="15" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="120" y="12" font-size="10" font-family="Times New Roman">y</text>
+    <text x="115" y="116" font-size="9" font-family="Times New Roman">O</text>
+    <!-- Wider parabola f(x) = ax^2 -->
+    <path d="M 45 35 Q 125 155 205 35" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+    <text x="195" y="30" font-size="9.5" font-family="Times New Roman" fill="#2563eb">f(x) = ax²</text>
+    <!-- Narrower parabola g(x) = bx^2 -->
+    <path d="M 75 35 Q 125 140 175 35" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+    <text x="145" y="25" font-size="9.5" font-family="Times New Roman" fill="#dc2626">g(x) = bx²</text>
+  </svg>
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>a</i> > <i>b</i> > 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>b</i> > <i>a</i> > 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>a</i> < 0 dan / <i>and</i> <i>b</i> > 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>a</i> = <i>b</i></span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>2</span>
+        <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+      </div>
+    </div>
+    
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">5.</div>
+          <div class="q-body">
+            <div class="q-bm">Diberi fungsi kuadratik <i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> &minus; 12<i>x</i> + 7. Tentukan persamaan paksi simetri bagi graf tersebut.</div>
+            <div class="q-en">Given <i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> &minus; 12<i>x</i> + 7. Determine the equation of axis of symmetry of the graph.</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i> = &minus;3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i> = &minus;6</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i> = 3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i> = 6</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">6.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan graf bagi suatu fungsi kuadratik yang memotong paksi-<i>x</i> pada (&minus;2, 0) dan (6, 0). Nyatakan persamaan paksi simetrinya.</div>
+            <div class="q-en">The diagram shows the graph of a quadratic function intersecting the <i>x</i>-axis at (&minus;2, 0) and (6, 0). State its axis of symmetry.</div>
+            
+  <svg width="260" height="130" viewBox="0 0 260 130" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="20" y1="90" x2="240" y2="90" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="245" y="93" font-size="10" font-family="Times New Roman">x</text>
+    <line x1="75" y1="120" x2="75" y2="15" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="70" y="12" font-size="10" font-family="Times New Roman">y</text>
+    <text x="65" y="101" font-size="9" font-family="Times New Roman">O</text>
+    <!-- Parabola passing through (-2, 0) at x=50, (6, 0) at x=190, vertex at x=120, y=115 -->
+    <path d="M 35 60 Q 120 150 205 60" fill="none" stroke="#1d4ed8" stroke-width="1.8"/>
+    <!-- Axis of symmetry at x = 120 -->
+    <line x1="120" y1="20" x2="120" y2="115" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <circle cx="50" cy="90" r="3" fill="#0f172a"/>
+    <text x="35" y="85" font-size="9.5" font-family="Times New Roman">(&minus;2, 0)</text>
+    <circle cx="190" cy="90" r="3" fill="#0f172a"/>
+    <text x="180" y="85" font-size="9.5" font-family="Times New Roman">(6, 0)</text>
+    <text x="112" y="15" font-size="9.5" font-weight="bold" font-family="Times New Roman">x = ?</text>
+  </svg>
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i> = 1</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i> = 2</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i> = 3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i> = 4</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">7.</div>
+          <div class="q-body">
+            <div class="q-bm">Cari koordinat titik puncak bagi fungsi kuadratik <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 4<i>x</i> &minus; 5.</div>
+            <div class="q-en">Find the coordinates of the turning point of <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 4<i>x</i> &minus; 5.</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>(&minus;2, &minus;9)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>(2, 7)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>(&minus;2, &minus;5)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>(4, &minus;5)</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">8.</div>
+          <div class="q-body">
+            <div class="q-bm">Fungsi kuadratik <i>f</i>(<i>x</i>) = 3<i>x</i><sup>2</sup> + <i>px</i> &minus; 8 mempunyai paksi simetri pada <i>x</i> = &minus;2. Cari nilai <i>p</i>.</div>
+            <div class="q-en">Quadratic function <i>f</i>(<i>x</i>) = 3<i>x</i><sup>2</sup> + <i>px</i> &minus; 8 has an axis of symmetry at <i>x</i> = &minus;2. Find the value of <i>p</i>.</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>&minus;12</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>&minus;6</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>6</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>12</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>3</span>
+        <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+      </div>
+    </div>
+    
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">9.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan graf <i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> &minus; 3. Jika nilai <i>c</i> diubah kepada +5, apakah perubahan yang berlaku pada graf tersebut?</div>
+            <div class="q-en">The diagram shows <i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> &minus; 3. If value of <i>c</i> changes to +5, what change occurs to the graph?</div>
+            
+  <svg width="250" height="135" viewBox="0 0 250 135" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="20" y1="70" x2="230" y2="70" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="235" y="73" font-size="10" font-family="Times New Roman">x</text>
+    <line x1="125" y1="125" x2="125" y2="15" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="120" y="12" font-size="10" font-family="Times New Roman">y</text>
+    <!-- Curve 1: vertex at (125, 95) => c = -3 -->
+    <path d="M 65 35 Q 125 135 185 35" fill="none" stroke="#64748b" stroke-width="1.6"/>
+    <circle cx="125" cy="95" r="2.5" fill="#64748b"/><text x="130" y="98" font-size="8.5" font-family="Times New Roman">&minus;3</text>
+    <!-- Curve 2: shifted up to (125, 45) => c = +5 -->
+    <path d="M 65 15 Q 125 65 185 15" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+    <circle cx="125" cy="45" r="2.5" fill="#2563eb"/><text x="130" y="47" font-size="8.5" font-family="Times New Roman">5</text>
+    <!-- Arrow indicating shift -->
+    <line x1="125" y1="90" x2="125" y2="52" stroke="#dc2626" stroke-width="1.4" stroke-dasharray="2 2"/>
+  </svg>
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>Graf bergerak 8 unit secara menegak ke atas</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>Graf bergerak 5 unit secara menegak ke atas</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>Graf bergerak 8 unit secara mengufuk ke kanan</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>Bukaan graf menjadi lebih sempit</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">10.</div>
+          <div class="q-body">
+            <div class="q-bm">Diberi fungsi kuadratik <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 4<i>x</i> + 3. Jika fungsi itu diubah kepada <i>g</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 4<i>x</i> &minus; 3, apakah kesan terhadap bentuk graf?</div>
+            <div class="q-en">Given <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 4<i>x</i> + 3. If changed to <i>g</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 4<i>x</i> &minus; 3, what is the effect on the graph shape?</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>Graf berubah dari bentuk &cap; kepada &cup;</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>Graf berubah dari bentuk &cup; kepada &cap; melalui pantulan pada paksi-<i>x</i></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>Paksi simetri graf beralih ke kiri paksi-<i>y</i></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>Bukaan graf menjadi dua kali lebih lebar</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">11.</div>
+          <div class="q-body">
+            <div class="q-bm">Diberi <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>bx</i> + 4. Jika nilai <i>b</i> bertambah daripada &minus;6 kepada +6, apakah yang berlaku kepada paksi simetri graf?</div>
+            <div class="q-en">Given <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + <i>bx</i> + 4. If value of <i>b</i> increases from &minus;6 to +6, what happens to the axis of symmetry?</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>Paksi simetri beralih dari sebelah kanan ke sebelah kiri paksi-<i>y</i></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>Paksi simetri beralih dari sebelah kiri ke sebelah kanan paksi-<i>y</i></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>Paksi simetri tidak mengalami sebarang perubahan</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>Paksi simetri menjadi bertindih dengan paksi-<i>x</i></span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">12.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan graf bagi suatu fungsi kuadratik dengan titik minimum (0, &minus;4) dan pintasan-<i>x</i> pada &minus;2 dan 2. Tentukan fungsinya.</div>
+            <div class="q-en">The diagram shows a quadratic graph with minimum point (0, &minus;4) and <i>x</i>-intercepts at &minus;2 and 2. Determine its function.</div>
+            
+  <svg width="250" height="135" viewBox="0 0 250 135" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="20" y1="65" x2="230" y2="65" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="235" y="68" font-size="10" font-family="Times New Roman">x</text>
+    <line x1="125" y1="125" x2="125" y2="15" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="120" y="12" font-size="10" font-family="Times New Roman">y</text>
+    <path d="M 65 20 Q 125 140 185 20" fill="none" stroke="#1d4ed8" stroke-width="1.8"/>
+    <circle cx="85" cy="65" r="2.8" fill="#0f172a"/><text x="73" y="60" font-size="9" font-family="Times New Roman">&minus;2</text>
+    <circle cx="165" cy="65" r="2.8" fill="#0f172a"/><text x="168" y="60" font-size="9" font-family="Times New Roman">2</text>
+    <circle cx="125" cy="105" r="3" fill="#dc2626"/><text x="131" y="108" font-size="9" font-weight="bold" font-family="Times New Roman">&minus;4</text>
+  </svg>
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>f</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> &minus; 4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>f</i>(<i>x</i>) = 2<i>x</i><sup>2</sup> &minus; 4</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>4</span>
+        <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+      </div>
+    </div>
+    
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">13.</div>
+          <div class="q-body">
+            <div class="q-bm">Graf <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> digerakkan 3 unit ke kanan dan 5 unit ke atas. Apakah fungsi kuadratik baharu dalam bentuk am?</div>
+            <div class="q-en">Graph <i>f</i>(<i>x</i>) = <i>x</i><sup>2</sup> is translated 3 units right and 5 units up. What is the new function in general form?</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 6<i>x</i> + 8</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 6<i>x</i> + 14</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> &minus; 6<i>x</i> + 14</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>g</i>(<i>x</i>) = <i>x</i><sup>2</sup> + 3<i>x</i> + 5</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">14.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan graf bagi <i>f</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 2<i>x</i> + 8. Nyatakan punca-punca bagi persamaan kuadratik &minus;<i>x</i><sup>2</sup> + 2<i>x</i> + 8 = 0.</div>
+            <div class="q-en">The diagram shows graph of <i>f</i>(<i>x</i>) = &minus;<i>x</i><sup>2</sup> + 2<i>x</i> + 8. State roots of &minus;<i>x</i><sup>2</sup> + 2<i>x</i> + 8 = 0.</div>
+            
+  <svg width="250" height="135" viewBox="0 0 250 135" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="20" y1="95" x2="230" y2="95" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="235" y="98" font-size="10" font-family="Times New Roman">x</text>
+    <line x1="90" y1="125" x2="90" y2="15" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="85" y="12" font-size="10" font-family="Times New Roman">y</text>
+    <text x="80" y="105" font-size="9" font-family="Times New Roman">O</text>
+    <!-- Inverted parabola cutting x at -2 (x=60), 4 (x=160), peak at (1, 9) => x=110, y=35 -->
+    <path d="M 45 115 Q 110 -15 175 115" fill="none" stroke="#1d4ed8" stroke-width="1.8"/>
+    <circle cx="60" cy="95" r="2.8" fill="#0f172a"/><text x="48" y="90" font-size="9" font-family="Times New Roman">&minus;2</text>
+    <circle cx="160" cy="95" r="2.8" fill="#0f172a"/><text x="163" y="90" font-size="9" font-family="Times New Roman">4</text>
+    <circle cx="90" cy="40" r="2.5" fill="#0f172a"/><text x="95" y="44" font-size="8.5" font-family="Times New Roman">8</text>
+  </svg>
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i> = 2, <i>x</i> = &minus;4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i> = &minus;2, <i>x</i> = 4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i> = 0, <i>x</i> = 8</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i> = 1, <i>x</i> = 9</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">15.</div>
+          <div class="q-body">
+            <div class="q-bm">Antara nilai <i>x</i> berikut, yang manakah merupakan suatu punca bagi persamaan kuadratik 2<i>x</i><sup>2</sup> &minus; 5<i>x</i> &minus; 3 = 0?</div>
+            <div class="q-en">Which of the following values of <i>x</i> is a root of 2<i>x</i><sup>2</sup> &minus; 5<i>x</i> &minus; 3 = 0?</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>&minus;3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><sup>1</sup>/<sub>2</sub></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>&minus;2</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">16.</div>
+          <div class="q-body">
+            <div class="q-bm">Selesaikan persamaan kuadratik: <i>x</i><sup>2</sup> &minus; 7<i>x</i> + 12 = 0.</div>
+            <div class="q-en">Solve the quadratic equation: <i>x</i><sup>2</sup> &minus; 7<i>x</i> + 12 = 0.</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i> = 3, <i>x</i> = 4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i> = &minus;3, <i>x</i> = &minus;4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i> = 2, <i>x</i> = 6</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i> = &minus;2, <i>x</i> = &minus;6</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>5</span>
+        <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+      </div>
+    </div>
+    
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">17.</div>
+          <div class="q-body">
+            <div class="q-bm">Selesaikan persamaan kuadratik: 2<i>x</i><sup>2</sup> &minus; 7<i>x</i> + 3 = 0.</div>
+            <div class="q-en">Solve the quadratic equation: 2<i>x</i><sup>2</sup> &minus; 7<i>x</i> + 3 = 0.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i> = &minus;<sup>1</sup>/<sub>2</sub>, <i>x</i> = &minus;3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i> = <sup>1</sup>/<sub>2</sub>, <i>x</i> = 3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i> = 1, <i>x</i> = 6</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i> = &minus;1, <i>x</i> = 3</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">18.</div>
+          <div class="q-body">
+            <div class="q-bm">Selesaikan persamaan pecahan algebra: <sup>(<i>x</i> + 1)</sup>/<sub>2</sub> = <sup>6</sup>/<sub><i>x</i></sub>.</div>
+            <div class="q-en">Solve the algebraic fraction equation: <sup>(<i>x</i> + 1)</sup>/<sub>2</sub> = <sup>6</sup>/<sub><i>x</i></sub>.</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i> = &minus;4, <i>x</i> = 3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i> = 4, <i>x</i> = &minus;3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i> = 2, <i>x</i> = &minus;6</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i> = 1, <i>x</i> = 12</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">19.</div>
+          <div class="q-body">
+            <div class="q-bm">Diberi punca-punca bagi suatu persamaan kuadratik ialah &minus;3 dan 5. Bentukkan persamaan kuadratik tersebut dalam bentuk am.</div>
+            <div class="q-en">Given the roots of a quadratic equation are &minus;3 and 5. Form the quadratic equation in general form.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i><sup>2</sup> + 2<i>x</i> &minus; 15 = 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i><sup>2</sup> &minus; 2<i>x</i> &minus; 15 = 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i><sup>2</sup> &minus; 8<i>x</i> + 15 = 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i><sup>2</sup> + 8<i>x</i> &minus; 15 = 0</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">20.</div>
+          <div class="q-body">
+            <div class="q-bm">Diberi bahawa <i>x</i> = 2 ialah salah satu punca bagi persamaan 3<i>x</i><sup>2</sup> + <i>kx</i> &minus; 10 = 0. Cari nilai <i>k</i> dan punca yang satu lagi.</div>
+            <div class="q-en">Given <i>x</i> = 2 is a root of 3<i>x</i><sup>2</sup> + <i>kx</i> &minus; 10 = 0. Find the value of <i>k</i> and the other root.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>k</i> = &minus;1, punca kedua = &minus;<sup>5</sup>/<sub>3</sub></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>k</i> = 1, punca kedua = <sup>5</sup>/<sub>3</sub></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>k</i> = &minus;2, punca kedua = &minus;5</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>k</i> = 2, punca kedua = &minus;<sup>3</sup>/<sub>5</sub></span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>6</span>
+        <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+      </div>
+    </div>
+    
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">21.</div>
+          <div class="q-body">
+            <div class="q-bm">Bentukkan persamaan kuadratik yang mempunyai punca-punca <sup>1</sup>/<sub>2</sub> dan &minus;<sup>4</sup>/<sub>3</sub>.</div>
+            <div class="q-en">Form a quadratic equation with roots <sup>1</sup>/<sub>2</sub> and &minus;<sup>4</sup>/<sub>3</sub>.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>6<i>x</i><sup>2</sup> &minus; 5<i>x</i> &minus; 4 = 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>6<i>x</i><sup>2</sup> + 5<i>x</i> &minus; 4 = 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>5<i>x</i><sup>2</sup> + 6<i>x</i> &minus; 4 = 0</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>6<i>x</i><sup>2</sup> + 5<i>x</i> + 4 = 0</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">22.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan graf fungsi kuadratik yang menyentuh paksi-<i>x</i> pada satu titik sahaja secara tangen. Apakah jenis punca bagi persamaan <i>f</i>(<i>x</i>) = 0?</div>
+            <div class="q-en">The diagram shows a quadratic graph touching the <i>x</i>-axis at only one point. What is the nature of roots for <i>f</i>(<i>x</i>) = 0?</div>
+            
+  <svg width="250" height="130" viewBox="0 0 250 130" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="20" y1="90" x2="230" y2="90" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="235" y="93" font-size="10" font-family="Times New Roman">x</text>
+    <line x1="75" y1="120" x2="75" y2="15" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="70" y="12" font-size="10" font-family="Times New Roman">y</text>
+    <text x="65" y="100" font-size="9" font-family="Times New Roman">O</text>
+    <!-- Parabola touching x-axis tangentially at (135, 90) -->
+    <path d="M 85 25 Q 135 155 185 25" fill="none" stroke="#059669" stroke-width="2"/>
+    <circle cx="135" cy="90" r="3.5" fill="#047857"/>
+    <text x="125" y="106" font-size="9.5" font-weight="bold" font-family="Times New Roman">x = 3</text>
+    <text x="150" y="45" font-size="9" font-style="italic" fill="#047857" font-family="Times New Roman">b² &minus; 4ac = 0</text>
+  </svg>
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>Dua punca nyata yang sama / <i>Two equal real roots</i> (<i>b</i><sup>2</sup> &minus; 4<i>ac</i> = 0)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>Dua punca nyata yang berbeza / <i>Two distinct real roots</i> (<i>b</i><sup>2</sup> &minus; 4<i>ac</i> > 0)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>Tiada punca nyata / <i>No real roots</i> (<i>b</i><sup>2</sup> &minus; 4<i>ac</i> < 0)</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>Punca khayalan / <i>Imaginary roots</i></span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">23.</div>
+          <div class="q-body">
+            <div class="q-bm">Sebiji bola dibaling tegak ke atas dari tanah. Tingginya, <i>h</i> dalam meter, selepas <i>t</i> saat diberi oleh <i>h</i>(<i>t</i>) = &minus;5<i>t</i><sup>2</sup> + 30<i>t</i>. Hitung tinggi maksimum yang dicapai oleh bola itu.</div>
+            <div class="q-en">A ball is thrown vertically upwards from ground. Height <i>h</i> (m) after <i>t</i> seconds is <i>h</i>(<i>t</i>) = &minus;5<i>t</i><sup>2</sup> + 30<i>t</i>. Calculate maximum height reached.</div>
+            
+  <svg width="260" height="140" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="35" y1="110" x2="245" y2="110" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="225" y="124" font-size="9.5" font-family="Times New Roman">t (saat / s)</text>
+    <line x1="45" y1="120" x2="45" y2="15" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="35" y="12" font-size="9.5" font-family="Times New Roman">h (m)</text>
+    <text x="35" y="118" font-size="9" font-family="Times New Roman">O</text>
+    <!-- Projectile trajectory: from (45, 110) to peak (125, 30) to landing (205, 110) -->
+    <path d="M 45 110 Q 125 -45 205 110" fill="none" stroke="#2563eb" stroke-width="2"/>
+    <line x1="125" y1="110" x2="125" y2="30" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="45" y1="30" x2="125" y2="30" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <circle cx="125" cy="30" r="3" fill="#1e3a8a"/>
+    <text x="130" y="28" font-size="9" font-weight="bold" font-family="Times New Roman">(3, 45)</text>
+    <text x="122" y="122" font-size="9" font-family="Times New Roman">3</text>
+    <text x="202" y="122" font-size="9" font-family="Times New Roman">6</text>
+    <text x="30" y="34" font-size="9" font-family="Times New Roman">45</text>
+  </svg>
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>30 m pada / <i>at</i> <i>t</i> = 3 s</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>45 m pada / <i>at</i> <i>t</i> = 3 s</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>50 m pada / <i>at</i> <i>t</i> = 5 s</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>90 m pada / <i>at</i> <i>t</i> = 6 s</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>7</span>
+        <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+      </div>
+    </div>
+    
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">24.</div>
+          <div class="q-body">
+            <div class="q-bm">Ketinggian roket mainan dari tanah dimodelkan oleh <i>h</i> = &minus;5<i>t</i><sup>2</sup> + 15<i>t</i> + 20. Cari masa, dalam saat, apabila roket itu mendarat semula di tanah.</div>
+            <div class="q-en">Height of toy rocket is <i>h</i> = &minus;5<i>t</i><sup>2</sup> + 15<i>t</i> + 20. Find time in seconds when rocket lands on the ground.</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>2 saat / <i>seconds</i></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>3 saat / <i>seconds</i></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>4 saat / <i>seconds</i></span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>5 saat / <i>seconds</i></span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">25.</div>
+          <div class="q-body">
+            <div class="q-bm">Diberi fungsi kuadratik <i>f</i>(<i>x</i>) = 2(<i>x</i> &minus; 3)<sup>2</sup> + 4. Nyatakan nilai minimum fungsi tersebut dan julat nilainya.</div>
+            <div class="q-en">Given <i>f</i>(<i>x</i>) = 2(<i>x</i> &minus; 3)<sup>2</sup> + 4. State its minimum value and range.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>Nilai minimum = 4, julat: <i>f</i>(<i>x</i>) &ge; 4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>Nilai minimum = 3, julat: <i>f</i>(<i>x</i>) &ge; 3</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>Nilai minimum = &minus;4, julat: <i>f</i>(<i>x</i>) &le; 4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>Nilai minimum = 2, julat: <i>f</i>(<i>x</i>) &ge; 2</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">26.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan trajektori seorang penerjun papan anjal yang dimodelkan oleh <i>h</i>(<i>t</i>) = &minus;<i>t</i><sup>2</sup> + 2<i>t</i> + 3. Berapakah ketinggian papan anjal dari paras air?</div>
+            <div class="q-en">The diagram shows a diver's trajectory modeled by <i>h</i>(<i>t</i>) = &minus;<i>t</i><sup>2</sup> + 2<i>t</i> + 3. What is the height of the diving board above water?</div>
+            
+  <svg width="250" height="135" viewBox="0 0 250 135" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <line x1="30" y1="105" x2="235" y2="105" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="180" y="118" font-size="8.5" fill="#0369a1" font-family="Times New Roman">Paras air / Water surface</text>
+    <line x1="45" y1="120" x2="45" y2="20" stroke="#0f172a" stroke-width="1.3"/>
+    <text x="35" y="15" font-size="9" font-family="Times New Roman">h(t)</text>
+    <!-- Diver starts at (45, 75) => h=3, peaks at (90, 50) => h=4 at t=1, lands at (180, 105) => t=3 -->
+    <path d="M 45 75 Q 90 25 180 105" fill="none" stroke="#d97706" stroke-width="2"/>
+    <circle cx="45" cy="75" r="3" fill="#b45309"/>
+    <text x="28" y="78" font-size="9" font-weight="bold" font-family="Times New Roman">3 m</text>
+    <circle cx="180" cy="105" r="2.8" fill="#0284c7"/>
+    <text x="175" y="120" font-size="9" font-family="Times New Roman">3 s</text>
+  </svg>
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>2 meter</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>3 meter</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>4 meter</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>5 meter</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">27.</div>
+          <div class="q-body">
+            <div class="q-bm">Sebidang tanah segi empat tepat mempunyai perimeter 36 m dan luas 80 m<sup>2</sup>. Jika panjang tanah itu ialah <i>x</i> m, bentukkan persamaan kuadratik dan cari panjangnya.</div>
+            <div class="q-en">A rectangular land has perimeter 36 m and area 80 m<sup>2</sup>. If length is <i>x</i> m, form quadratic equation and find length.</div>
+            
+            <div class="options-grid single-col">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span><i>x</i><sup>2</sup> &minus; 18<i>x</i> + 80 = 0, panjang = 10 m</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span><i>x</i><sup>2</sup> &minus; 36<i>x</i> + 80 = 0, panjang = 20 m</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span><i>x</i><sup>2</sup> + 18<i>x</i> &minus; 80 = 0, panjang = 8 m</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span><i>x</i><sup>2</sup> &minus; 18<i>x</i> + 80 = 0, panjang = 16 m</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>8</span>
+        <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+      </div>
+    </div>
+    
+    <div class="page-container page-break">
+      <div>
+        <div class="running-header">
+          <span>MATEMATIK TINGKATAN 4</span>
+          <span>BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK</span>
+          <span>SULIT</span>
+        </div>
+    
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">28.</div>
+          <div class="q-body">
+            <div class="q-bm">Rajah menunjukkan sebuah segi tiga bersudut tegak dengan sisi <i>x</i> cm, (<i>x</i> + 2) cm dan hipotenus (<i>x</i> + 4) cm. Hitung nilai positif bagi <i>x</i>.</div>
+            <div class="q-en">The diagram shows a right-angled triangle with sides <i>x</i> cm, (<i>x</i> + 2) cm and hypotenuse (<i>x</i> + 4) cm. Calculate positive value of <i>x</i>.</div>
+            
+  <svg width="230" height="125" viewBox="0 0 230 125" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <!-- Triangle vertices at (40, 105), (170, 105), (40, 25) -->
+    <polygon points="40,105 170,105 40,25" fill="#f8fafc" stroke="#1e293b" stroke-width="1.6"/>
+    <!-- Right angle marker -->
+    <rect x="40" y="93" width="12" height="12" fill="none" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="12" y="70" font-size="9.5" font-family="Times New Roman">x cm</text>
+    <text x="90" y="118" font-size="9.5" font-family="Times New Roman">(x + 2) cm</text>
+    <text x="115" y="60" font-size="9.5" font-family="Times New Roman">(x + 4) cm</text>
+  </svg>
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>4</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>6</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>8</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>10</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">29.</div>
+          <div class="q-body">
+            <div class="q-bm">Sebuah kolam renang berukuran 10 m &times; 6 m dikelilingi laluan pejalan kaki selebar <i>x</i> m. Jumlah luas kolam dan laluan ialah 96 m<sup>2</sup>. Cari lebar laluan <i>x</i>.</div>
+            <div class="q-en">A 10 m &times; 6 m pool is surrounded by a path of uniform width <i>x</i> m. Total area is 96 m<sup>2</sup>. Find width of path <i>x</i>.</div>
+            
+  <svg width="240" height="135" viewBox="0 0 240 135" xmlns="http://www.w3.org/2000/svg" class="exam-diagram">
+    <!-- Outer walkway -->
+    <rect x="25" y="15" width="190" height="105" fill="#e2e8f0" stroke="#475569" stroke-width="1.4" rx="2"/>
+    <!-- Inner pool -->
+    <rect x="55" y="35" width="130" height="65" fill="#bae6fd" stroke="#0284c7" stroke-width="1.4"/>
+    <text x="95" y="72" font-size="9.5" font-weight="bold" fill="#0369a1" font-family="Times New Roman">Kolam / Pool<br>10 m &times; 6 m</text>
+    <!-- Width indicators -->
+    <text x="36" y="72" font-size="9" font-weight="bold" fill="#dc2626" font-family="Times New Roman">x</text>
+    <text x="195" y="72" font-size="9" font-weight="bold" fill="#dc2626" font-family="Times New Roman">x</text>
+    <text x="115" y="27" font-size="9" font-weight="bold" fill="#dc2626" font-family="Times New Roman">x</text>
+    <text x="115" y="113" font-size="9" font-weight="bold" fill="#dc2626" font-family="Times New Roman">x</text>
+  </svg>
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>1 m</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>1.5 m</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>2 m</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>2.5 m</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-item">
+        <div class="q-header">
+          <div class="q-num">30.</div>
+          <div class="q-body">
+            <div class="q-bm">Keuntungan harian sebuah kilang cermin mata diberi oleh <i>P</i>(<i>x</i>) = &minus;2<i>x</i><sup>2</sup> + 100<i>x</i> &minus; 450, dengan <i>x</i> ialah bilangan unit cermin mata. Cari bilangan unit yang memaksimumkan keuntungan dan nilai keuntungan maksimum itu.</div>
+            <div class="q-en">Daily profit is <i>P</i>(<i>x</i>) = &minus;2<i>x</i><sup>2</sup> + 100<i>x</i> &minus; 450, where <i>x</i> is units produced. Find units for max profit and the maximum profit.</div>
+            
+            <div class="options-grid ">
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>A</b></span>
+                  <span>20 unit, RM 750</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>B</b></span>
+                  <span>25 unit, RM 800</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>C</b></span>
+                  <span>30 unit, RM 850</span>
+                </div>
+              
+                <div class="option-choice">
+                  <span class="opt-letter"><b>D</b></span>
+                  <span>50 unit, RM 800</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div class="running-footer">
+        <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+        <span>9</span>
+        <span>KERTAS SOALAN TAMAT / <i>END OF QUESTIONS</i></span>
+      </div>
+    </div>
+    
+  <div class="page-container page-break">
+    <div>
+      <div class="running-header">
+        <span>MATEMATIK TINGKATAN 4</span>
+        <span>BORANG JAWAPAN OMR / <i>OMR ANSWER SHEET</i></span>
+        <span>SULIT</span>
+      </div>
+
+      <div style="border: 2px solid #000; padding: 10px 14px; margin-bottom: 8px; background: #fafafa;">
+        <div style="text-align: center; margin-bottom: 6px;">
+          <h3 style="margin: 0; font-size: 11pt;">LEMBARAN JAWAPAN OBJEKTIF (OMR)</h3>
+          <h4 style="margin: 2px 0; font-size: 9.5pt; color:#1e40af;">BAB 1: FUNGSI DAN PERSAMAAN KUADRATIK (30 SOALAN)</h4>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; font-size:9pt; border-top:1px solid #999; padding-top:6px;">
+          <div><b>NAMA:</b> ................................................................................</div>
+          <div><b>KELAS:</b> ............................</div>
+          <div><b>MARKAH:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / 30</div>
+        </div>
+      </div>
+
+      <div style="font-size: 8.5pt; margin-bottom: 8px; color: #475569; text-align: center;">
+        <b>PANDUAN MENGHITAMKAN JAWAPAN / <i>GUIDELINES:</i></b>
+        Gunakan pensel 2B sahaja. Hitamkan bulatan dengan penuh: 
+        <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#000; vertical-align:middle;"></span>.
+      </div>
+
+      <div class="omr-grid">
+  <div class="omr-col">
+        <div class="omr-row">
+          <span class="omr-qnum">1.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">2.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">3.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">4.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">5.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">6.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">7.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">8.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">9.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">10.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      </div><div class="omr-col">
+        <div class="omr-row">
+          <span class="omr-qnum">11.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">12.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">13.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">14.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">15.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">16.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">17.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">18.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">19.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">20.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      </div><div class="omr-col">
+        <div class="omr-row">
+          <span class="omr-qnum">21.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">22.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">23.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">24.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">25.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">26.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">27.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">28.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">29.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      
+        <div class="omr-row">
+          <span class="omr-qnum">30.</span>
+          <div class="omr-bubbles">
+            <span class="bubble">A</span>
+            <span class="bubble">B</span>
+            <span class="bubble">C</span>
+            <span class="bubble">D</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+      <span>10</span>
+      <span>[Skema Jawapan &amp; Jalan Kerja Menyusul / <i>Solutions Follow</i></span>
+    </div>
+  </div>
+  
+  <div class="page-container page-break">
+    <div>
+      <div class="running-header">
+        <span>MATEMATIK TINGKATAN 4 &bull; BAB 1</span>
+        <span>SKEMA JAWAPAN &amp; JALAN KERJA LENGKAP (SOALAN 1 &ndash; 15)</span>
+        <span>SULIT</span>
+      </div>
+
+      <div style="background:#eff6ff; border:1px solid #bfdbfe; padding:4px 8px; margin-bottom:8px; border-radius:3px; font-size:8.5pt;">
+        <b>SKEMA PEMARKAHAN &amp; PENERANGAN LENGKAP / <i>FULL MARK SCHEME &amp; EXPLANATIONS</i> (Q1 &ndash; Q15)</b>
+      </div>
+
+      <table class="answers-table">
+        <thead>
+          <tr>
+            <th style="width:30px; text-align:center;">No.</th>
+            <th style="width:45px; text-align:center;">Jaw.</th>
+            <th>Penerangan Konsep &amp; Jalan Kerja Terperinci</th>
+          </tr>
+        </thead>
+        <tbody>
+  
+      <tr>
+        <td style="font-weight:bold; text-align:center;">1</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>Ungkapan kuadratik dalam satu pemboleh ubah mesti mempunyai satu pemboleh ubah dengan kuasa tertinggi 2: 3x² &minus; 5x + 2. Pilihan B berkuasa 3, C mempunyai dua pemboleh ubah, D mempunyai kuasa negatif (&minus;2).</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">2</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>2x(x &minus; 3) = 5 &minus; x &rArr; 2x² &minus; 6x = 5 &minus; x &rArr; 2x² &minus; 5x &minus; 5 = 0. Maka a = 2, b = &minus;5, c = &minus;5.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">3</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>a = &minus;3 < 0 &rArr; Graf berbentuk &cap; (Titik maksimum). Paksi simetri: x = &minus;b/(2a) = &minus;6/(2(&minus;3)) = 1. f(1) = &minus;3(1)² + 6(1) &minus; 1 = 2. Titik maksimum = (1, 2).</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">4</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>Kedua-dua graf terbuka ke atas (a > 0, b > 0). Graf g(x) lebih sempit dan curam daripada f(x), maka nilai pekali b lebih besar daripada a (|b| > |a| &rArr; b > a > 0).</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">5</td>
+        <td style="text-align:center;"><span class="badge-ans">C</span></td>
+        <td>Paksi simetri: x = &minus;b / (2a) = &minus;(&minus;12) / (2 &times; 2) = 12 / 4 = 3.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">6</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>Paksi simetri terletak tepat di tengah dua pintasan-x: x = (x₁ + x₂) / 2 = (&minus;2 + 6) / 2 = 4 / 2 = 2.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">7</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>x = &minus;b / (2a) = &minus;4 / (2(1)) = &minus;2. f(&minus;2) = (&minus;2)² + 4(&minus;2) &minus; 5 = 4 &minus; 8 &minus; 5 = &minus;9. Titik puncak = (&minus;2, &minus;9).</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">8</td>
+        <td style="text-align:center;"><span class="badge-ans">D</span></td>
+        <td>x = &minus;b / (2a) &rArr; &minus;2 = &minus;p / (2 &times; 3) &rArr; &minus;2 = &minus;p / 6 &rArr; p = 12.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">9</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>Pintasan-y asal = &minus;3, pintasan-y baharu = +5. Perubahan menegak = 5 &minus; (&minus;3) = 8 unit ke atas.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">10</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>Pekali a berubah tanda dari +1 kepada &minus;1. Bentuk graf terpantul secara menegak pada paksi-x daripada bentuk &cup; kepada bentuk &cap;.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">11</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>Paksi asal: x = &minus;(&minus;6)/2 = 3 (kanan paksi-y). Paksi baharu: x = &minus;6/2 = &minus;3 (kiri paksi-y). Maka beralih dari kanan ke kiri.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">12</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>Punca ialah &plusmn;2 &rArr; (x + 2)(x &minus; 2) = x² &minus; 4. Pada x = 0, y = &minus;4. Maka f(x) = x² &minus; 4.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">13</td>
+        <td style="text-align:center;"><span class="badge-ans">C</span></td>
+        <td>g(x) = (x &minus; 3)² + 5 = x² &minus; 6x + 9 + 5 = x² &minus; 6x + 14.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">14</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>Punca ialah pintasan-x pada graf: &minus;x² + 2x + 8 = 0 &rArr; x² &minus; 2x &minus; 8 = 0 &rArr; (x &minus; 4)(x + 2) = 0 &rArr; x = &minus;2, x = 4.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">15</td>
+        <td style="text-align:center;"><span class="badge-ans">C</span></td>
+        <td>(2x + 1)(x &minus; 3) = 0 &rArr; x = &minus;1/2 atau x = 3. Maka x = 3 ialah punca.</td>
+      </tr>
+    
+        </tbody>
+      </table>
+    </div>
+
+    <div class="running-footer">
+      <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+      <span>11</span>
+      <span>[Lihat halaman sebelah / <i>Turn over</i></span>
+    </div>
+  </div>
+  
+  <div class="page-container">
+    <div>
+      <div class="running-header">
+        <span>MATEMATIK TINGKATAN 4 &bull; BAB 1</span>
+        <span>SKEMA JAWAPAN &amp; JALAN KERJA LENGKAP (SOALAN 16 &ndash; 30)</span>
+        <span>SULIT</span>
+      </div>
+
+      <div style="background:#eff6ff; border:1px solid #bfdbfe; padding:4px 8px; margin-bottom:8px; border-radius:3px; font-size:8.5pt;">
+        <b>SKEMA PEMARKAHAN &amp; PENERANGAN LENGKAP / <i>FULL MARK SCHEME &amp; EXPLANATIONS</i> (Q16 &ndash; Q30)</b>
+      </div>
+
+      <table class="answers-table">
+        <thead>
+          <tr>
+            <th style="width:30px; text-align:center;">No.</th>
+            <th style="width:45px; text-align:center;">Jaw.</th>
+            <th>Penerangan Konsep &amp; Jalan Kerja Terperinci</th>
+          </tr>
+        </thead>
+        <tbody>
+  
+      <tr>
+        <td style="font-weight:bold; text-align:center;">16</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>(x &minus; 3)(x &minus; 4) = 0 &rArr; x = 3, x = 4.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">17</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>(2x &minus; 1)(x &minus; 3) = 0 &rArr; x = 1/2, x = 3.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">18</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>x(x + 1) = 12 &rArr; x² + x &minus; 12 = 0 &rArr; (x + 4)(x &minus; 3) = 0 &rArr; x = &minus;4, x = 3.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">19</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>(x &minus; (&minus;3))(x &minus; 5) = (x + 3)(x &minus; 5) = x² &minus; 2x &minus; 15 = 0.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">20</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>Gantikan x = 2: 3(4) + 2k &minus; 10 = 0 &rArr; 2k + 2 = 0 &rArr; k = &minus;1. Persamaan: 3x² &minus; x &minus; 10 = 0 &rArr; (3x + 5)(x &minus; 2) = 0 &rArr; punca kedua = &minus;5/3.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">21</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>(2x &minus; 1)(3x + 4) = 0 &rArr; 6x² + 8x &minus; 3x &minus; 4 = 0 &rArr; 6x² + 5x &minus; 4 = 0.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">22</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>Graf menyentuh paksi-x pada satu titik sahaja bermaksud persamaan mempunyai dua punca nyata yang sama (b² &minus; 4ac = 0).</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">23</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>Masa tinggi maksimum: t = &minus;b / (2a) = &minus;30 / (2(&minus;5)) = 3 saat. h(3) = &minus;5(3)² + 30(3) = &minus;45 + 90 = 45 meter.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">24</td>
+        <td style="text-align:center;"><span class="badge-ans">C</span></td>
+        <td>Mendarat di tanah &rArr; h = 0 &rArr; &minus;5t² + 15t + 20 = 0 &rArr; t² &minus; 3t &minus; 4 = 0 &rArr; (t &minus; 4)(t + 1) = 0. Kerana t > 0, t = 4 saat.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">25</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>Bentuk verteks a(x &minus; h)² + k. Nilai minimum = k = 4 (pada x = 3). Oleh itu, julat f(x) &ge; 4.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">26</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>Ketinggian papan anjal ialah ketinggian pada t = 0 saat: h(0) = &minus;(0)² + 2(0) + 3 = 3 meter.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">27</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>Lebar = 18 &minus; x. Luas = x(18 &minus; x) = 80 &rArr; x² &minus; 18x + 80 = 0 &rArr; (x &minus; 10)(x &minus; 8) = 0. Panjang = 10 m (lebar = 8 m).</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">28</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>x² + (x + 2)² = (x + 4)² &rArr; x² + x² + 4x + 4 = x² + 8x + 16 &rArr; x² &minus; 4x &minus; 12 = 0 &rArr; (x &minus; 6)(x + 2) = 0 &rArr; x = 6.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">29</td>
+        <td style="text-align:center;"><span class="badge-ans">A</span></td>
+        <td>(10 + 2x)(6 + 2x) = 96 &rArr; 60 + 32x + 4x² = 96 &rArr; 4x² + 32x &minus; 36 = 0 &rArr; x² + 8x &minus; 9 = 0 &rArr; (x + 9)(x &minus; 1) = 0 &rArr; x = 1 m.</td>
+      </tr>
+    
+      <tr>
+        <td style="font-weight:bold; text-align:center;">30</td>
+        <td style="text-align:center;"><span class="badge-ans">B</span></td>
+        <td>x = &minus;b / (2a) = &minus;100 / (2(&minus;2)) = 25 unit. P(25) = &minus;2(625) + 100(25) &minus; 450 = &minus;1250 + 2500 &minus; 450 = RM 800.</td>
+      </tr>
+    
+        </tbody>
+      </table>
+    </div>
+
+    <div class="running-footer">
+      <span>Matematik Tingkatan 4 &bull; Bab 1</span>
+      <span>12</span>
+      <span>TAMAT MODUL BAB 1 / <i>END OF CHAPTER 1 MODULE</i></span>
+    </div>
+  </div>
+</body>
+</html>
+  
